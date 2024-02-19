@@ -1,4 +1,4 @@
-\documentclass{book}
+\documentclass[openany]{book}
 
 \usepackage{array}
 
@@ -22,7 +22,7 @@
 
 \usepackage[sfdefault]{roboto}
 
-\usepackage{tcolorbox}
+\usepackage[most]{tcolorbox}
 \tcbuselibrary{breakable}
 \tcbuselibrary{breakable}
 
@@ -30,17 +30,39 @@
 
 \usepackage{longtable,xtab,booktabs}
 
+\usepackage{makecell}
+
+\def\defcolwidth{0.6cm}
+\def\aq{\textbf{Adventure Quest }}
+
+\setcounter{secnumdepth}{5}
+
+\DeclareTotalTCBox{\tcbinline}{ m }{%
+  leftrule=0mm,%
+  rightrule=0mm,%
+  toprule=0mm,%
+  bottomrule=0mm,%
+  sharp corners,%
+  top=0pt,%
+  bottom=0pt,%
+  left=0pt,%
+  right=0pt,%
+  tcbox raise base,%
+  boxsep=1.0mm,%
+  nobeforeafter,%
+  }{\textbf{#1}}
+
 \begin{document}
 \include{titlepage.tex}
 \include{copyright.tex}
 \include{dedication.tex}
 \include{introduction.tex}
-\include{creating-an-adventurer.tex}
-\include{playing-an-adventurer.tex}
+\input{creating-an-adventurer.tex}
+\input{playing-an-adventurer.tex}
 \include{life-on-the-high.tex}
 \include{skills.tex}
 \include{onivero.tex}
 \include{jaernian-humanoids.tex}
 \include{creating-and-playing-actors.tex}
-
+\include{important-tables.tex}
 \end{document}
