@@ -1,68 +1,205 @@
-\documentclass[openany]{book}
+\documentclass[openany,svgnames]{book}
+\usepackage[svgnames]{xcolor}
+\usepackage{blindtext}
 
-\usepackage{array}
+\usepackage{comment}
 
 \usepackage{parskip}
 \setlength{\parindent}{0pt}
 
-\usepackage{scrextend}
-
 \usepackage{geometry}
-\geometry{letterpaper, portrait, margin=0.65in}
+\geometry{letterpaper, portrait, margin=0.5in}
+
+\usepackage{imakeidx}
+\makeindex[columns=3]
 
 \usepackage{multicol}
-
 \usepackage{enumitem}
-
 \usepackage{tabularx}
-
-\usepackage{nameref,nameref}
-
+\usepackage{nameref}
 \usepackage{tikz}
-
 \usepackage[sfdefault]{roboto}
-
 \usepackage[most]{tcolorbox}
 \tcbuselibrary{breakable}
-\tcbuselibrary{breakable}
-
 \usepackage{booktabs}
-
-\usepackage{longtable,xtab,booktabs}
-
+\usepackage{xtab}
 \usepackage{makecell}
+\usepackage{wrapfig}
+
+\usepackage{array,ragged2e}
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
+
+\usepackage{titlesec}
+
+\usepackage{etoolbox}
+
+\usepackage{xparse}
 
 \def\defcolwidth{0.6cm}
 \def\aq{\textbf{Adventure Quest }}
 
 \setcounter{secnumdepth}{5}
 
-\DeclareTotalTCBox{\tcbinline}{ m }{%
+%\DeclareRobustCommand{\indy}[2]{\index{\MakeLowercase{#1}}\textbf{#2}}
+\DeclareDocumentCommand \indy { o m } {%
+  \IfNoValueTF {#1} {%
+    \lowercase{\def\temp{#2}}
+    \expandafter\index\expandafter{\temp}
+    \textbf{#2}
+    %\index{\MakeLowercase{#1}}\textbf{#1}%
+  }{%
+    \lowercase{\def\temp{#1}}
+    \expandafter\index\expandafter{\temp}
+    \textbf{#2}
+    %\index{\MakeLowercase{#1}}\textbf{#2}%
+  }%
+}
+
+
+\DeclareRobustCommand{\STR}{\index{strength!STR}\textbf{STR}}
+\DeclareRobustCommand{\INT}{\index{intelligence!INT}\textbf{INT}}
+\DeclareRobustCommand{\PER}{\index{perception!PER}\textbf{PER}}
+\DeclareRobustCommand{\CSE}{\index{common sense!CSE}\textbf{CSE}}
+\DeclareRobustCommand{\HEA}{\index{health!HEA}\textbf{HEA}}
+\DeclareRobustCommand{\AGI}{\index{agility!AGI}\textbf{AGI}}
+\DeclareRobustCommand{\PWR}{\index{power!PWR}\textbf{PWR}}
+\DeclareRobustCommand{\COM}{\index{comliness!COM}\textbf{COM}}
+\DeclareRobustCommand{\WIL}{\index{willpower!WIL}\textbf{WIL}}
+%\DeclareRobustCommand{\}{\index{!}\textbf{} }
+\DeclareRobustCommand{\CDV}{\index{combat defense!CDV}\textbf{CDV}}
+\DeclareRobustCommand{\CM}{\index{combat modifier!CM}\textbf{CM}}
+\DeclareRobustCommand{\GDV}{\index{grapple defense!GDV}\textbf{GDV}}
+\DeclareRobustCommand{\GM}{\index{grapple modifier!GM}\textbf{GM}}
+\DeclareRobustCommand{\MDV}{\index{missile defense!MDV}\textbf{MDV}}
+\DeclareRobustCommand{\MM}{\index{missile modifier!MM}\textbf{MM}}
+\DeclareRobustCommand{\DP}{\index{damage points!DP}\textbf{DP}}
+\DeclareRobustCommand{\EP}{\index{experience points!EP}\textbf{EP}}
+\DeclareRobustCommand{\DU}{\index{divine units!DU}\textbf{DU}}
+\DeclareRobustCommand{\EU}{\index{elemential units!EU}\textbf{EU}}
+\DeclareRobustCommand{\LF}{\index{life force!LF}\textbf{LF}}
+
+\newcommand{\newacronymidx}[4][]{
+    \newacronym{#2}{#3}{#4}
+    \ifstrempty{#1}
+        { \index{#3|see{\MakeLowercase{#4}}} }
+        { \index{#3|see{#1}} }
+}
+
+\DeclareTotalTCBox{\tcdieroll}{ O{GreenYellow} v !O{} }{%
   leftrule=0mm,%
   rightrule=0mm,%
   toprule=0mm,%
   bottomrule=0mm,%
-  sharp corners,%
-  top=0pt,%
+  rounded corners,%
+  top=1pt,%
   bottom=0pt,%
-  left=0pt,%
-  right=0pt,%
+  left=2pt,%
+  right=2pt,%
   tcbox raise base,%
-  boxsep=1.0mm,%
+  boxsep=0mm,%
   nobeforeafter,%
-  }{\textbf{#1}}
+  colback=white!40!#1,%
+  colupper=black,%
+  halign=center,%
+  }{\textbf{\strut{#2}}}
+
+\DeclareTotalTCBox{\tcdefine}{ O{DodgerBlue} v !O{} }{%
+  leftrule=0mm,%
+  rightrule=0mm,%
+  toprule=0mm,%
+  bottomrule=0mm,%
+  rounded corners,%
+  top=1pt,%
+  bottom=0pt,%
+  left=2pt,%
+  right=2pt,%
+  tcbox raise base,%
+  boxsep=0mm,%
+  nobeforeafter,%
+  colback=white!30!#1,%
+  colupper=black,%
+  halign=center,%
+  }{\textbf{\strut{#2}}}
+
+\DeclareTotalTCBox{\tcpage}{ O{Crimson} m !O{} }{%
+  leftrule=0mm,%
+  rightrule=0mm,%
+  toprule=0mm,%
+  bottomrule=0mm,%
+  rounded corners,%
+  top=1pt,%
+  bottom=0pt,%
+  left=2pt,%
+  right=2pt,%
+  tcbox raise base,%
+  boxsep=0mm,%
+  nobeforeafter,%
+  colback=white!50!#1,%
+  colupper=black,%
+  halign=center,%
+  }{\textbf{\strut{Page #2}}}
+
+\newtcolorbox{normbox}[1][]{%
+  boxrule=0pt,%
+  enhanced,
+  title=\textbf{#1},%
+  left=2pt,%
+  right=2pt,%
+  top=2pt,%
+  bottom=1pt,%
+  boxsep=2pt,%
+  boxrule=0.6pt,%
+  lefttitle=2mm,%
+  righttitle=2mm,
+  toptitle=1mm,%
+  bottomtitle=1mm,%
+  minipage boxed title,%
+  hbox,%
+  colbacktitle=Navy,%
+  colback=white,%
+  }
+
+\newtcolorbox{normboxper}[2][]{%
+  boxrule=0pt,%
+  enhanced,
+  title=\textbf{#2},%
+  left=2pt,%
+  right=2pt,%
+  top=2pt,%
+  bottom=1pt,%
+  boxsep=2pt,%
+  boxrule=0.6pt,%
+  lefttitle=2mm,%
+  righttitle=2mm,
+  toptitle=1mm,%
+  bottomtitle=1mm,%
+  width=#1\linewidth,%
+  %width=0.5\linewidth,%
+  minipage boxed title,%
+  %attach boxed title to top,%
+  }
+
 
 \begin{document}
+\enlargethispage{1.5\baselineskip}
+\raggedright
+%\setlength{\multicolsep}{6.0pt plus 2.0pt minus 1.5pt}%
+\titlespacing\section{0pt}{6pt}{6pt}
+\titlespacing\subsection{0pt}{6pt }{6pt}
+\titlespacing\subsubsection{0pt}{6pt}{6pt}
+%\include{test.tex}
 \include{titlepage.tex}
 \include{copyright.tex}
 \include{dedication.tex}
 \include{introduction.tex}
-\input{creating-an-adventurer.tex}
-\input{playing-an-adventurer.tex}
-\include{life-on-the-high.tex}
+\include{creating-an-adventurer.tex}
+\include{playing-an-adventurer.tex}
+\include{life-on-the-high-seas.tex}
 \include{skills.tex}
 \include{onivero.tex}
 \include{jaernian-humanoids.tex}
 \include{creating-and-playing-actors.tex}
 \include{important-tables.tex}
+\include{earth-references.tex}
+\include{index.tex}
 \end{document}

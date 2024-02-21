@@ -1,8 +1,18 @@
-\begin{tcolorbox}[breakable,boxrule=0pt,beforeafter skip=1pt,title=Skill Lists]
-\begin{xtabular}{@{}p{0.5\linewidth} p{0.07\linewidth} p{0.07\linewidth} p{0.2\linewidth}}
-\label{create-skills-list}
+\documentclass{article}
+\usepackage[sfdefault]{roboto}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{paperwidth=3.75in,paperheight=10in, portrait, margin=0in, nofoot}
+\pagestyle{empty}
+\begin{document}
+\begin{longtable}{@{}p{0.375\linewidth} p{0.178\linewidth} p{0.1\linewidth} p{0.178\linewidth}}
 \small
-\textbf{Auger Skills} & \textbf{Base Cost} & \textbf{Stat} & \textbf{Extra Dice}\\
+\textbf{Skills} & \textbf{Base Cost} & \textbf{Stat} & \textbf{Extra Dice}\\
+\endhead
+\textbf{Auger Skills} &  &  & \\
 Accounting & 130 & INT & 4 \\
 Ambush & 150 & INT & 2 \\
 Analyze Trap & 150 & INT & N/A \\
@@ -121,27 +131,27 @@ Wheelwright & 50 & CSE & 2 \\
 Writing & 15 & INT & RESERVED \\
 Zoology & 50 & INT & 3 \\
 \midrule
-\textbf{Warrior Skills} & \textbf{Base Cost} & \textbf{Stat} & \textbf{Extra Dice}\\
+\textbf{Warrior Skills} &  &  & \\
 Ambidextrous & 150 & AGI & 2 \\
 Assassination & 500 & AGI & N/A \\
 Jousting & 300 & STR & 3 \\
 Lance & 360 & CSE & N/A \\
 Net Handling & 100 & AGI & 2 \\
 \midrule
-\textbf{Priest Skills} & \textbf{Base Cost} & \textbf{Stat} & \textbf{Extra Dice}\\
+\textbf{Priest Skills} &  &  & \\
 Embalming & 200 & CSE & 0 \\
 Scribing & 200 & INT & N/A \\
 Teaching & 100 & INT & N/A \\
 Verbal Casting & 300 & CSE & N/A \\
 Wine Making & 250 & INT & N/A \\
 \midrule
-\textbf{Mage Skills} & \textbf{Base Cost} & \textbf{Stat} & \textbf{Extra Dice}\\
+\textbf{Mage Skills} &  &  & \\
 Identify Spell & 200 & PER & 3 \\
 Non-verbal casting & 300 & CSE & N/A \\
 One hand casting & 150 & AGI & N/A \\
 Target Magic & 200 & AGI & N/A \\
 \midrule
-\textbf{Marine Skills} & \textbf{Base Cost} & \textbf{Stat} & \textbf{Extra Dice}\\
+\textbf{Marine Skills} &  &  & \\
 Acrobatics & 200 & AGI & 2 \\
 Artillery & 200 & INT & 2 \\
 Balance & 50 & AGI & 2 \\
@@ -179,7 +189,7 @@ Tackling & 120 & AGI & 2 \\
 Tumbling & 100 & AGI & 2 \\
 Wrestling & 180 & CSE & N/A \\
 \midrule
-\textbf{Nomad Skills} & \textbf{Base Cost} & \textbf{Stat} & \textbf{Extra Dice}\\
+\textbf{Nomad Skills} &  & & \\
 Acting & 100 & INT & 2 \\
 Animal Training & 200 & WIL & N/A \\
 Astrology & 250 & INT & RESERVED \\
@@ -200,5 +210,5 @@ Pyrotechnics & 100 & INT & N/A \\
 Singing & 50 & COM & 2 \\
 Tattooing & 200 & PER & N/A \\
 Ventriloquism & 200 & CSE & N/A \\
-\end{xtabular}
-\end{tcolorbox}
+\end{longtable}
+\end{document}
