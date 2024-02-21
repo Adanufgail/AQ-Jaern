@@ -43,40 +43,46 @@
 %\DeclareRobustCommand{\indy}[2]{\index{\MakeLowercase{#1}}\textbf{#2}}
 \DeclareDocumentCommand \indy { o m } {%
   \IfNoValueTF {#1} {%
-    \lowercase{\def\temp{#2}}
-    \expandafter\index\expandafter{\temp}
-    \textbf{#2}
+    \lowercase{\def\temp{#2}}%
+    %\expandafter\index\expandafter{\temp}
+    \index{\temp}%
+    \textbf{#2}\xspace%
     %\index{\MakeLowercase{#1}}\textbf{#1}%
   }{%
-    \lowercase{\def\temp{#1}}
-    \expandafter\index\expandafter{\temp}
-    \textbf{#2}
+    \lowercase{\def\temp{#1}}%
+    %\expandafter\index\expandafter{\temp}
+    \index{\temp}%
+    \textbf{#2}\xspace%
     %\index{\MakeLowercase{#1}}\textbf{#2}%
   }%
 }
+\DeclareDocumentCommand \indx { m } {%
+    \lowercase{\def\temp{#1}}%
+    \index{\temp}%
+}
 
 
-\DeclareRobustCommand{\STR}{\index{strength!STR}\textbf{STR}}
-\DeclareRobustCommand{\INT}{\index{intelligence!INT}\textbf{INT}}
-\DeclareRobustCommand{\PER}{\index{perception!PER}\textbf{PER}}
-\DeclareRobustCommand{\CSE}{\index{common sense!CSE}\textbf{CSE}}
-\DeclareRobustCommand{\HEA}{\index{health!HEA}\textbf{HEA}}
-\DeclareRobustCommand{\AGI}{\index{agility!AGI}\textbf{AGI}}
-\DeclareRobustCommand{\PWR}{\index{power!PWR}\textbf{PWR}}
-\DeclareRobustCommand{\COM}{\index{comliness!COM}\textbf{COM}}
-\DeclareRobustCommand{\WIL}{\index{willpower!WIL}\textbf{WIL}}
-%\DeclareRobustCommand{\}{\index{!}\textbf{} }
-\DeclareRobustCommand{\CDV}{\index{combat defense!CDV}\textbf{CDV}}
-\DeclareRobustCommand{\CM}{\index{combat modifier!CM}\textbf{CM}}
-\DeclareRobustCommand{\GDV}{\index{grapple defense!GDV}\textbf{GDV}}
-\DeclareRobustCommand{\GM}{\index{grapple modifier!GM}\textbf{GM}}
-\DeclareRobustCommand{\MDV}{\index{missile defense!MDV}\textbf{MDV}}
-\DeclareRobustCommand{\MM}{\index{missile modifier!MM}\textbf{MM}}
-\DeclareRobustCommand{\DP}{\index{damage points!DP}\textbf{DP}}
-\DeclareRobustCommand{\EP}{\index{experience points!EP}\textbf{EP}}
-\DeclareRobustCommand{\DU}{\index{divine units!DU}\textbf{DU}}
-\DeclareRobustCommand{\EU}{\index{elemential units!EU}\textbf{EU}}
-\DeclareRobustCommand{\LF}{\index{life force!LF}\textbf{LF}}
+\DeclareRobustCommand{\STR}{\indy[strength!STR]{STR}}
+\DeclareRobustCommand{\INT}{\indy[intelligence!INT]{INT}}
+\DeclareRobustCommand{\PER}{\indy[perception!PER]{PER}}
+\DeclareRobustCommand{\CSE}{\indy[common sense!CSE]{CSE}}
+\DeclareRobustCommand{\HEA}{\indy[health!HEA]{HEA}}
+\DeclareRobustCommand{\AGI}{\indy[agility!AGI]{AGI}}
+\DeclareRobustCommand{\PWR}{\indy[power!PWR]{PWR}}
+\DeclareRobustCommand{\COM}{\indy[comliness!COM]{COM}}
+\DeclareRobustCommand{\WIL}{\indy[willpower!WIL]{WIL}}
+\DeclareRobustCommand{\CDV}{\indy[combat defense!CDV]{CDV}}
+\DeclareRobustCommand{\CM}{\indy[combat modifier!CM]{CM}}
+\DeclareRobustCommand{\GDV}{\indy[grapple defense!GDV]{GDV}}
+\DeclareRobustCommand{\GM}{\indy[grapple modifier!GM]{GM}}
+\DeclareRobustCommand{\MDV}{\indy[missile defense!MDV]{MDV}}
+\DeclareRobustCommand{\MM}{\indy[missile modifier!MM]{MM}}
+\DeclareRobustCommand{\DP}{\indy[damage points!DP]{DP}}
+\DeclareRobustCommand{\EP}{\indy[experience points!EP]{EP}}
+\DeclareRobustCommand{\DU}{\indy[divine units!DU]{DU}}
+\DeclareRobustCommand{\EU}{\indy[elemential units!EU]{EU}}
+\DeclareRobustCommand{\LF}{\indy[life force!LF]{LF}}
+\DeclareRobustCommand{\LOS}{\indy[line of sight!LOS]{LOS}}
 
 \newcommand{\newacronymidx}[4][]{
     \newacronym{#2}{#3}{#4}
