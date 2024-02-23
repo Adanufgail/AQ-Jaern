@@ -4,7 +4,11 @@
 
 \usepackage{comment}
 
+\usepackage{cprotectinside}
+\usepackage{ulem}
+
 \usepackage{parskip}
+%\setlength{\parindent}{0pt}
 \setlength{\parindent}{0pt}
 
 \usepackage{geometry}
@@ -21,13 +25,13 @@
 \usepackage[sfdefault]{roboto}
 \usepackage[most]{tcolorbox}
 \tcbuselibrary{breakable}
+\tcbuselibrary{skins}
 \usepackage{booktabs}
 \usepackage{xtab}
 \usepackage{makecell}
 \usepackage{wrapfig}
 
 \usepackage{array,ragged2e}
-\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
 
 \usepackage{titlesec}
 
@@ -35,31 +39,56 @@
 
 \usepackage{xparse}
 
+\usepackage{ifthen}
+
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+
 \def\defcolwidth{0.6cm}
 \def\aq{\textbf{Adventure Quest }}
 
 \setcounter{secnumdepth}{5}
 
-%\DeclareRobustCommand{\indy}[2]{\index{\MakeLowercase{#1}}\textbf{#2}}
 \DeclareDocumentCommand \indy { o m } {%
   \IfNoValueTF {#1} {%
     \lowercase{\def\temp{#2}}%
-    %\expandafter\index\expandafter{\temp}
+    %\def\temp{#2}%
     \index{\temp}%
     \textbf{#2}\xspace%
-    %\index{\MakeLowercase{#1}}\textbf{#1}%
   }{%
     \lowercase{\def\temp{#1}}%
-    %\expandafter\index\expandafter{\temp}
+    %\def\temp{#1}%
     \index{\temp}%
     \textbf{#2}\xspace%
-    %\index{\MakeLowercase{#1}}\textbf{#2}%
   }%
 }
+
 \DeclareDocumentCommand \indx { m } {%
     \lowercase{\def\temp{#1}}%
     \index{\temp}%
 }
+
+\newcommand{\bhead}[1]{\thead{\textbf{#1}}}
+%\newcommand{\defnum}[1]{\underline{\textbf{#1}}}
+\newcommand{\defnum}[1]{\uline{\textbf{#1}}}
+\newcommand{\mets}[4]{%
+  \ifthenelse{\equal{#2}{}}{%
+    \defnum{#1 mets} (\textit{#3 mi or #4 KM})%
+  }%
+  {%
+    \defnum{#1 mets} per #2 (\textit{#3 mi or #4 KM})%
+  }
+}
+
+\newcommand{\chref}[1]{\textbf{Chapter \ref{#1}: \nameref{#1}}}
+%\textbf{Chapter \ref{ch:jaern-humanoids}: \nameref{ch:jaern-humanoids}}
+
+\setlength\intextsep{0pt}
+
+\newlength{\doublemulticol}
+\setlength{\doublemulticol}{0.25cm}
+
+\setlength{\multicolsep}{0pt}%
 
 
 \DeclareRobustCommand{\STR}{\indy[strength!STR]{STR}}
@@ -71,6 +100,7 @@
 \DeclareRobustCommand{\PWR}{\indy[power!PWR]{PWR}}
 \DeclareRobustCommand{\COM}{\indy[comliness!COM]{COM}}
 \DeclareRobustCommand{\WIL}{\indy[willpower!WIL]{WIL}}
+\DeclareRobustCommand{\DV}{\indy[weapon!defensive value]{DV}}
 \DeclareRobustCommand{\CDV}{\indy[combat defense!CDV]{CDV}}
 \DeclareRobustCommand{\CM}{\indy[combat modifier!CM]{CM}}
 \DeclareRobustCommand{\GDV}{\indy[grapple defense!GDV]{GDV}}
@@ -83,6 +113,9 @@
 \DeclareRobustCommand{\EU}{\indy[elemential units!EU]{EU}}
 \DeclareRobustCommand{\LF}{\indy[life force!LF]{LF}}
 \DeclareRobustCommand{\LOS}{\indy[line of sight!LOS]{LOS}}
+\DeclareRobustCommand{\RC}{\indy[resistance check!RC]{RC}}
+\DeclareRobustCommand{\DI}{\indy[divine intervention!DI]{DI}}
+\DeclareRobustCommand{\ADV}{\indy[Artillery Defense Value!ADV]{ADV}}
 
 \newcommand{\newacronymidx}[4][]{
     \newacronym{#2}{#3}{#4}
@@ -97,7 +130,7 @@
   toprule=0mm,%
   bottomrule=0mm,%
   rounded corners,%
-  top=1pt,%
+  top=0pt,%
   bottom=0pt,%
   left=2pt,%
   right=2pt,%
@@ -115,7 +148,7 @@
   toprule=0mm,%
   bottomrule=0mm,%
   rounded corners,%
-  top=1pt,%
+  top=0pt,%
   bottom=0pt,%
   left=2pt,%
   right=2pt,%
@@ -133,7 +166,7 @@
   toprule=0mm,%
   bottomrule=0mm,%
   rounded corners,%
-  top=1pt,%
+  top=0pt,%
   bottom=0pt,%
   left=2pt,%
   right=2pt,%
@@ -143,11 +176,11 @@
   colback=white!50!#1,%
   colupper=black,%
   halign=center,%
-  }{\textbf{\strut{Page #2}}}
+  }{\strut{\textbf{Page \pageref{#2}}}}
 
 \newtcolorbox{normbox}[1][]{%
   boxrule=0pt,%
-  enhanced,
+  enhanced,%
   title=\textbf{#1},%
   left=2pt,%
   right=2pt,%
@@ -155,12 +188,34 @@
   bottom=1pt,%
   boxsep=2pt,%
   boxrule=0.6pt,%
+  before skip=0.5\baselineskip,%
   lefttitle=2mm,%
   righttitle=2mm,
   toptitle=1mm,%
   bottomtitle=1mm,%
   minipage boxed title,%
   hbox,%
+  colbacktitle=Navy,%
+  colback=white,%
+  }
+
+\newtcolorbox{normboxw}[1][]{%
+  boxrule=0pt,%
+  enhanced,%
+  title=\textbf{#1},%
+  left=2pt,%
+  right=2pt,%
+  top=2pt,%
+  bottom=1pt,%
+  boxsep=2pt,%
+  boxrule=0.6pt,%
+  before skip=0.5\baselineskip,%
+  lefttitle=2mm,%
+  righttitle=2mm,
+  toptitle=1mm,%
+  bottomtitle=1mm,%
+  minipage boxed title,%
+  width=\columnwidth,%
   colbacktitle=Navy,%
   colback=white,%
   }
@@ -183,13 +238,17 @@
   %width=0.5\linewidth,%
   minipage boxed title,%
   %attach boxed title to top,%
+  colbacktitle=Navy,%
+  colback=white,%
   }
+
+\hyphenpenalty=5000
 
 
 \begin{document}
 \enlargethispage{1.5\baselineskip}
-\raggedright
-%\setlength{\multicolsep}{6.0pt plus 2.0pt minus 1.5pt}%
+\titleformat{\chapter}[display] {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}   
+\titlespacing*{\chapter}{0pt}{20pt}{40pt}
 \titlespacing\section{0pt}{6pt}{6pt}
 \titlespacing\subsection{0pt}{6pt }{6pt}
 \titlespacing\subsubsection{0pt}{6pt}{6pt}

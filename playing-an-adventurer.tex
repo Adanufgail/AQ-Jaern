@@ -1,9 +1,10 @@
 \chapter{Playing an Adventurer}
 \label{ch:play-adventurer}
 \index{adventurer!playing}
-An \aq game session revolves about the interaction between you, other players, actors, and your \indy{Game Master} as events unfold during play. This chapter presents the rules you and the GM need for a smooth running game. Once learned, you'll find them so simple and natural that they fade into the background, allowing everyone to immerse themselves in the excitement of the adventure without being distracted by constantly consulting tables and charts.
 \setlength{\columnsep}{\defcolwidth}
 \begin{multicols*}{2}
+An \aq game session revolves about the interaction between you, other players, actors, and your \indy{Game Master} as events unfold during play. This chapter presents the rules you and the GM need for a smooth running game. Once learned, you'll find them so simple and natural that they fade into the background, allowing everyone to immerse themselves in the excitement of the adventure without being distracted by constantly consulting tables and charts.
+%\vspace{5pt}
 \section{Your job as a player}
 You must bear one thought in mind when playing Adventure Quest: your GM has gone to much effort to learn and adjudicate the adventure. All their decisions are final and
 should not be challenged during the game. If you disagree with any of these decisions, take the GM aside \textbf{after} the game and talk it over. They may have acted on information you don't know, or slightly changed some rules to make the game  different, more exciting, or less predictable. Your GM is under no obligation to explain any result, as the explanation could reveal information that your adventurer should not have.
@@ -14,6 +15,7 @@ Dice with different numbers of sides are required to play AQ. At a minimum you'l
 place. Percentile rolls (\tcdieroll{d100}) can be rolled with \tcdieroll{2d10} \tcdieroll{2d20}; one die represents the tens digit and the other the ones digit. A \tcdieroll{d100} and a \tcdieroll{d30} are commercially available, but they are not needed to play AQ. Since it is quicker to roll three dice at once rather
 than the same die three times, expand your dice collection as needed.\\
 \textbf{Adopting these simple conventions will prevent confusion and misunderstandings about dice rolls:}
+\setlist{nosep}
 \begin{enumerate}[leftmargin=12pt]
 \item Make sure someone witnesses all rolls.
 \item Don't roll dice until the GM asks you.
@@ -33,22 +35,22 @@ companions procure passage back to your home city of Rougtero. Four uneventful d
 For most of an adventure session you will play in near real time. The GM freely accepts actions stated by the players and gives the results of those actions. This mode of play is suspended only when the GM decides to summarize a long time period or when melee is initiated.
 \subsection{Melee Actions Mode}
 \indx{mode!melee actions}\indx{playing!melee actions}
-When adventurers, creatures and actors come into conflict with each other, the GM places the game into melee mode. Time is broken down into 4 second combat rounds. Each round, the GM hands out information about the \indy{combat}, asks for adventurer actions, and reports the results. This cycle is repeated until the melee ends, at which point the GM switches to \indy{Free Action Mode}.
+When adventurers, creatures and actors come into conflict with each other, the GM places the game into melee mode. Time is broken down into 4 second combat rounds. Each round, the GM hands out information about the \indy[combat|see{melee}]{combat}, asks for adventurer actions, and reports the results. This cycle is repeated until the melee ends, at which point the GM switches to \indy{Free Action Mode}.
 \section{Encounters and Combat}
 \indx{encounter}
-When adventurers encounter an actor, a group of actors, or creatures, combat may be the only alternative. The GM accepts and resolves melee actions as follows:
+When adventurers encounter an actor, a group of actors, or creatures, combat may be the only alternative. The GM accepts and resolves \indy{melee} actions as follows:
 \subsection{Distance}
-\indx{combat!distance}
+\indx{melee!distance}
 When the opportunity exists for adventurers to encounter other creatures or actors, your GM will determine at what distance you are from them. Your adventurer must have \indy{Line of Sight}, i.e., \textit{an unobstructed viewing path}, to see their opponents. Indoors or underground this generally means they must be in the same room or corridor. Outdoors, the prevailing light conditions, the type of plant life, and the general terrain are all factors that the GM must considered.
 \subsection{Order of Melee}
-\indx{melee!order}\indx{combat!order}
-A \indx{combat!round}\indy{Round} is an exchange of blows between two or more opponents. A round lasts \tcdefine{4 seconds} (15 rounds per minute) and is the time unit of combat. The following \indy{Order of Actions} imposes order on an inherently chaotic situation:
+\indx{melee!order}
+A \indy{Round} is an exchange of blows between two or more opponents. A round lasts \tcdefine{4 seconds} (15 rounds per minute) and is the time unit of combat. The following \indy{Order of Actions} imposes order on an inherently chaotic situation:
 \begin{enumerate}[leftmargin=12pt]
-\item Determine \indy{initiative}.
-\item Each group, in order of initiative, gets an \indy{Action Phase}.
+\item Determine \indx{melee!initiative}\indy{initiative}.
+\item Each group, in order of initiative, gets an \indx{melee!action phase}\indy{Action Phase}.
 \begin{enumerate}[leftmargin=12pt]
-\item \indx{combat!information questions}\indy[melee!informational questions]{Informational questions}
-\item \indx{combat!action preparation}\indy[melee!action preparation]{Action preparation}
+\item \indy[melee!informational questions]{Informational questions}
+\item \indy[melee!action preparation]{Action preparation}
 \item \indy[melee!actions]{Statement of actions}
 \item \indy[melee!results]{Results of actions}
 \end{enumerate}
@@ -57,31 +59,28 @@ A \indx{combat!round}\indy{Round} is an exchange of blows between two or more op
 \subsubsection{Initiative}
 \indy{Initiative} indicates the order in which each side plans and performs its actions. A representative from each group rolls \tcdieroll{2d6} and the results determine the order, highest to lowest, in which actions are taken. There is no simultaneous combat. If players are involved in one group, they win ties. Otherwise if a tie results, each side must roll again until one wins.
 
-For each \textbf{Round} a side does not win initiative, it gets to add a cumulative \textbf{+1} to its roll for each succeeding roll. When a side wins initiative, it gets no such bonus the next round.
+For each \indy{Round} a side does not win initiative, it gets to add a cumulative \defnum{+1} to its roll for each succeeding roll. When a side wins initiative, it gets no such bonus the next round.
 
 There may be more than two groups of initiative, in which case the rounds occur in descending order of initiative. Additionally, groups may merge or split during combat (i.e. a character is revealed to be an impostor or attacks an innocent bystander). Any changes to initiative groups take effect on the next round. 
-\subsubsection{Informational Questions}
+\subsubsection{Informational Questions}\indx{melee!informational questions}
 The GM starts the adventurers' action phase by taking questions from the players about the current situation and answering them according to the adventurers' knowledge at the time. Players may talk with each other about the situation, about playing style and rules questions, but MAY NOT tell each other what they plan to do or exchange information between adventurers. When all questions have been answered, the GM continues.
-\subsubsection{Action Preparation}
+\subsubsection{Action Preparation}\indx{melee!action preparation}
 The GM asks all players to prepare actions. Each player must decide what one action their adventurer will do during the upcoming round. Players MAY NOT talk with each other during this time. If play becomes very intense or important, the GM may ask for actions in writing. When all actions are ready, play continues.
-\subsubsection{Statement of Actions}
+\subsubsection{Statement of Actions}\indx{melee!actions}
 One at a time, the GM asks each player what their adventurer's action is for the round. Since these actions are occurring simultaneously, the order of the call is unimportant. As each action is revealed, the GM asks the player to make any needed rolls. The player should roll the requested dice and announce the results (including any modifiers). The GM records any results during this phase.
-\subsubsection{Results of Actions}
+\subsubsection{Results of Actions}\indx{melee!results}
 After all actions have been stated and resolved, the GM announces the results of the Action Phase. This includes creatures or people falling to the ground, incidental movement, noise, or visions. The players may ask questions here if the results are unclear. (Remember, sometimes this is intentional and the GM may refuse to answer!)
-\subsubsection{Outcome Phase}
+\subsubsection{Outcome Phase}\indx{melee!outcome}
 After all combatants have had their Action Phase, the GM also announces the outcome of any occurrences that are not the direct result of adventurers, actors, or creatures involved in the combat. This includes things like large falling objects, timed explosions, natural disasters, collapsing buildings and disintegrating planets.
-\subsection{Surprise}
+\subsection{Surprise}\indx{melee!surprise}
 When two groups of adventures, actors or creatures first meet, one group may not notice the other immediately. If this is true, and the non-surprised group attempts a combat
 action, the GM will change to Free Action mode allow them a Free Round to perform actions. The GM will continue to allow the Free Rounds until the other party notices their presence. Then the GM will start normal combat.
 \section{Actions}
 Of course, there are many different actions an adventurer may take during a round, but usually they fall into a few different classes. Each of these is described below to give you an idea of what your adventurer may do during melee.
-\subsection{Movement}
-\setlength{\columnsep}{0.25cm}
-\begin{multicols*}{2}
-It is often necessary to maneuver during combat. Each adventurer has a Movement Rate that is the distance they may move in a round when not in direct melee. This distance may be modified by your GM according to terrain, obstacles, or circumstances.
-
-If you wish to make any attacks or cast spells, you can only move 1/4 your movement rate that round. You can ready weapons, talk, observe the situation or ready actions while moving.
-\begin{normbox}[Armor Move Restrictions]
+\subsection{Movement}\indx{melee!movement}
+\begin{wrapfigure}[9]{o}[0pt]{4cm}
+\begin{normbox}[Armor Restrictions]
+\small
 \begin{tabular}{@{}l l}
 Armor & Move Rate\\
 Naked & 60'\\
@@ -91,41 +90,47 @@ Chain armor & 30'\\
 Plate mail & 20'\\
 \end{tabular}
 \end{normbox}
+\end{wrapfigure}
 
-\end{multicols*}
-\subsection{Striking}
-When two opponents are within 5 feet of each other, they are normally considered "in melee," trading attacks with intent to harm. To determine if a hand-to-hand attack is successful, the attacker rolls \tcdieroll{1d20}, adds their \textbf{Combat Modifier (CM)}, plus any other appropriate bonuses, to the result, and compares the total to the \textbf{Combat Defense Value (CDV)} of the opponent. The total must equal or exceed the opponent's CDV to hit.
+It is often necessary to maneuver during combat. Each adventurer has a Movement Rate that is the distance they may move in a round when not in direct melee. This distance may be modified by your GM according to terrain, obstacles, or circumstances.
+
+If you wish to make any attacks or cast spells, you can only move 1/4 your movement rate that round. You can ready weapons, talk, observe the situation or ready actions while moving.
+
+\subsection{Striking}\indx{melee!striking}\indx{striking}
+When two opponents are within 5 feet of each other, they are normally considered \indy[melee!in melee]{in melee}, trading attacks with intent to harm. To determine if a hand-to-hand attack is successful, the attacker rolls \tcdieroll{1d20}, adds their \indy{Combat Modifier} (\CM), plus any other appropriate bonuses, to the result, and compares the total to the \indy{Combat Defense Value} (\CDV) of the opponent. The total must equal or exceed the opponent's CDV to hit.
 
 \textit{Valken the Warrior attacks a poor, helpless villager with his once enchanted (+1) long sword. Valken's player rolls a 10 on 1d20. Valken's CM is 1, and the magical sword has a bonus of 1, for a total of 10+1+1 = 12. The poor villager is lying supine on the ground (with Valken's foot on his stomach), so it has a CDV of 5. Valken's player announces he has struck CDV 12. Since 12 is greater than 5, Valken strikes the orc with his long sword. The GM tells Valken's player that he has struck and directs him to roll damage. The player rolls 1d10 (for long sword damage), getting a 5. He adds 1 (for the magic sword) and announces that Valken has done 6 points of damage. At the end of the round, since the poor villager only started with 4 DP, the GM announces the he is slain.}
-\subsubsection{Impaling}
-Impaling our opponent with your weapon is a style of attack that uses the same attack roll and defense value as striking, but can cause considerably more damage. Charging an opponent with a set weapon or setting a weapon and allowing an opponent to run themselves through are both examples of impaling. Impaling is only effective when the target or the impaler have been moving at their maximum movement rate for at least one full round and the other is stationary or moving closer. Impaling is accomplished with  standard roll to strike, but modifiers and skills are not applicable.
-\subsection{Hitting}
-Missile weapons are used very much like hand-to-hand weapons, except you use the attacker's Missile Modifier (MM) and the defender's Missile Defense Value (MDV). If the attacker's \tcdieroll{1d20} roll plus their MM, plus other bonuses equal or exceeds the defender's MDV, they have hit and the player rolls missile damage.
-\subsection{Critical Hits and Misses}
-When your adventurer is attempting to attack in any way, examine the result of the attack roll before any bonuses or mods are added. If the die roll is \textbf{one}, it is an \textbf{automatic miss}, no hit happens, no grapple succeeds, no damage is
-done. If the die roll is \textbf{twenty}, it is considered a \textbf{Critical Hit}. The GM will ask you to roll percentiles (\tcdieroll{2d10} with one die specified as the tens' digit and one die as the ones' digit) to determine its severity. You can cross reference the appropriate table for your attack type in \textbf{Appendix \ref{ap:important-tables} on \tcpage{\pageref{critical-hits}}}
-\subsection{Grappling}
-Whenever an adventurer is within melee range of an opponent, they may attempt to grapple rather than strike at the opponent with a weapon. The adventurer must drop anything they are holding at the beginning of the round so that both hands are free. Shields take a full round to drop, your adventurer's arm is in a couple of straps.
+\subsubsection{Impaling}\indx{melee!impaling}\indx{weapon!impaling}
+\indy{Impaling} our opponent with your weapon is a style of attack that uses the same attack roll and defense value as striking, but can cause considerably more damage. Charging an opponent with a set weapon or setting a weapon and allowing an opponent to run themselves through are both examples of impaling. Impaling is only effective when the target or the impaler have been moving at their \defnum{maximum movement rate for at least one full round} and the other is stationary or moving closer. Impaling is accomplished with  standard roll to strike, but modifiers and skills are not applicable.
+\subsection{Hitting}\indx{melee!hitting}
+Missile weapons are used very much like hand-to-hand weapons, except you use the attacker's \indy{Missile Modifier} (\MM) and the defender's \indy{Missile Defense Value} (\MDV). If the attacker's \tcdieroll{1d20} roll plus their MM, plus other bonuses equal or exceeds the defender's MDV, they have hit and the player rolls missile damage.
+\subsection{Critical Hits and Misses}\indx{melee!critical hits}\indx{critical hits}
+When your adventurer is attempting to attack in any way, examine the result of the attack roll before any bonuses or mods are added. If the die roll is \defnum{1}, it is an \indx{melee!automatic miss}\indy{automatic miss}, no hit happens, no grapple succeeds, no damage is
+done. If the die roll is \defnum{20}, it is considered a \indx{melee!critical hit}\indy{Critical Hit}. The GM will ask you to roll percentiles (\tcdieroll{2d10} with one die specified as the tens' digit and one die as the ones' digit) to determine its severity. You can cross reference the appropriate table for your attack type in \textbf{Appendix \ref{ap:important-tables} on \tcpage{critical-hits}}
+\subsection{Grappling}\indx{melee!grappling}
+Whenever an adventurer is within melee range of an opponent, they may attempt to \indy{grapple} rather than strike at the opponent with a weapon. The adventurer must drop anything they are holding at the beginning of the round so that both hands are free. \indy{Shields} take a full round to drop, your adventurer's arm is in a couple of straps.
 
-The player states which grappling option will be used (hold or throw), then rolls \tcdieroll{1d20} and adds the adventurer's Grapple Modifier (GM). If the total is equal to or greater than the opponent's \textbf{Grapple Defense Value (GDV)}, the grapple option succeeds, the defender is held, or thrown. If the grapple fails the attacker and defender are still grappling, and must wait until the next round for another attempt.
+The player states which grappling option will be used (hold or throw), then rolls \tcdieroll{1d20} and adds the adventurer's \indy{Grapple Modifier} (\GM). If the total is equal to or greater than the opponent's \indy{Grapple Defense Value} (\GDV), the grapple option succeeds, the defender is held, or thrown. If the grapple fails the attacker and defender are still grappling, and must wait until the next round for another attempt.
 
 All this happens during the attacker's portion of the round, so the defender may become the attacker in his portion of the round. Once an adventurer is grappling he may not withdraw unless he is not held, and has the initiative.
-\subsubsection{Hold}
-The only action a held person may take is to attempt to break the hold. During their round, the held combatant may make a \tcdieroll{4d6} check vs. \textbf{STR}. Each additional person holding the combatant adds \tcdieroll{1d6} to this STR check. If the check succeeds, they has broken the attacker's grasp and may take other actions in their latter rounds. If it fails, every subsequent attempt is made adding an additional die to the STR check.
-\subsubsection{Throw}
-When a throw attempt succeeds, the thrower may determine the direction of the throw. However, the distance thrown and what, if any, damage or other results occur must be adjudicated by the GM at the time of the throw.
-\subsection{Withdrawal from Melee and Grappling}
-To successfully withdraw from melee, the adventurer must not be held when it is his round to take an action. It will take one round to get up from the ground, so their opponent may have further opportunities to grapple before they can escape. Even if an adventurer has got up and run from a grapple, their opponent is free to chase and tackle them.
-\subsection{Multiple Combatants}
-Situations occur where more than one person wants to strike or grapple the same target. If the target and the attackers are relatively the same size, no more than four may attack the same target. A standing target backed up against a wall may only be attacked by two combatants; if in a doorway or tight corridor, only one. If more than the allowed number attempt to attack a single target, all attackers must make a check of \tcdieroll{3d6}, plus \tcdieroll{1d6} for each extra attacker, vs. their \textbf{AGI} or trip and fall to the floor, losing their attack that round.
+\subsubsection{Hold}\indx{melee!hold}
+The only action a held person may take is to attempt to break the \indy{hold}. During their round, the held combatant may make a \tcdieroll{4d6} check vs. \STR. Each additional person holding the combatant adds \tcdieroll{1d6} to this STR check. If the check succeeds, they has broken the attacker's grasp and may take other actions in their latter rounds. If it fails, every subsequent attempt is made adding \defnum{an additional die} to the STR check.
+\subsubsection{Throw}\indx{melee!throw}
+When a \indy{throw} attempt succeeds, the thrower may determine the direction of the throw. However, the distance thrown and what, if any, damage or other results occur must be adjudicated by the GM at the time of the throw.
+\subsection{Withdrawal from Melee and Grappling}\indx{melee!withdrawal}
+To successfully \indy{withdraw} from melee, the adventurer must not be held when it is his round to take an action. It will take one round to get up from the ground, so their opponent may have further opportunities to grapple before they can escape. Even if an adventurer has got up and run from a grapple, their opponent is free to chase and tackle them.
+\subsection{Multiple Combatants}\indx{melee!multiple combatants}
+Situations occur where more than one person wants to strike or grapple the same target. If the target and the attackers are relatively the same size, no more than \defnum{four} may attack the same target. A standing target backed up against a wall may only be attacked by \defnum{two} combatants; if in a doorway or tight corridor, only \defnum{one}. If more than the allowed number attempt to attack a single target, all attackers must make a check of \tcdieroll{3d6}, plus \tcdieroll{1d6} for each extra attacker, vs. their \AGI or trip and fall to the floor, losing their attack that round.
 
 A possible exception to this might arise if adventurers behind the attackers want to thrust polearms or spears at the target between the attackers. This might be perfectly feasible; it is up the GM to decide based on the circumstances.
-\subsection{Shooting into Melee}
+\subsection{Shooting into Melee}\indx{melee!shooting into}\indx{shooting}
 Shooting a missile weapon at an opponent who is in melee with adventurers from your party is a dangerous and possibly fatal action. If you attempt to hit an opponent in
-melee, and miss, the GM will determine if any others in the combat are potential targets. If so, they will ask you to roll to hit the alternate target, damaging them if you succeed. Shooting your friends in the back is a sure way to earn a quick and violent death.
-\subsection{Other Common Actions}
+melee, and miss, the GM will determine if any others in the combat are potential targets. If so, they will ask you to roll to hit the alternate target, damaging them if you succeed. \textit{Shooting your friends in the back is a good way to earn a quick and violent death.}
+\subsection{Other Common Actions}\indx{melee!common action}
 It is impossible to list all the actions that might occur during an Action Phase. During play, the GM must adjudicate any unusual actions and assign duration for them. Some common actions and their duration in rounds are given below:
 \begin{normbox}[Common Action Duration]
+\indx{melee!action durations}
+\small
 \begin{tabular}{l l}
 \textbf{Action} & \textbf{Duration}\\
 Climb 10' of rope & 2\\
@@ -145,32 +150,33 @@ Switching weapons & 1\\
 \end{tabular}
 \end{normbox}
 \section{Using Skills}
-When your adventurer must perform a specific task during play, success or failure is determined by a skill check or a stat check. Having an applicable skill gives them a better chance of succeeding, and the higher the skill value, the greater the chance for success.
+When your adventurer must perform a specific task during play, success or failure is determined by a \indy{skill} check or a stat check. Having an applicable skill gives them a better chance of succeeding, and the higher the skill value, the greater the chance for success.
 
 To check skill use, your Game Master will ask you to roll some \tcdieroll{d6}. If you roll \textbf{your adventurer's skill value or less}, they have successfully applied that skill.
 
 Simple tasks require a roll equal to or below your adventurer's skill value on \tcdieroll{1d6}; moderately difficult tasks require a roll of \tcdieroll{2d6}, and very difficult tasks \tcdieroll{3d6} or more. Remember, your GM is the final authority on needed rolls and can and will apply appropriate modifiers.
 \section{Defaulting a skill}
-If your adventurer attempts to use a skill they don't have, or fails at an acquired skill, they may still try, but the check is against that skill's associated stat, this is called \textbf{defaulting}. The total number of \tcdieroll{d6} to be rolled is that given by the GM, plus the number of dice shown as extra dice for that skill. Restricted skills are so complex that aside from the fact that they must be purchased from the GM, they also may not be attempted by those who have not been taught the skill. Also some skills are based on acquired knowledge, and can not be defaulted. An entry of "res" or "non" in the extra dice column indicates that skill can not be defaulted.
+If your adventurer attempts to use a skill they don't have, or fails at an acquired skill, they may still try, but the check is against that skill's associated stat, this is called \indx{skill!defaulting}\indy{defaulting}. The total number of \tcdieroll{d6} to be rolled is that given by the GM, plus the number of dice shown as extra dice for that skill. Restricted skills are so complex that aside from the fact that they must be purchased from the GM, they also may not be attempted by those who have not been taught the skill. Also some skills are based on acquired knowledge, and can not be defaulted. An entry of \defnum{res} or \defnum{non} in the extra dice column indicates that skill can not be defaulted.
 
 \textit{Alene has bought mountain climbing up to rank 8, and has an AGI of 15. While adventuring she must climb a steep rock face. The rock is damp from rain and somewhat
 slippery, so the GM asks Alene's player to roll 8 or less on 2d6. The player rolls a 7, so the skill check succeeds.}
 
 \textit{Let's say the player rolled a 10, meaning the skill check failed. The GM allows another chance, using mountain climbing's associated stat (AGI). The player must roll Alene's AGI or less on 4d6 (the 2 dictated by the GM, plus 2 from the extra dice column opposite mountain climbing). The result is a 12, meaning success this time.}
 \section{Resistance Checks}
-\textbf{Resistance Checks} (or \textbf{RC}) are a measure of your adventurer's resistance to physical and spell effects. When you are subject to such an effect, your GM will state what the effect is, which stat to check against, and how strong the effect is by announcing how many dice you need to roll to resist that effect. Roll that many dice, and if you roll equal to or lower than your rank in the appropriate stat, you succeed the resistance check and the effect is weakened or negated.
-\subsection{Armor Effects of Resistance Checks}
-Different types of armor can diminish your ability to resist certain magical and physical effects. Leather armor restricts mobility, automatically adding \tcdieroll{1d6} to any \textbf{RC (Resistance Check)} against \textbf{AGI}. Chain mail has, in addition, a large mass of metal that attracts magical energies. An adventurer in chain must add \tcdieroll{1d6} to any RC against \textbf{AGI} and \textbf{PWR}. A set of plate mail is extremely heavy and takes considerable strength to wear. An adventurer in plate mail must add \tcdieroll{1d6} to any RC against \textbf{AGI}, \textbf{PWR}, or \textbf{STR}.
-\section{Dying and Falling Unconscious}
-If you fight you just might get hurt! When an adventurer is damaged they must temporarily subtract that number of damage points from his damage point total. If the total goes below zero, the adventurer dies immediately. (Since all actions are simultaneous in an action phase, a cure in the same round may prevent the total from going below zero).
-If an adventurer's DP total is between \textbf{0} and \textbf{5}, the
-player must roll their adventurer's current \textbf{DP} total (after damage) or less on \tcdieroll{1d6} to remain conscious. If they fail this roll, the adventurer immediately falls \textbf{unconscious}. When (and if) an unconscious adventurer recovers damage points through natural or magical healing, they may reroll to wake up. (This is automatic once 6 DP is reached).
-\section{Stressing Stats}
-If desired, adventurers can push themselves beyond the normal limits of their stats by \textbf{stressing}. This means that one point of the stressed stat is expended \textbf{permanently} to gain some effect. A single stat may not be stressed more than once in a melee, and two stats may not be stressed at the same time. Stressing may be done in any playing mode, but occurs most often during melee and doesn't count as an action. Though the stressed stat can never recover naturally, it can be bought back to its previous rank, or beyond, by spending experience points.
+\indy{Resistance Checks} (or \RC) are a measure of your adventurer's resistance to physical and spell effects. When you are subject to such an effect, your GM will state what the effect is, which stat to check against, and how strong the effect is by announcing how many dice you need to roll to resist that effect. Roll that many dice, and if you roll \defnum{equal to or lower than your \indy{rank}} in the appropriate stat, you succeed the resistance check and the effect is weakened or negated.
+\subsection{Armor Effects of Resistance Checks}\indx{armor}\indx{resistance check!armor}
+Different types of armor can diminish your ability to resist certain magical and physical effects. Leather armor restricts mobility, automatically adding \tcdieroll{1d6} to any \textbf{RC (Resistance Check)} against \AGI. Chain mail has, in addition, a large mass of metal that attracts magical energies. An adventurer in chain must add \tcdieroll{1d6} to any RC against \AGI and \PWR. A set of plate mail is extremely heavy and takes considerable strength to wear. An adventurer in plate mail must add \tcdieroll{1d6} to any RC against \AGI, \PWR, or \STR.
+\section{Dying and Falling Unconscious}\indx{dying}
+If you fight you just might get hurt! When an adventurer is damaged they must temporarily subtract that number of damage points from their damage point total. If the total goes \defnum{below zero}, the adventurer \indy[death]{dies} \defnum{immediately}. (Since all actions are simultaneous in an action phase, a cure in the same round may prevent the total from going below zero).
 
-Stressing can not be used for any skill checks. Even though defaulted skills are rolled against a stat, this is not considered a stat check for the sake of stressing. A defaulted skill roll is a skill attempted without the proper training or knowledge, so no amount of stressing will improve your adventurer's chance of success.
+If an adventurer's DP total is between \defnum{0} and \defnum{5}, the
+player must roll their adventurer's current \DP total (after damage) or less on \tcdieroll{1d6} to remain conscious. If they fail this roll, the adventurer immediately falls \indy{unconscious}. When (and if) an unconscious adventurer recovers damage points through natural or magical healing, they may reroll to wake up. (This is automatic once \defnum{6 DP} is reached).
+\section{Stressing Stats}\indx{statistics!stressing}
+If desired, adventurers can push themselves beyond the normal limits of their stats by \indx{statistics!stressing}\indy{stressing}. This means that one point of the stressed stat is expended \defnum{permanently} to gain some effect. A single stat may not be stressed more than once in a melee, and two stats may not be stressed at the same time. Stressing may be done in any playing mode, but occurs most often during melee and doesn't count as an action. Though the stressed stat can never recover naturally, it can be bought back to its previous rank, or beyond, by spending experience points.
 
-To stress a stat, state to the GM at the beginning of your action which stat your adventurer is stressing. Some stats may be stressed in response to the GM asking for an RC. This table summarizes the results of stressing.
+Stressing can not be used for any \indy[skill!check]{skill checks}. Even though \indy{defaulted} skills are rolled against a stat, this is not considered a stat check for the sake of stressing. A defaulted skill roll is a skill attempted without the proper training or knowledge, so no amount of stressing will improve your adventurer's chance of success.
+
+To stress a stat, state to the GM at the \defnum{beginning} of your action which stat your adventurer is stressing. Some stats may be stressed in response to the GM asking for an RC. This table summarizes the results of stressing.
 \small
 \begin{normbox}[Effects of Stressing]
 \begin{tabular}{@{}l l l l}
@@ -182,7 +188,7 @@ INT & 2d6 &  & \\
 \midrule
 PER & 2d6 &  & \\
 \midrule
-CSE &  &  & \makecell{1 extra\\DI die}\\
+CSE &  &  & \makecell{1 extra\\\indx{divine!intervention}DI die}\\
 \midrule
 HEA & 2d6 & \makecell{+2 rank/\\incant} & \makecell{stay\\conscious}\\
 \midrule
@@ -198,137 +204,151 @@ WIL & 2d6 &  & \\
 \normalsize
 A few of the entries in this table deserve some more
 explanation.
-\subsection{Strength}
-Stressing \textbf{STR} during a combat round means your adventurer is making a heroic effort against their opponent. They gain a +10 modifier to his "to strike" roll and, if they strike successfully, inflicts an additional 10 damage points on their target.
-\subsection{Common Sense}
-When a priest feels deserted by their deity during desperate times, they may elect to set common sense aside and put their faith in being delivered from their predicament by their god. Stressing a point of \textbf{CSE} gives them one extra die when calling forth intervention from their deity. No other background gains this ability.
-\subsection{Power}
-Caught in a deadly situation, a caster may stress one point of \textbf{PWR} to regain 4 lost units, which must be used in the same round of the stress. These units can be elemental or divine units.
-\subsection{Health}
-When near death, the slightest damage can cause your adventurer to black out, leaving them at their opponent's mercy. By an enormous effort of will, they can stay conscious, but this places their body and health at great risk. Stressing one point of \textbf{HEA} allows the adventurer to automatically succeed one unconsciousness check.
+\subsection{Strength}\indx{stressing!strength}
+Stressing \STR during a combat round means your adventurer is making a heroic effort against their opponent. They gain a +10 modifier to his "to strike" roll and, if they strike successfully, inflicts an additional 10 damage points on their target.
+\subsection{Common Sense}\indx{stressing!common sense}
+When a priest feels deserted by their deity during desperate times, they may elect to set common sense aside and put their faith in being delivered from their predicament by their god. Stressing a point of \CSE gives them \defnum{one} extra die when calling forth intervention from their deity. No other background gains this ability.
+\subsection{Power}\indx{stressing!power}
+Caught in a deadly situation, a caster may stress one point of \PWR to regain \defnum{4} lost units, which must be used in the same round of the stress. These units can be elemental or divine units.
+\subsection{Health}\indx{stressing!health}
+When near death, the slightest damage can cause your adventurer to black out, leaving them at their opponent's mercy. By an enormous effort of will, they can stay conscious, but this places their body and health at great risk. Stressing one point of \HEA allows the adventurer to automatically succeed one unconsciousness check.
 
-Nomads may stress one point of health to add two ranks to any one incant which they are preparing. They can only do this once per day.
-\subsection{Comeliness}
-Unfortunately, physical attractiveness is not something that can be improved in times of stress. If anything, the opposite is likely to occur. Stressing your adventurer's \textbf{COM} doesn't result in any perceptible boon, and may actually make the adventurer seem more frantic to his companions.
-\section{Weapons and Their Effects}
+\indy[nomad]{Nomads} may stress one point of \HEA to add \defnum{two ranks} to any one incant which they are preparing. They can only do this once per day.
+\subsection{Comeliness}\indx{stressing!comeliness}
+Unfortunately, physical attractiveness is not something that can be improved in times of stress. If anything, the opposite is likely to occur. Stressing your adventurer's \COM doesn't result in any perceptible boon, and may actually make the adventurer seem more frantic to his companions.
+\section{Weapons and Their Effects}\indx{weapon!effects}
 Adventurers may employ many different weapons in combat. Each weapon is unique in the amount of damage it can do and who may use it.
-\textbf{Weapon Type} is the broad classification of each
+\indy[weapon!type]{Weapon Type} is the broad classification of each
 weapon as Edged, Pointed, Blunt, or Defensive. If a critical hit is rolled, these tell you which Critical Hit Table to consult. No criticals are possible with a defensive device.
 
-STR is the minimum STR value required to effectively use the weapon. \textbf{DV} column is the Defensive Value adjustment for that particular weapon; this value is added to the adventurer's \textbf{CDV} and \textbf{GDV} when that weapon is in use. Note that one-handed weapons are worth 1 DV, two-handed weapons are worth 2 DV, and most defensive weapons are worth 3 DV. Two-handed weapons (those listed with a DV of 2) must be used two-handed.
+\STR is the minimum STR value required to effectively use the weapon. \DV column is the Defensive Value adjustment for that particular weapon; this value is added to the adventurer's \CDV and \GDV when that weapon is in use. Note that \indy[weapon!one-handed]{one-handed weapons} are worth \defnum{1 DV}, \indy[weapon!two-handed]{two-handed weapons} are worth \defnum{2 DV}, and most defensive weapons are worth \defnum{3 DV}. Two-handed weapons (those listed with a DV of 2) must be used two-handed.
 
-The value in the \textbf{Use Rate} column specifies how many rounds are needed to use and then ready a weapon, already in hand, for another attack. \textbf{Strike Damage} is the damage inflicted on a successful "to strike" roll. \textbf{Thrown Damage} is the damage done on a successful "to hit" roll, or when a weapon is hurled by hand. \textbf{Impale Damage} is the damage potential if the weapon is set and braced against a charge, a falling body, etc. \textbf{Max Range} is the distance, in feet, that the weapon can be fired or hurled.
+\indx{weapon!damage}The value in the \indy[weapon!userate]{Use Rate} column specifies how many rounds are needed to use and then ready a weapon, already in hand, for another attack. \indy[weapon!strike]{Strike Damage} is the damage inflicted on a successful "to strike" roll. \indy[weapon!throw]{Thrown Damage} is the damage done on a successful "to hit" roll, or when a weapon is hurled by hand. \indy[weapon!impale]{Impale Damage} is the damage potential if the weapon is set and braced against a charge, a falling body, etc. \indy[weapon!range]{Max Range} is the distance, in feet, that the weapon can be fired or hurled.
 \end{multicols*}
 \input{playing-weapon-table.tex}
+
 \setlength{\columnsep}{\defcolwidth}
 \begin{multicols*}{2}
 \section{Weapon Specialization Skills}
-You may increase your adventurer's ability to use
-specific weapons by buying the appropriate weapon specialization skill. You buy this skill separately for each weapon you wish to specialize in. Skill in any weapon gives you additional options during combat for multiple attacks, better accuracy, higher damage and ability to get difficult shots with missile weapons. These abilities are given in detail under the entries for \textbf{Combat Weapon Skill} and \textbf{Missile
-Weapon Skill} in the list of skills in the next chapter.
+You may increase your adventurer's ability to use specific weapons by buying the appropriate weapon specialization skill. You buy this skill separately for each weapon you wish to specialize in. Skill in any weapon gives you additional options during combat for multiple attacks, better accuracy, higher damage and ability to get difficult shots with missile weapons. These abilities are given in detail under the entries for \indy{Combat Weapon Skill} and \indy{Missile Weapon Skill} in the list of skills in the next chapter.
 \section{Using Magic}
-There are two broad classes of magic: elemental
-and divine. Elemental power is derived from the four elements present in the physical environment: Earth, Fire, Air, and Water. The adventurer chooses one element in which to specialize and serves as a conduit for the power of that element. Magical effects are manifested by calling forth, manipulating, and controlling raw elemental power. The caster's expertise in their craft is measured in \textbf{Elemental Units (EU)}.
+There are two broad classes of \indy[spell]{magic}: \indy{elemental} and \indy{divine}. Elemental power is derived from the four elements present in the physical environment: Earth, Fire, Air, and Water. The adventurer chooses one element in which to specialize and serves as a conduit for the power of that element. Magical effects are manifested by calling forth, manipulating, and controlling raw elemental power. The caster's expertise in their craft is measured in \indy{Elemental Units (EU)}.
 
-Each time a caster buys a rank in a spell group, they gains one Elemental Unit (EU). This power may be applied to any Spell Group the caster has purchased the knowledge to use; it is not limited to any specific spell group. Thus a caster who has purchased up through the third rank spells in five spell groups has 15 EU, and may use them to cast any spell they have acquired, even the same spell requiring three EU five times. Elemental Unit and Divine Unit totals must be kept separate as elemental power cannot activate divine spells and vice versa.
+Each time a caster buys a rank in a \indy{spell group}, they gains one \indy{Elemental Unit} (\EU). This power may be applied to any Spell Group the caster has purchased the knowledge to use; it is not limited to any specific spell group. \textit{Thus a caster who has purchased up through the third rank spells in five spell groups has 15 EU, and may use them to cast any spell they have acquired, even the same spell requiring three EU five times.} Elemental Unit and Divine Unit totals must be kept separate as elemental power cannot activate divine spells and vice versa.
 
-Divine magical power derives directly from the Jaernian deities. The adventurer is beholden to a specific deity and must perform the duties of their office and serve the cause of their god to receive the power to invoke magical effects. Priests perform their magical effects by manipulating the divine power granted them by their gods. Their mastery of their calling is also measured in \textbf{Divine Units (DU)}.
+Divine magical power derives directly from the Jaernian deities. The adventurer is beholden to a specific [deity] and must perform the duties of their office and serve the cause of their god to receive the power to invoke magical effects. Priests perform their magical effects by manipulating the divine power granted them by their gods. Their mastery of their calling is also measured in \indy{Divine Units} (\DU).
 \subsection{Casting and Terminating Skills}
-To use a spell, declare to the GM which spell your adventurer intends to cast. Your adventurer then begins to gesture, with a single hand if the casting time of the spell is a single round, or both hands for longer spells. They also speak out the key word or words that activate the spell. Any spell may be terminated by the caster before
+\indx{spell!casting}\indx{spell!terminating}
+To \indy{cast} a spell, declare to the GM which spell your adventurer intends to cast. Your adventurer then begins to gesture, with a single hand if the casting time of the spell is a single round, or both hands for longer spells. They also speak out the key word or words that activate the spell. Any spell may be \indy[terminate]{terminated} by the caster before
 the normal end of its duration by expending one unit. This counts as the adventurer's action for the round.
 \subsection{Recovering Elemental and Divine Units}
-When a spell is cast, the required units are temporarily deducted from the caster's total. Expended units may be recovered by resting. These units regenerate at a rate
-of the caster's \textbf{PWR} stat in units for each eight hours rest. For example, a caster with a PWR of 13 recovers units at the rate of 13 units/8 hours rest (12 hours for an elf). Divine and elemental unit totals are kept separate, and an adventurer recovers their PWR in units for both types if they have purchased both styles of magic. Priests of Ra and Rudri recover spells in unusual ways, look at the section on your deity for details.
-\subsection{Restrictions on Spell Casting}
-If your adventurer's hands are damaged or restricted, they may be prevented from casting spells. One impaired hand prevents casting any spell with a casting time greater than one round; two impaired hands prevents any casting. A damaged or non-functional voice also prevents casting, but a magical silence does \textbf{not}, as the vocal component of a spell is more a concentration device than a method of summoning magical power. 
+When a spell is cast, the required units are temporarily deducted from the caster's total. Expended units may be recovered by resting. These units regenerate at a rate of the caster's \PWR stat in units for each \defnum{8} hours \indy{rest}, or \defnum{12} hours of \indy{meditation} for an \indy{elf}. 
 
-If a spell caster has the \textbf{One-Hand Casting} skill, they can cast spells longer than one round by making a check. \textbf{Non-verbal casting} allows a caster to cast spells without using their voice. See \textbf{Chapter \ref{ch:skills}: \nameref{ch:skills} on page \pageref{ch:skills}} for more information.
+\textit{For example, a caster with a PWR of 13 recovers units at the rate of 13 units/8 hours rest (12 hours for an elf)}. 
+
+Divine and elemental unit totals are kept separate, and an adventurer recovers their PWR in units for both types if they have purchased both styles of magic. \indy[priest]{Priests} of \indy{Ra} and \indy{Rudri} recover spells in unusual ways, look at the section on your deity for details.
+\subsection{Restrictions on Spell Casting}
+\indx{spell!restrictions}
+If your adventurer's hands are damaged or restricted, they may be prevented from casting spells. One impaired hand prevents casting any spell with a casting time greater than \defnum{1 \indy{round}}; two impaired hands prevents any casting. A damaged or non-functional voice also prevents casting, but a magical \indy{silence} does \defnum{not}, as the vocal component of a \indx{spell!vocal component}spell is more a concentration device than a method of summoning magical power. 
+
+If a spell caster has the \indx{spell!one-hand casting}\indy{One-Hand Casting} skill, they can cast spells longer than one round by making a check. \indx{spelL!non-verbal casting}\indy{Non-verbal casting} allows a caster to cast spells without using their voice. See \chref{ch:skills} on \tcpage{ch:skills} for more information.
 
 The properties of the metal Terisium, consume spell energy. If a caster is encircled by this metal, their current EU and DU totals eventually drops to zero; the adventurer may recover the units, by resting, once the metal is removed. 
-\textbf{Prisoners} capable of spell-casting are often made to wear manacles, collars, and leg irons.
+\indy{Prisoners} capable of spell-casting are often made to wear manacles, collars, and leg irons.
 \subsection{Spell Interruption}
-All spells have a fixed casting time. If your adventurer begins a spell and then becomes the target of an attack before the spell is completed, the spell is ruined and they lose the units put into the spell. Spells with a one round casting time may not be interrupted, except by your adventurer's companions. Of course, if a fellow adventurer disrupts the spell, they may no longer be a friend.
-\subsection{Spell Duration}
-Once a spell has been cast and is active, the caster only needs to concentrate on it when they desires to change the spell effect. For example, an \textbf{Arise} spell requires no concentration to hover, but does to lower or raise the target. A \textbf{Fly} spell requires no concentration to move straight at a constant velocity, but does to turn, slow down, or speed up. A conjuration takes no concentration to maintain, but the caster must concentrate on it to make any changes within the conjuration.
+\indx{spell!interruption}
+All spells have a fixed casting time. If your adventurer begins a spell and then becomes the target of an attack before the spell is completed, the spell is ruined and they lose the units put into the spell. Spells with a one round casting time may not be interrupted, except by your adventurer's companions. 
 
-Concentrating on the spell restricts the caster's actions to a slow walk (1/5 normal movement rate) for any non-movement spell, and the appropriate movement for movement spells. Also they must maintain line-of-sight (\textbf{LOS}) on the spell effect to be changed. The caster may not speak, nor perform other actions while concentrating.
+\textit{Of course, if a fellow adventurer disrupts the spell, they may no longer be a friend.}
+\subsection{Spell Duration}
+\indx{spell!duration}
+Once a spell has been cast and is active, the caster only needs to \indy{concentrate} on it when they desires to change the spell effect. For example, an \indy{Arise} spell requires no concentration to hover, but does to lower or raise the target. A \indy{Fly} spell requires no concentration to move straight at a constant velocity, but does to turn, slow down, or speed up. A conjuration takes no concentration to maintain, but the caster must concentrate on it to make any changes within the conjuration.
+
+Concentrating on the spell restricts the caster's actions to a slow walk (\defnum{1/5 normal movement rate}) for any non-movement spell, and the appropriate movement for movement spells. Also they must maintain line-of-sight (\indy{LOS}) on the spell effect to be changed. The caster may not speak, nor perform other actions while concentrating.
 \subsection{Stressing PWR for Units}
-An adventurer may sacrifice one point of \textbf{PWR} for eight EUs or DUs by stressing the stat. This may be done at any time and does not count as an action. The caster may use these newly acquired units as they sees fit. The experience cost to replace a point of PWR is quite high, so this is not an action to be taken lightly.
+\indx{stressing}\indx{spell!stressing}
+An adventurer may sacrifice one point of \PWR for eight \EU or \DU by \indy{stressing} the stat. This may be done at any time and does not count as an action. The caster may use these newly acquired units as they sees fit. The experience cost to replace a point of PWR is quite high, so this is not an action to be taken lightly.
 \subsection{Overloading the Spell Group}
+\indx{spell!overloading}
 Normally you state your adventurer is casting an acquired spell, expend the necessary unit (deducting them from their current total), and the spell effect is adjudicated by the GM. If the caster lacks the required number of units, the spell may not be cast as they lose all remaining units. However, there are instances where an adventurer can stretch their ability to (and beyond) the limit.
 
-This happens when the total cost of a spell is higher than the caster's rank in a spell group, and they have sufficient units to cast that spell. The caster is extrapolating their knowledge of the gestures and control that may be required by trying to skip one or more necessary steps (spells) in the training process. The adventurer may cast spells above what is allowed normally by overloading. They may not cast any spell 7 or more ranks higher than their highest purchased rank in the spell group; attempting to do so only drains their unit
-total to zero and no spell effect occurs. Nor may the attempted spell rank be higher than the caster's PWR stat.
+This happens when the total cost of a spell is higher than the caster's rank in a spell group, and they have sufficient units to cast that spell. The caster is extrapolating their knowledge of the gestures and control that may be required by trying to skip one or more necessary steps (spells) in the training process. The adventurer may cast spells above what is allowed normally by overloading. They may not cast any spell \defnum{7} or more ranks higher than their highest purchased rank in the spell group; attempting to do so only drains their unit total to \defnum{0} \DU or \EU and no spell effect occurs. Nor may the attempted spell rank be higher than the caster's \PWR stat.
 
-If the overload attempt is from 1 to 6 ranks above the caster's highest purchased rank, the attempted spell may work, but other effects are possible considering the uncertainties of the power involved. The required units are
-deducted from the caster's total despite what happens. Subtract the caster's rank in the spell group from the rank of the attempted spell and add 6 to the result. This is the number the player must roll or exceed on \tcdieroll{2d6} for the overload to work.
+If the overload attempt is from \defnum{1} to \defnum{6} ranks above the caster's highest purchased rank, the attempted spell may work, but other effects are possible considering the uncertainties of the power involved. The required units are deducted from the caster's total despite what happens. Subtract the caster's \indy{rank} in the spell group from the rank of the attempted spell and add \defnum{6} to the result. This is the number the player must roll or exceed on \tcdieroll{2d6} for the overload to work.
 
-The spell fails if the roll comes up short; check the roll against the Overload Table for additional effects. The table only goes up to 11 because if the required roll is 12 and a 12 is rolled, the overload is successful.
+The spell fails if the roll comes up short; check the roll against the \indy{Overload Effect Table} for additional effects. The table only goes up to 11 because if the required roll is 12 and a \defnum{12} is rolled, the overload is successful.
 
 \input{playing-overload-table.tex}
 \textit{Malvern has bought up to rank four in the Fire Magics group, but wishes to cast the eighth ranked spell, Fireball. He expends 8 EU to cast the spell, and the player must roll a 10 or higher (8-4+6=10) on 2d6 for the Fireball to succeed. The roll comes up as 11, meaning the Fireball functions as normal.}
 
 \textit{Gondo has bought up to sixth rank in the Water Magics group, but wants to cast Ocean Cold, the twelfth ranked spell. He expends 12 EU and needs to roll a 12 (12-6+6=12) on 2d6 for the overload to work. Unfortunately, he rolls an 11, meaning that the spell fails, and he loses two points of INT. He may buy his INT back, but it cannot regenerate on its own. One must be cautious when using spells.}
 \subsection{Finessing Spells}
-The spells any caster learns have been developed over centuries of trial and much error. What has been learned is that when "x" amount of power is called forth and, through specific gestures and words manipulated in such a way, a
-certain effect happens. Magic is thus more an art than a science due to the vagaries of the raw power, elemental or divine, with which the caster must work.
+\indx{spell!finess}
+The spells any caster learns have been developed over centuries of trial and much error. What has been learned is that when a certain amount of power is called forth and, through specific gestures and words manipulated in such a way, a certain effect happens. Magic is thus more an art than a science due to the vagaries of the raw power, elemental or divine, with which the caster must work.
 
-This is not to say that experimentation is dead; on the contrary, most spells were serendipitously discovered when magicians and priests attempted to refine, or \textbf{finesse}, a known spell effect by judiciously applying a little more power to alter the range, duration, area of effect, or the effect itself. The EU or DU cost required to alter a spell component is always one, and no spell or spell component may be finessed more than four times. The sum of the spell rank and the finesses may not exceed the caster's \textbf{PWR} stat.
+This is not to say that experimentation is dead; on the contrary, most spells were serendipitously discovered when magicians and priests attempted to refine, or \indy{finesse}, a known spell effect by judiciously applying a little more power to alter the \indy{range}, \indy{duration}, \indy{area of effect}, or the \indy{effect} itself. The \EU or \DU cost required to alter a spell component is always one, and no spell or spell component may be finessed more than \defnum{4} times. The sum of the spell rank and the finesses may not exceed the caster's \PWR stat.
 
 Finessable parameters within the spell descriptions are denoted by giving their values in two parts. The first part is the base number, followed by a plus sign, and then the
-amount that the base number may be modified by each finesse. For example, the area of effect of a spell could be given as \textbf{20 + 10/F' radius}. This means the spell normally occupies a 20 foot radius sphere, but each finesse can add or subtract up to 10 feet to this radius. No number may be modified to less than zero by finessing.
+amount that the base number may be modified by each finesse. No number may be modified to less than zero by finessing.
+
+\textit{For example, the area of effect of a spell could be given as 20 + 10/F' radius. This means the spell normally occupies a 20 foot radius sphere, but each finesse can add or subtract up to 10 feet to this radius}. 
 
 To determine if the finesse is successful, add one unit for each spell parameter the caster wishes to alter to the base cost of the spell. If the total cost does not exceed the caster's rank in that spell group, the finesse works. If the total cost exceeds the caster's rank, they are overloading the spell group (see above); subtract the caster's rank in the group from the total cost of the spell and add 6 to find the number or more to be rolled on \tcdieroll{2d6}.
 
 \textit{Tolfirion wishes to finesse two parameters of a 2 EU spell. The total cost is 4 EU (2+1+1=4), but the caster has only bought up to the second spell . He therefore is overloading the spell group and must roll 8 or more (4-2+6=8) on 2d6 for the finessed spell to work. If the roll is 7 or less, check the Overload Table for the result.}
 
-If the caster finds they lack the required units to meet the total cost (pay attention to the costs and your adventurer's current unit totals!), the spell never gets started and the caster loses all remaining units.
+If the caster finds they lack the required units to meet the total cost, the spell never gets started and the caster loses all remaining units. \textit{Pay attention to the costs and your adventurer's current unit totals!}
 
 \textit{Malvern has bought up to the fourth rank in a spell group and wishes to finesse two parameters of a 2 EU spell. The total cost is 4 EU, but he only has 2 EU left. The spell fizzles and the caster loses his remaining 2 EU, unless he stresses his PWR to gain EU.}
 \subsection{Limitations on Finessing}
-How much may a spell be altered before it, in essence, becomes a new spell effect that must be researched? No spell, or single parameter of a spell, may be finessed more
-than 4 times. This could be 1 parameter 4 times, 2 parameters twice, 2 parameters once and 1 parameter twice, etc. Each spell description shows which parameters may be finessed and the change per finesse.
+\indx{spelL!finess limitations}
+How much may a spell be altered before it, in essence, becomes a new spell effect that must be researched? No spell, or single parameter of a spell, may be finessed more than \defnum{4} times. This could be 1 parameter 4 times, 2 parameters twice, 2 parameters once and 1 parameter twice, etc. Each spell description shows which parameters may be finessed and the change per finesse.
 
-For example, an adventurer wishes to increase the range of a spell by 2 steps, the duration by 1 step. This is a total of 3 finesses and is possible. If they wished to increase the range twice and the duration twice, it would be possible, as well. But if they wanted to increase the range 3 times and the duration 3 times that is a total of 6 finesses and is beyond the capabilities of the spell.
+\textit{For example, an adventurer wishes to increase the range of a spell by 2 steps, the duration by 1 step. This is a total of 3 finesses and is possible. If they wished to increase the range twice and the duration twice, it would be possible, as well. But if they wanted to increase the range 3 times and the duration 3 times that is a total of 6 finesses and is beyond the capabilities of the spell.}
 \subsection{Finessing and Overloading}
+\indx{spell!finess and overload}
 This is possible, but obviously very chancy. This occurs when the adventurer wants to cast a spell above their rank in a group, and finesses it. The deleterious effects of lacking the basic spell ability and finesse ability are additive.
 
-For example, a caster wishes to alter a fifth ranked spell so that it is 2 steps smaller but does the same damage as the normal spell. The finesse cost for this would be 4 EU (reduce the area twice (2 EU) and increase the damage twice (2 EU). This is a total of 4 finesses (within the limit) and 9 EU (5+2+2=9). But the caster only has rank 4 in this group. The total cost for this spell exceeds the caster's rank by 5. They must roll 11 or more on \tcdieroll{2d6} (9-4+6=11) for the finessed spell to succeed; if they roll 10 or less, check the Overload Table for the grizzly results.
+\textit{For example, a caster wishes to alter a fifth ranked spell so that it is 2 steps smaller but does the same damage as the normal spell. The finesse cost for this would be 4 EU (reduce the area twice (2 EU) and increase the damage twice (2 EU). This is a total of 4 finesses (within the limit) and 9 EU (5+2+2=9). But the caster only has rank 4 in this group. The total cost for this spell exceeds the caster's rank by 5. They must roll 11 or more on 2d6 (9-4+6=11) for the finessed spell to succeed; if they roll 10 or less, check the Overload Table for the grizzly results.}
 \subsection{Powerful Spells}
-Casting any spell with a base rank (before finesses) of 12 or more causes the caster to lose one rank in that spell group. The only way to recover this rank is to purchase the rank back with experience points, just as it was originally bought.
+\indx{spell!powerful}
+Casting any spell with a base \indy{rank} (before finesses) of \defnum{12} or more causes the caster to lose \defnum{1} \indy{rank} in that spell group. The only way to recover this rank is to purchase the rank back with experience points, just as it was originally bought.
 \section{Targeting}
-Targeting is the directing of magical spell energy, and is as important as the spell itself. There are seven \indy[targeting!methods]{targeting methods} which determine what is the spell target. Some affect an object, entitling that object to a \indy{resistance check} to reduce or eliminate the spell effect. Other methods affect an area and are always successful. Each spell description lists the targeting method for that spell.
+\indx{target}
+Targeting is the directing of magical spell energy, and is as important as the spell itself. There are seven \indy[target!methods]{targeting methods} which determine what is the spell target. Some affect an object, entitling that object to a \indy{resistance check} to reduce or eliminate the spell effect. Other methods affect an area and are always successful. Each spell description lists the targeting method for that spell.
 \subsection{Caster}
 \tcdefine{Target: caster}\indx{target!caster} Spells which specify \indy{caster} as a target can only
 affect the person or creature casting the spell.
 \subsection{Touch}
+\indx{target!touch}\indx{touch}
 \tcdefine{Target: touch}\indx{target!touch} Spells labeled touch require the caster to actually touch the intended target. Only a single object, person, or creature can be affected by this type of spell. If cast during combat at a mobile target, the caster must successfully \indy{strike} the target to deliver the spell. If the caster attempts to strike and fails, the spell is never cast and the spell energy is not expended. If the target is an unwilling person or creature,
 or any object, it is entitled to a resistance check against the spell if one is listed.
 \subsection{Multitouch}
 \tcdefine{Target: multitouch}\indx{target!multitouch} While a spell labeled MultiTouch is being cast, the caster touches each target they want to affect, during the \indy{rounds} used to cast the spell. Thus a spell with a target of MultiTouch, which takes three rounds to cast, indicates the caster touches as many targets as they can (or wish) to in those three rounds, and when the casting time is complete, all those touched are affected. If the targets are unwilling persons or creatures, or any objects, they are entitled to a resistance check against the spell if one is listed.
 \subsection{Hearing}
-\tcdefine{Target: Hearing}\indx{target!hearing} This targeting method involves an \indy{audible} casting magic, which affects any creatures or persons capable of hearing it. In a large, open area with no other sounds,  creatures or people within a distance of \textbf{240 feet} of the caster can be affected. Other sound, wind, and obstructions may modify this distance, as adjudicated by the GM. Simply covering the ears does not stop the sound! The targets must have effective earplugs, which stop all other noises as well, to avoid being affected by the spell. If the targets are unwilling persons or creatures, they are entitled to a resistance check against the spell if one is listed.
+\tcdefine{Target: Hearing}\indx{target!hearing} This targeting method involves an \indy{audible} casting magic, which affects any creatures or persons capable of hearing it. In a large, open area with no other sounds,  creatures or people within a distance of \defnum{240 feet} of the caster can be affected. Other sound, wind, and obstructions may modify this distance, as adjudicated by the GM. Simply covering the ears does not stop the sound! The targets must have effective earplugs, which stop all other noises as well, to avoid being affected by the spell. If the targets are unwilling persons or creatures, they are entitled to a resistance check against the spell if one is listed.
 \subsection{Memorized Location}
-\tcdefine{Target: MemLoc}\indx{target!memloc}\indx{memorized location} This targeting method is generally used for spells which move the caster or an object to a distanct place, or let the caster scry or communicate at a distance. To memorize a location the player must state that their adventurer is specifically memorizing a location. The adventurer must spend at least \textbf{10 minutes} to complete the memorization, and may not memorize more locations than their \INT attribute. The adventurer can only remember the fine details needed to target to the memorized location for a period of \textbf{four weeks}. Since there is no target object, no resistance checks are needed for these spells.
+\tcdefine{Target: MemLoc}\indx{target!memloc}\indx{memorized location} This targeting method is generally used for spells which move the caster or an object to a distanct place, or let the caster scry or communicate at a distance. To memorize a location the player must state that their adventurer is specifically memorizing a location. The adventurer must spend at least \defnum{10 minutes} to complete the memorization, and may not memorize more locations than their \INT attribute. The adventurer can only remember the fine details needed to target to the memorized location for a period of \defnum{four weeks}. Since there is no target object, no resistance checks are needed for these spells.
 \subsection{Direction/Distance}
-\tcdefine{Target: 100 + 50/F'} Spells using this method contain only a distance in the Target: field. The caster specifies the direction the spell is to travel, and the distance at which it will activate. The spell then travels in that direction and activates at the stated distance, or at the first intervening object in the indicated direction. Since there is no intended target object, there is no resistance check which could prevent the spell from activating. However, there may be a resistance check against the spell effect.
+\indx{target!direction}
+\tcdefine{Target: X + Y/F unit} Spells using this method contain only a \indy{distance} in the Target: field. The caster specifies the direction the spell is to travel, and the distance at which it will activate. The spell then travels in that direction and activates at the stated distance \defnum{X}, or at the \defnum{first} intervening object in the indicated direction. Since there is no intended target object, there is no resistance check which could prevent the spell from activating. However, there may be a resistance check against the spell effect. The distance can be finessed by \defnum{Y units} per finess.
 \subsection{Line of Sight}
-\tcdefine{Target: LOS 20 + 10/F'} \LOS stands for \indy{Line of Sight}. These spells are cast at an object. The object must be within the listed distance, and there must be an unobstructed, straight path from the caster to the object. The distance limitation is based on the details needed for the caster to successfully target the spell. Any intervening objects, glass, water, opaque gases, or darkness prevent these spells from succeeding. LOS spells may not be cast through scrying spells unless the spell specifically states otherwise.
+\tcdefine{Target: LOS X + Y/F unit} \LOS stands for \indy{Line of Sight}. These spells are cast at an object. The object must be within the listed distance \defnum{X}, and there must be an unobstructed, straight path from the caster to the object. The distance limitation is based on the details needed for the caster to successfully target the spell. Any intervening objects, glass, water, opaque gases, or darkness prevent these spells from succeeding. LOS spells may not be cast through scrying spells unless the spell specifically states otherwise. Distances can be increased by the amount \defnum{Y units} for each finess.
 
-These spells can be banked off of well-formed mirrors and other optics, but will malfunction in strange ways (GM's discretion) if banked off flawed surfaces. Spells which affect vision also affect the ability to cast LOS spells. For example, \textbf{Long Eyes} increases LOS spell ranges proportionally. Heat Vision allows LOS spells to function in the dark. There are no resistance checks against the activation of these spells, but any listed RC applies to the resulting spell effect.
+These spells can be banked off of well-formed mirrors and other optics, but will malfunction in strange ways (GM's discretion) if banked off flawed surfaces. Spells which affect vision also affect the ability to cast LOS spells. \textit{For example, \indy{Long Eyes} increases LOS spell ranges proportionally. Heat Vision allows LOS spells to function in the dark. There are no resistance checks against the activation of these spells, but any listed RC applies to the resulting spell effect.}
 \section{Areas of Effect}
+\indx{target!area}
 As well as understanding how to target a spell, you also need to know how to define what is affected by the spell. In general, spells affect areas, objects, or groups of objects.
 
 Let's deal with areas first. An area is defined by giving a specific size to the spell effect. If the effect is meant to occur to objects within the area, then every object within it is entitled to the resistance check listed in the spell description. If the area itself is to be affected, there is no resistance check. Areas can be expressed as:
 \subsection{Radius}
-\tcdefine{Area: 10' radius} This affects a spherically-shaped area with a radius of 10 feet from the point at which the spell is targeted. Intervening objects within the area may partially or fully shield other objects from the spell effect (GM's discretion). Once the spell is activated, the GM may use normal laws of physics to determine how the effect acts, if it's a physical effect.
+\tcdefine{Area: X unit radius} This affects a spherically-shaped area with a radius of \defnum{X units} from the point at which the spell is targeted. Intervening objects within the area may partially or fully shield other objects from the spell effect (GM's discretion). Once the spell is activated, the GM may use normal laws of physics to determine how the effect acts, if it's a physical effect.
 \subsection{Volume}
-\tcdefine{Area: 100 cubic'} This spell affects a particular volume, whose shape is specified by the caster. No single dimension of this volume may by more than four times larger than any other dimension. All objects within the volume can be affected by the spell,
-and resistance checks may be listed, if appropriate.
+\tcdefine{Area: X cubic unit} This spell affects a particular volume of size \defnum{X units}, whose shape is specified by the caster. No single dimension of this volume may by more than \defnum{four} times larger than any other dimension. All objects within the volume can be affected by the spell, and resistance checks may be listed, if appropriate.
 \subsection{Cone}
-\tcdefine{Area: 10 x 30' cone} This spell affects a conical area 30 feet long with a 10 foot diameter base. The point of the cone is at the caster's fingertip. Intervening objects within the area may partially or fully shield other objects from the spell effect (GM's discretion). Once the spell is activated, the GM may use normal laws of physics to determine how the effect acts, if it's physical in nature.
+\tcdefine{Area: X x Y unit cone} This spell affects a conical area \defnum{Y units} long with a \defnum{X unit} diameter base. The point of the cone is at the caster's fingertip. Intervening objects within the area may partially or fully shield other objects from the spell effect (GM's discretion). Once the spell is activated, the GM may use normal laws of physics to determine how the effect acts, if it's physical in nature.
 \subsection{Line}
-\tcdefine{Area: 5 x 20' line} This area of effect is defined by drawing a line from the caster's finger tip 20 feet toward the spell target. All objects 2.5 feet on either side of this line (5 feet total distance) can be affected by the spell. Intervening objects within the area may partially or fully shield other objects from the spell effect (GM's discretion). Once the spell is activated, the GM may use normal laws of physics to determine how the effect acts, if it's physical in nature.
+\tcdefine{Area: X x Y unit line} This area of effect is defined by drawing a line from the caster's finger tip \defnum{Y units} toward the spell target. All objects \defnum{X/2 units} on either side of this line (\defnum{X} units total distance) can be affected by the spell. Intervening objects within the area may partially or fully shield other objects from the spell effect (GM's discretion). Once the spell is activated, the GM may use normal laws of physics to determine how the effect acts, if it's physical in nature.
 \section{Objects}
 An object is a person, a creature or a thing. When a spell affects an object, further restrictions limit what kind or type of object can be affected by the spell.
 
@@ -340,64 +360,69 @@ An object is a person, a creature or a thing. When a spell affects an object, fu
 
 \tcdefine{Area: single plant} Yes, plants can be affected by some spells as well.
 
-\tcdefine{Area: 130 lb} This limits the spell effect to a single object of no more than 130 pounds.
+\tcdefine{Area: X unit} This limits the spell effect to a \defnum{single} object of no more than \defnum{X units}.
 
-\tcdefine{Area: 3' radius} This limits the spell to affecting that portion of an object which is within three feet of the target point of the spell.
+\tcdefine{Area: X unit radius} This limits the spell to affecting that portion of an object which is within \defnum{X units} of the target point of the spell.
 
-\tcdefine{Area: ferromagnetic object} The target of this spell is only effected if it can be magnetized. Other classifications, such as \textbf{transparent}, \textbf{non-metallic}, \textbf{frozen} or \textbf{red} can be used in this way.
+\tcdefine{Area: ferromagnetic object} The target of this spell is only effected if it can be magnetized. Other classifications, such as \indy{transparent}, \indy{non-metallic}, \indy{frozen} or \indy{red} can be used in this way.
 \section{Groups of Objects}
-Often a group of several objects can and will be considered as a single object. If all the objects in the group fit within the limits and restrictions of the spell being cast, and they are all physically touching, the spell will affect the group
-of objects as though they are one. 
+Often a group of several objects can and will be considered as a single object. If all the objects in the group fit within the limits and restrictions of the spell being cast, and they are all physically touching, the spell will affect the group of objects as though they are one. 
 
-An adventurer, their clothes, backpack, and enclosed objects within the backpack, is considered a single object. A wall, with all of its boards, nails, enclosed wiring, and paint is considered a single object. A brick wall, with bricks and mortar is considered a single object. A ship's hull, with its enclosed superstructure, decking and rigging is considered a single object. A group of more than one persons, creatures, or plants is not considered a single object.
+An \indy{adventurer}, their clothes, backpack, and enclosed objects within the backpack, is considered a single object. A wall, with all of its boards, nails, enclosed wiring, and paint is considered a single object. A brick wall, with bricks and mortar is considered a single object. A ship's \indy{hull}, with its enclosed superstructure, decking and rigging is considered a single object. A group of more than one persons, creatures, or plants is not considered a single object.
 
 In short, anything constructed as a permanent structure, and any creature carrying non-living objects, are considered as a single object when examining the area of effect of spells.
 \section{Incants}
-Unlike spells, incants involve the release of \textbf{Spiritual Energy} or \textbf{Life Force}. The power behind incantations is that of the spirits of the \textbf{Kurago}, but the incantor uses his own life energy to perform the ritual to create the conduit to the Kurago. This conduit is then used to channel the spiritual energy, concentrating it in a mixture, talisman, song, imprint or invocation. 
+Unlike spells, \indy[incant]{incants} involve the release of \indy{Spiritual Energy} or \indy{Life Force}. The power behind incantations is that of the spirits of the \indy{Kurago}, but the incantor uses his own life energy to perform the ritual to create the conduit to the Kurago. This conduit is then used to channel the spiritual energy, concentrating it in a \indy[incant!mixture]{mixture}, \indy[incant!talisman]{talisman}, \indy[incant!song]{song}, \indy[incant!imprint]{imprint} or \indy[incant!invocation]{invocation}. 
 
 The nature of incants is such that they many may not show their power or effect immediately. The magic is concentrated in some physical form and remains quiescent until activated by drinking, breaking, or brandishing it appropriately.
 \subsection{Preparing Incants}
+\indx{incant!preparing}
 To prepare an incant your adventurer performs a Ritual. Each ritual requires life force to be expended by your adventurer equal to the rank of the incant. Make sure you have gathered any needed ingredients, and have any needed props at hand for the particular incant. Tell your GM which ritual your adventurer is about to perform. Spend the time listed preparing, using the method in the incant description. With the preparation ready, your adventurer speaks or sings the ritual, manifesting the results of the incant. Subtract the incant rank from your live force total.
 \subsection{Life Force and Death}
-All adventurers have a \textbf{Life Force} equal to the total of their \textbf{HEA} and \textbf{PER} stats. Nomads use this life force to open a conduit to the \textbf{Kurago} to channel the energies of the spirits within. If a nomad's life force drops below 1, their body expires, and the nomad's spirit travels to the Kurago, mergin with their \textbf{Guardian Spirit}. The attempted ritual does complete, but the results may or may not be useful depending on the type of incantation.
-
-Life force is regained by the nomad at a rate of (\textbf{HEA} + \textbf{PER}) divided by 5, rounded down. The life force total never exceeds the sum of these two stats.
+All adventurers have a \indy{Life Force} equal to the total of their \HEA and \PER stats. Nomads use this life force to open a conduit to the \indy{Kurago} to channel the energies of the spirits within. If a nomad's life force drops below 1, their body expires, and the nomad's spirit travels to the Kurago, mergin with their \indy{Guardian Spirit}. The attempted ritual does complete, but the results may or may not be useful depending on the type of incantation. Life force is regained by the nomad at a rate of (\HEA + \PER) divided by \defnum{5}, rounded down. The life force total never exceeds the \defnum{sum} of these two stats.
 \subsection{Restrictions on Preparing Incants}
 Incants may not be prepared under duress. The incantor must be calm and in firm control to complete the preparation without error. The incantor must not be under the influence of any mind-controlling spell or drug. If the incantor is interrupted while mixing, speaking or singing, the ritual must be redone from the beginning.
 \subsection{Stressing Health for Incants}
-An adventurer may sacrifice 1 point of \textbf{HEA} while preparing an incant to increase its rank by 2. This may done only once per day, and it does not count as an action. The caster can only effect the single ritual they are currently performing. The cost to replace a point of Health is quite high, so this is not an action to be taken lightly.
+An adventurer may sacrifice \defnum{1 point} of \HEA while preparing an incant to increase its \indy{rank} by \defnum{2}. This may done only once per day, and it does not count as an action. The caster can only effect the single ritual they are currently performing. The cost to replace a point of \HEA is quite high, so this is not an action to be taken lightly.
 \subsection{Performing Songs}
-Some incants are performed as songs, or songs with dancing. More than one nomad can conduct such an incant at the same time. While multiple incantors will not increase the effect of such a ceremony, it will multiple the number of resistance checks needed to resist. If the target of such an incant must make a \tcdieroll{4d6} RC vs \textbf{WIL} to resist, with three nomads singing, the target must make three RCs to resist the effects. Musicians accompanying the incantor assist in their concentration making it harder for external distractions to interrupt the ritual.
+\indx{incant!song}
+Some incants are performed as songs, or songs with dancing. More than one nomad can conduct such an incant at the same time. While multiple incantors will not increase the effect of such a ceremony, it will multiple the number of resistance checks needed to resist. Musicians accompanying the incantor assist in their concentration making it harder for external distractions to interrupt the ritual.
+
+\textit{If the target of such an incant must make a 4d6 RC vs WIL to resist, with three nomads singing, the target must make three RCs to resist the effects.} 
 \section{Intervention of the Deities}
-Gods and goddesses are much like humans in their likes and dislikes. They enjoy heroism and abhor cowardice. They live to be worshiped, reward their faithful followers,
-and punish wrongdoers. Manipulating the creatures of their world is both a pleasure and a duty.
+\indx{deity}
+Gods and goddesses are much like humans in their likes and dislikes. They enjoy heroism and abhor cowardice. They live to be worshiped, reward their faithful followers, and punish wrongdoers. Manipulating the creatures of their world is both a pleasure and a duty.
 
-When your adventurer seems to be up against impossible odds, or when death is imminent, they may call upon a deity for aid. To try this, announce your adventurer is calling for divine aid, roll \tcdieroll{3d6}, and call out the name of a deity. If all three dice come up as \textbf{ones or twos}, the deity may intervene.
+When your adventurer seems to be up against impossible odds, or when death is imminent, they may call upon a deity for aid. To try this, announce your adventurer is calling for divine aid, roll \tcdieroll{3d6}, and call out the name of a deity. If all three dice come up as \defnum{1s or 2s}, the deity may intervene.
 
-A call for \textbf{Divine Intervention} (\textbf{DI}) may be made
-during your action phase whenever your adventurer is conscious. Also, at the time of death, one call may be made after the GM announces your adventure's demise in the result phase of your round. If you forget to name a deity when making the roll, the GM will choose a random deity who may respond. The GM may allow priests to stress their \textbf{CSE}, allowing them extra dice in their attempt to roll 3 ones or twos.
+A call for \indy{Divine Intervention} (\DI) may be made during your action phase whenever your adventurer is \indy{conscious}. Also, at the time of \indy{death}, one call may be made after the GM announces your adventure's demise in the result phase of your round. If you forget to name a deity when making the roll, the GM will choose a random deity who may respond. The GM may allow priests to stress their \CSE, allowing them extra dice in their attempt to roll three 1s or 2s.
 
-A result of \textbf{three sixes} automatically signals the deity's immense displeasure at being disturbed, and results in the instant and irrevocable death of the adventurer, usually at the end of an enormous bolt of lightning. If your adventurer is granted extra dice for a divine intervention call, while the first three must be rolled, you may stop at any point past them to avoid such a fate.
+A result of \defnum{three 6s} automatically signals the deity's immense displeasure at being disturbed, and typically results in the instant and irrevocable death of the adventurer or their party, usually at the end of an enormous bolt of lightning. If your adventurer is granted extra dice for a divine intervention call, while the first three must be rolled, you may stop at any point past them to avoid such a fate.
 
 Repeated, spurious calls to the gods do little but annoy them. Each time they do not respond to your adventurer's call, and they survive without their aid, they will be less inclined to be helpful in the future. They recognize and appreciate those who survive and flourish on their own talents and abilities.
 \section{Between Adventures}
-Your adventurer does not disappear from existence at the end of an adventure, and then reappear at the beginning of the next. While there are many things he may do which are of little consequence to the ongoing adventures, your GM may allow you to specify some of their actions between adventures. Here are a few of the activities in which he may
-be involved.
+\indx{adventure!between}
+Your adventurer does not disappear from existence at the end of an adventure, and then reappear at the beginning of the next. While there are many things he may do which are of little consequence to the ongoing adventures, your GM may allow you to specify some of their actions between adventures. Here are a few of the activities in which he may be involved.
 \subsection{Employment: Getting a Job}
-There are many opportunities for using your adventurer's skills in the employ of some shop, business or nobleman. You may pick one such skill to consider as your adventurer's Profession. You adventurer earns silver in this employment which both pays their living expenses and provides them some extra cash. Only skills that make sense as a profession can be chosen (GM's choice). To be hired to a position, using a skill, that skill must first be bought to a rank high enough to be profitable, \textbf{7} is considered the minimum. For each game week between adventures, the adventurer profits silver pieces equal to the base cost of the skill, divided by ten, times the adventurer's rank in that skill.
+\indx{adventurer!job}
+There are many opportunities for using your adventurer's skills in the employ of some shop, business or nobleman. You may pick one such skill to consider as your adventurer's Profession. You adventurer earns silver in this employment which both pays their living expenses and provides them some extra cash. Only skills that make sense as a profession can be chosen (GM's choice). To be hired to a position, using a skill, that skill must first be bought to a rank high enough to be profitable, \defnum{7} is considered the minimum. For each game week between adventures, the adventurer profits silver pieces equal to the base cost of the skill, divided by ten, times the adventurer's rank in that skill.
+\begin{normbox}[Job Profit]
+\large
+$Profit = \frac{Base Cost}{10} * Rank$
+\end{normbox}
 \subsection{Being Your Own Boss}
-With a sufficient amount of capital, you can buy the property and equipment to become your own boss, running a business. Pick a skill which your adventurer has at rank 9 or higher and ask your GM the cost of setting up a storefront, shop or warehouse. If you can meet or exceed that amount, and they determine there is space available, and a market for your product or service, you may invest silver to establish this business.
+With a sufficient amount of capital, you can buy the property and equipment to become your own boss, running a business. Pick a skill which your adventurer has at rank \defnum{9} or higher and ask your GM the cost of setting up a storefront, shop or warehouse. If you can meet or exceed that amount, and they determine there is space available, and a market for your product or service, you may invest silver to establish this business.
 
-The GM will then roll \tcdieroll{1d6} to find out how many months your adventurer will have to spend out of play to acquire land, outfit or build the building, purchase stock or supplies and hire and train employees. Once you are in business, you normally earn \textbf{1/20} of your original investment back each game month with no further attention on your part. You may invest additional silver at any time, raising the earnings and worth of your business. If at any time after you have started, you decide to disband your business, you may recover up to one half of your total investment.
+The GM will then roll \tcdieroll{1d6} to find out how many \defnum{months} your adventurer will have to spend out of play to acquire land, outfit or build the building, purchase stock or supplies and hire and train employees. Once you are in business, you normally earn \defnum{1/20} of your original investment back \defnum{each game month} with no further attention on your part. You may invest additional silver at any time, raising the earnings and worth of your business. If at any time after you have started, you decide to disband your business, you may recover up to one half of your total investment.
 
 The economy of the village, town or city you are based in may change. The GM may alter your earnings to reflect times of boom, or economic hardship. Also, the GM can base adventures around your business and its employees.
 \section{Extended Leave from Adventuring}
-If you want to take an adventurer out of play for an extended period, inform your GM and he will place your adventure out of play, and record the current game date on your adventurer card. You can do this to allow your adventurer to take a long trip, to recover from too much action, to enter an institution of learning or to join a monastery or temple. Your adventurer will earn \tcdieroll{1d6 times 100} experience points \textbf{per game month} they are out of play. You can apply this to any attributes as you feel appropriate for the activities the adventurer pursued while out of play. 
+If you want to take an adventurer out of play for an extended period, inform your GM and he will place your adventure out of play, and record the current game date on your adventurer card. You can do this to allow your adventurer to take a long trip, to recover from too much action, to enter an institution of learning or to join a monastery or temple. Your adventurer will earn \tcdieroll{1d6 times 100} experience points \defnum{per game month} they are out of play. You can apply this to any attributes as you feel appropriate for the activities the adventurer pursued while out of play. 
 
-For example, if Yazin, a warrior, suddenly acquired religion and decided to present himself at the Solarium to the priests of Ra, if he is accepted, he informs the GM that he is out of play. The GM records the game date that this occurred. If the GM then determines that Yazin spends 10 months inside the Solarium until his \textbf{Day of Awakening}, Yazin's player would roll 10d6. If the total was 37, Yazin would receive 3,700 experience points, which he probably should spend on divine magic (which is, of course, triple cost because Yazin has a warrior's background).
+\textit{For example, if Yazin, a warrior, suddenly acquired religion and decided to present himself at the Solarium to the priests of Ra, if he is accepted, he informs the GM that he is out of play. The GM records the game date that this occurred. If the GM then determines that Yazin spends 10 months inside the Solarium until his \indy{Day of Awakening}, Yazin's player would roll 10d6. If the total was 37, Yazin would receive 3,700 experience points, which he probably should spend on divine magic (which is, of course, triple cost because Yazin has a warrior's background).}
 \section{Aging}
-Very successful adventures may live to a ripe old age, but eventually Time catches up with everyone. To find out when your adventurer could pass on from natural causes,
-add the numbers on the table below for each of their four grandparents.
+\indx{adventurer!aging}
+Very successful adventures may live to a ripe old age, but eventually Time catches up with everyone. To find out when your adventurer could pass on from natural causes, add the numbers on the table below for each of their four grandparents.
 
 \begin{normbox}[Min Life Span]
 \begin{tabular}{@{}l l l l l l}
@@ -406,7 +431,7 @@ add the numbers on the table below for each of their four grandparents.
 \end{tabular}
 \end{normbox}
 
-A full human's \textbf{Minimum Life Span} is 60 (4 x 15). A half-human, half-elf's minimum life span would be 2 x 15 + 2 x 50 = 130 years. A check needs to be made on each of your character's birthdays past their minimum life span. To make the check, subtract your adventurer's minimum life span from their age. Then roll the die shown on the next table for each grandparent and total the results. If it is less than the difference in ages, your character has passed on due to natural causes.
+A full human's \indy{Minimum Life Span} is 60 (4 x 15). A half-human, half-elf's minimum life span would be 2 x 15 + 2 x 50 = 130 years. A check needs to be made on each of your character's birthdays past their minimum life span. To make the check, subtract your adventurer's minimum life span from their age. Then roll the die shown on the next table for each grandparent and total the results. If it is less than the difference in ages, your character has \indy[death]{passed on} due to natural causes.
 \begin{normbox}[Aging Die]
 \begin{tabular}{@{}l l l l l l}
 \textbf{Race} & Orc & Human & Lizard & Dwarf & Elf\\
@@ -417,39 +442,38 @@ A full human's \textbf{Minimum Life Span} is 60 (4 x 15). A half-human, half-elf
 \textit{Feldnor is one quarter dwarf and three quarters human (minimum life span is 35 + 3 x 15 = 80 years). Suppose he has reached his 95th birthday. He must roll 15 or more (95 – 80) on 3d6 (human grandparents) + 1d10 (dwarf grandparent) to avoid death from old age.}
 
 This check is made once a year for convenience. This means that your adventurer's death is not always a sudden, catastrophic event that might have been prevented. The only way to preserve your adventurer's life is to use magic or some other means to physically reduce their age, or to allow them to live after death (as in the undead). Your adventurer is entitled to a divine intervention call when they die in this way.
-\section{Diseases}
+\section{Diseases}\indx{adventurer!disease}\indx{disease}
 Adventures encounter many strange places and are subjected to a lot of questionable health risks. Here is a list of some of the more common Jaernian diseases and illnesses and their effects:
 
-\tcdefine{Granjuke} Transmitted from person to person by close and prolonged bodily contact, this disease manifests itself as a rash on the skin. The affected area becomes inflamed and the victim has an intense desire to itch. This helps spread the disease to other areas of the body. Each day the afflicted must make a \tcdieroll{4d6} check vs \textbf{WIL} or lose \textbf{1 DP} from damage of the infected area. 
+\tcdefine{Granjuke}\indx{Granjuke} Transmitted from person to person by close and prolonged bodily contact, this disease manifests itself as a rash on the skin. The affected area becomes inflamed and the victim has an intense desire to itch. This helps spread the disease to other areas of the body. Each day the afflicted must make a \tcdieroll{4d6} check vs \WIL or lose \defnum{1 DP} from damage of the infected area. 
 
-While not usually fatal, this is a very annoying condition. It is normally treated with an extract of the \textbf{Horust} tree being spread on the afflicted areas just prior to a long soak in hot waters. This treatment will, over the course of 4 to 6 days, force the disease into a dormant state. However, heavy stress or physical activity can cause a reoccurance at a later date.
+While not usually fatal, this is a very annoying condition. It is normally treated with an extract of the \indy{Horust} tree being spread on the afflicted areas just prior to a long soak in hot waters. This treatment will, over the course of \defnum{4 to 6 days}, force the disease into a dormant state. However, heavy stress or physical activity can cause a reoccurance at a later date.
 
-\tcdefine{Maldormi} Believed to be caused by a fungus which grows on overripe fruits, this illness robs its victim of the ability to sleep. As tired as the victim gets, their body is unable to fall into unconsciousness unless injured, and even then, none of the normal healing and recuperative effects of sleep occur. Eventually, this results in death. Each day this illness robs its victim of \tcdieroll{1d8} \textbf{DP}, causing them to grow more tired, irritable and confused. When the victim reaches zero DP, they die.
+\tcdefine{Maldormi}\indx{Maldormi} Believed to be caused by a fungus which grows on overripe fruits, this illness robs its victim of the ability to sleep. As tired as the victim gets, their body is unable to fall into unconsciousness unless injured, and even then, none of the normal healing and recuperative effects of sleep occur. Eventually, this results in death. Each day this illness robs its victim of \tcdieroll{1d8 \DP}, causing them to grow more tired, irritable and confused. When the victim reaches \defnum{0 \DP}, they \indy[death]{die}.
 
-The priestesses of Isis sedate victims of maldormi with herbal mixtures to calm and dull their senses and minds, and restrain them to help them conserve their dwindling reserves. Each day of this treatment, the victim may attempt a \tcdieroll{5d6} check vs \textbf{HEA}. If successful, they break the disease, and falls into a normal sleep. Upon waking, they are functional, but needs to heal up to full normally.
+The priestesses of \indy{Isis} sedate victims of maldormi with herbal mixtures to calm and dull their senses and minds, and restrain them to help them conserve their dwindling reserves. Each day of this treatment, the victim may attempt a \tcdieroll{5d6} check vs \HEA. If successful, they break the disease, and falls into a normal sleep. Upon waking, they are functional, but needs to heal up to full normally.
 
-\tcdefine{Malibro} Leading healers are in disagreement as to the cause of this malady, but its symptoms are very recognizable. When its victim has been at sea for some great length of time, a sudden inability to hold his balance causes him to be unable to stand, walk or even sit. The surface below him seems to be swinging and spinning wildly. The constant movement makes it difficult for the victim to concentrate, speak coherently, or perform any task. The victim must make a \tcdieroll{6d6} check vs \textbf{WIL} to take any voluntary action, or make a \tcdieroll{5d6} check vs \textbf{WIL} to talk coherently for up to a minute.
+\tcdefine{Malibro}\indx{Malibro} Leading healers are in disagreement as to the cause of this malady, but its symptoms are very recognizable. When its victim has been at sea for some great length of time, a sudden inability to hold his balance causes him to be unable to stand, walk or even sit. The surface below him seems to be swinging and spinning wildly. The constant movement makes it difficult for the victim to concentrate, speak coherently, or perform any task. The victim must make a \tcdieroll{6d6} check vs \WIL to take any voluntary action, or make a \tcdieroll{5d6} check vs \WIL to talk coherently for up to a minute.
 
-The best treatment for such an individual is to restrain them in a bunk to keep them from injuring themselves, and then setting course for the nearest land. Once on land, the victim slowly comes back to normal over the next two to four days. Roll \tcdieroll{3d6} vs \textbf{HEA} after 24 hours of rest to return to normal. The disease is never actually cured, and will remanifest itself within one to two hours if its unfortunate victim sets foot on any floating or flying vessel.
+The best treatment for such an individual is to restrain them in a bunk to keep them from injuring themselves, and then setting course for the nearest land. Once on land, the victim slowly comes back to normal over the next two to four days. Roll \tcdieroll{3d6} vs \HEA after \defnum{4 hours} of rest to return to normal. The disease is never actually cured, and will remanifest itself within one to two hours if its unfortunate victim sets foot on any floating or flying vessel.
 
-\tcdefine{Putrihaut} Caused by a fungus which normally grows on certain underground mushrooms, this disease causes the skin to dry, flake and fall off. This process occurs faster than the body can regenerate new layers of skin. About a week after this is first notices, layers of muscle tissue are exposed. This leads to blood loss and a lot of pain. Victims will tightly wrap their exposed muscle in oil cloth to try to prevent blood loss. Each day from the third on, the victim looses \tcdieroll{1d8} \textbf{DP} and must make an RC of \tcdieroll{4d6} vs \tcdieroll{WIL} to perform any voluntary actions while in great pain.
+\tcdefine{Putrihaut}\indx{Putrihaut} Caused by a fungus which normally grows on certain underground mushrooms, this disease causes the skin to dry, flake and fall off. This process occurs faster than the body can regenerate new layers of skin. About a week after this is first notices, layers of muscle tissue are exposed. This leads to blood loss and a lot of pain. Victims will tightly wrap their exposed muscle in oil cloth to try to prevent blood loss. Each day from the third on, the victim looses \tcdieroll{1d8} \DP and must make an RC of \tcdieroll{4d6} vs \WIL to perform any voluntary actions while in great pain.
 
-\tcdefine{Siritmenso} The origin and transmission method of this disease are still unknown, but its symptoms are devastating. It attacks the brain, forcing it to use more and more of its reasoning power to combat the effects of the disease. This manifests itself first as short dropouts, where the victim stops moving, and is unaware of the passage of time. These can be as short as a few seconds, but get longer as the disease progresses until the victim never comes out of this state again.
+\tcdefine{Siritmenso}\indx{Siritmenso} The origin and transmission method of this disease are still unknown, but its symptoms are devastating. It attacks the brain, forcing it to use more and more of its reasoning power to combat the effects of the disease. This manifests itself first as short \indy[dropout]{dropouts}, where the victim stops moving, and is unaware of the passage of time. These can be as short as a few seconds, but get longer as the disease progresses until the victim never comes out of this state again.
 
-In any new situation, scene or location (GM's discretion), the player rolls \tcdieroll{1d6} vs \textbf{WIL} for each week they have been infected. If this RC vs WIL fails, they have a dropout of 1 round times the \textbf{product} of the dice of his roll (ie if the player rolls 2d6 and gets a 4 and a 3, they lose 12 rounds). At the end of this time, they must succeed at this roll to come out of the dropout. While not in a mindless state, the victim can be aware that the dropouts are occurring by the sudden shifts occurring around them. This gets more pronounced and frantic as the dropouts increase, until near the end, time seems to be rushing to a final end. This is extremely frightening.
+In any new situation, scene or location (GM's discretion), the player rolls \tcdieroll{1d6} vs \WIL for each week they have been infected. If this \RC vs \WIL fails, they have a \indy{dropout} of \defnum{1 round} times the \defnum{product} of the dice of his roll \textit{(ie if the player rolls 2d6 and gets a 4 and a 3, they lose 12 rounds)}. At the end of this time, they must succeed at this roll to come out of the dropout. While not in a mindless state, the victim can be aware that the dropouts are occurring by the sudden shifts occurring around them. This gets more pronounced and frantic as the dropouts increase, until near the end, time seems to be rushing to a final end. This is extremely frightening.
 
-\tcdefine{Sondikapto} An inherited condition, the unfortunate victim goes into a violent seizure triggered by the combination and sequence of certain tones. This seizure can last up to five minutes, during which the victim is likely to injure themselves. When triggered, make a \tcdieroll[green]{5d6} check vs \textbf{HEA} or suffer \tcdieroll{1d10} \textbf{DP} damage.
+\tcdefine{Sondikapto}\indx{Sondikapto} An inherited condition, the unfortunate victim goes into a violent seizure triggered by the combination and sequence of certain tones. This seizure can last up to five minutes, during which the victim is likely to injure themselves. When triggered, make a \tcdieroll{5d6} check vs \HEA or suffer \tcdieroll{1d10} \DP damage.
 
 Many troubadours have studied this condition in depth, and have categorized the kinds of sounds leading to these seizures. They avoid these combinations in their music. Some of the more knowledgeable nomads have discovered other sequences of sound which can bring the victim out of the seizure quickly, before they damages themselves.
 
-\tcdefine{Sorcofin} This can only effect those who cast magic, either divine or elemental. This airborne spore enters the body and attaches itself to the mucous membranes of the nose, mouth and throat. There it begins to grow, using any existing magical energy on which to feed. Quickly it victim looses any accumulated spell energies and any regenerated energy is fed on by the spores.
+\tcdefine{Sorcofin}\indx{Sorcofin} This can only effect those who cast magic, either divine or elemental. This airborne spore enters the body and attaches itself to the mucous membranes of the nose, mouth and throat. There it begins to grow, using any existing magical energy on which to feed. Quickly it victim looses any accumulated spell energies and any regenerated energy is fed on by the spores.
 
-These spores are most often found in humid dark regions rich in magical energies. These spores will feed for four to eight weeks until they reach a magical saturation level and reproduce, leaving the current host behind. The only known method of treating this infection involves the use of the metal Terisium to create an area completely devoid of
-magic. The spores will die within four hours in such an area.
+These spores are most often found in humid dark regions rich in magical energies. These spores will feed for \defnum{four to eight weeks} until they reach a magical saturation level and reproduce, leaving the current host behind. The only known method of treating this infection involves the use of the metal \indy{Terisium} to create an area completely devoid of magic. The spores will die within \defnum{four hours} in such an area.
 
-\tcdefine{Steliforto} This disease affects all muscle tissue in its victim. It lodges within the muscles, and feeds of the energy and nutrients which would have operated the muscles. Its symptoms start with a weakening of the limbs, and progress in two days to a difficulty in walking. At four days the victim can no longer walk and can barely use their arms. At six they are unable to make any voluntary movement, and generally at eight days their heart stops beating and they die. Effectively, the unfortunate adventurer afflicted with this loses \textbf{2} pts of \textbf{STR} each day.
+\tcdefine{Steliforto}\indx{Steliforto} This disease affects all muscle tissue in its victim. It lodges within the muscles, and feeds of the energy and nutrients which would have operated the muscles. Its symptoms start with a weakening of the limbs, and progress in two days to a difficulty in walking. At four days the victim can no longer walk and can barely use their arms. At six they are unable to make any voluntary movement, and generally at eight days their heart stops beating and they die. Effectively, the unfortunate adventurer afflicted with this loses \defnum{2 points} of \STR each day.
 
-Treated carefully by informed and well equipped priests of \textbf{Isis}, this disease can be halted and it effects slowly reserved in one half of most cases if they are caught while the victim can still walk. The earlier it is treated, the better the chances of living and eventual recovery. STR will recover at 1 point for every two days of rest after being cured.
+Treated carefully by informed and well equipped priests of \indy{Isis}, this disease can be halted and it effects slowly reserved in one half of most cases if they are caught while the victim can still walk. The earlier it is treated, the better the chances of living and eventual recovery. \STR will recover at \defnum{1 point} for every \defnum{2 days} of rest after being cured.
 
-\tcdefine{Vortoperdi} This very unusual and rare disease can only affect those of human stock, and mostly just those with red hair. When afflicted, the victim loses the ability to associate words with ideas, objects and places. This process takes about a day, and after this, they can not communicate verbally or telepathically with anyone else. The only known method of treating this disease involves magically removing all knowledge of language from the victim's brain, and then reteaching it language, from the ground up. The scrambled brain pathways relearn speech, and eventually the victim can communicate once again.
+\tcdefine{Vortoperdi}\indx{Vortoperdi} This very unusual and rare disease can only affect those of human stock, and mostly just those with red hair. When afflicted, the victim loses the ability to associate words with ideas, objects and places. This process takes about a day, and after this, they can not communicate verbally or telepathically with anyone else. The only known method of treating this disease involves magically removing all knowledge of language from the victim's brain, and then reteaching it language, from the ground up. The scrambled brain pathways relearn speech, and eventually the victim can communicate once again.
 \end{multicols*}
