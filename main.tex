@@ -83,6 +83,20 @@
 \newcommand{\chref}[1]{\textbf{Chapter \ref{#1}: \nameref{#1}}}
 %\textbf{Chapter \ref{ch:jaern-humanoids}: \nameref{ch:jaern-humanoids}}
 
+\newcommand{\skillentry}[6]{%
+  \begin{minipage}{\columnwidth}%
+  \noindent\rule{\columnwidth}{1pt}\\%
+  \textbf{#1}\\%
+
+  \begin{tabular}{@{} l l l l}%
+  Base Cost: & #2 & Attribute: & #3\\%
+  Skill Type: & #4 & Extra Dice: & #5\\%
+  \end{tabular}\\%
+  
+  #6\\%
+  \end{minipage}%
+}
+
 \setlength\intextsep{0pt}
 
 \newlength{\doublemulticol}
@@ -116,6 +130,7 @@
 \DeclareRobustCommand{\RC}{\indy[resistance check!RC]{RC}}
 \DeclareRobustCommand{\DI}{\indy[divine intervention!DI]{DI}}
 \DeclareRobustCommand{\ADV}{\indy[Artillery Defense Value!ADV]{ADV}}
+\DeclareRobustCommand{\AM}{\indy[Artillery Modifier!AM]{AM}}
 
 \newcommand{\newacronymidx}[4][]{
     \newacronym{#2}{#3}{#4}
