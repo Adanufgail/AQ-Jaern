@@ -6,6 +6,7 @@
 
 \usepackage{cprotectinside}
 \usepackage{ulem}
+\usepackage{soul}
 
 \usepackage{parskip}
 %\setlength{\parindent}{0pt}
@@ -52,12 +53,10 @@
 \DeclareDocumentCommand \indy { o m } {%
   \IfNoValueTF {#1} {%
     \lowercase{\def\temp{#2}}%
-    %\def\temp{#2}%
     \index{\temp}%
     \textbf{#2}\xspace%
   }{%
     \lowercase{\def\temp{#1}}%
-    %\def\temp{#1}%
     \index{\temp}%
     \textbf{#2}\xspace%
   }%
@@ -69,14 +68,15 @@
 }
 
 \newcommand{\bhead}[1]{\thead{\textbf{#1}}}
-%\newcommand{\defnum}[1]{\underline{\textbf{#1}}}
 \newcommand{\defnum}[1]{\uline{\textbf{#1}}}
+\newcommand{\result}[1]{\tcresult{#1}}
+\newcommand{\measure}[1]{\tcmeasure{#1}}
 \newcommand{\mets}[4]{%
   \ifthenelse{\equal{#2}{}}{%
-    \defnum{#1 mets} (\textit{#3 mi or #4 KM})%
+    \measure{#1 mets} (\textit{#3 mi or #4 KM})%
   }%
   {%
-    \defnum{#1 mets} per #2 (\textit{#3 mi or #4 KM})%
+    \measure{#1 mets} per #2 (\textit{#3 mi or #4 KM})%
   }
 }
 
@@ -92,7 +92,7 @@
   Base Cost: & #2 & Attribute: & #3\\%
   Skill Type: & #4 & Extra Dice: & #5\\%
   \end{tabular}\\%
-  
+
   #6\\%
   \end{minipage}%
 }
@@ -139,6 +139,20 @@
         { \index{#3|see{#1}} }
 }
 
+\colorlet{soulGreenYellow}{white!40!GreenYellow}
+\colorlet{soulDodgerBlue}{white!40!DodgerBlue}
+\colorlet{soulCrimson}{white!40!Crimson}
+\colorlet{soulKhaki}{white!50!Khaki}
+\colorlet{soulCyan}{white!40!Cyan}
+
+\DeclareRobustCommand{\tcdieroll}[1]{\sethlcolor{soulGreenYellow}\textbf{\hl{\mbox{#1\xspace}}}}
+\DeclareRobustCommand{\tcdefine}[1]{\sethlcolor{soulDodgerBlue}\textbf{\hl{\mbox{#1\xspace}}}}
+\DeclareRobustCommand{\tcpage}[1]{\sethlcolor{soulCrimson}\textbf{\hl{\mbox{Page \pageref{#1}\xspace}}}}
+\DeclareRobustCommand{\tcmeasure}[1]{\sethlcolor{soulKhaki}\textbf{\hl{\mbox{#1}}}\xspace}
+\DeclareRobustCommand{\tcresult}[1]{\sethlcolor{soulCyan}\textbf{\hl{\mbox{#1}}}\xspace}
+
+
+\begin{comment}
 \DeclareTotalTCBox{\tcdieroll}{ O{GreenYellow} v !O{} }{%
   leftrule=0mm,%
   rightrule=0mm,%
@@ -192,6 +206,9 @@
   colupper=black,%
   halign=center,%
   }{\strut{\textbf{Page \pageref{#2}}}}
+\end{comment}
+
+
 
 \newtcolorbox{normbox}[1][]{%
   boxrule=0pt,%
