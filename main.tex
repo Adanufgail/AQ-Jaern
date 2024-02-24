@@ -3,14 +3,17 @@
 \usepackage{blindtext}
 
 \usepackage{comment}
+\usepackage{microtype}
 
 \usepackage{cprotectinside}
 \usepackage{ulem}
 \usepackage{soul}
+%\usepackage{soulpos}
+\usepackage{pbox}
 
 \usepackage{parskip}
-%\setlength{\parindent}{0pt}
 \setlength{\parindent}{0pt}
+%\setlength{\parfillskip}{0pt}
 
 \usepackage{geometry}
 \geometry{letterpaper, portrait, margin=0.5in}
@@ -44,6 +47,21 @@
 
 \newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
 \newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+
+\setlength\intextsep{0pt}
+
+\newlength{\doublemulticol}
+\setlength{\doublemulticol}{0.25cm}
+
+\setlength{\multicolsep}{0pt}%
+
+\setlist{nosep,topsep=0pt,leftmargin=12pt}
+\setul{1pt}{.4pt}
+
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{2pt}
+
+\raggedbottom
 
 \def\defcolwidth{0.6cm}
 \def\aq{\textbf{Adventure Quest }}
@@ -105,14 +123,6 @@
   \end{minipage}%
 }
 
-\setlength\intextsep{0pt}
-
-\newlength{\doublemulticol}
-\setlength{\doublemulticol}{0.25cm}
-
-\setlength{\multicolsep}{0pt}%
-
-
 \DeclareRobustCommand{\STR}{\indy[strength!STR]{STR}}
 \DeclareRobustCommand{\INT}{\indy[intelligence!INT]{INT}}
 \DeclareRobustCommand{\PER}{\indy[perception!PER]{PER}}
@@ -153,92 +163,97 @@
 \colorlet{soulKhaki}{white!50!Khaki}
 \colorlet{soulCyan}{white!40!Cyan}
 \colorlet{soulLightGreen}{white!40!LightGreen}
-\colorlet{soulDarkOrange}{white!60!DarkOrange}
+\colorlet{soulDarkOrange}{white!80!DarkOrange}
 \colorlet{soulGrey}{white!40!Grey}
 
-\DeclareRobustCommand{\tcdieroll}[1]{\sethlcolor{soulGreenYellow}\textbf{\hl{\mbox{#1\xspace}}}}
-\DeclareRobustCommand{\tcdefine}[1]{\sethlcolor{soulDodgerBlue}\textbf{\hl{\mbox{#1\xspace}}}}
-\DeclareRobustCommand{\listing}[1]{\sethlcolor{soulGrey}\textbf{\hl{\mbox{#1\xspace}}}}
-\DeclareRobustCommand{\tcpage}[1]{\sethlcolor{soulCrimson}\textbf{\hl{\mbox{Page \pageref{#1}\xspace}}}}
-\DeclareRobustCommand{\chref}[1]{\sethlcolor{soulCrimson}\textbf{\hl{\mbox{Chapter \ref{#1}: \nameref{#1}\xspace}}}}
-\DeclareRobustCommand{\measure}[1]{\sethlcolor{soulKhaki}\textbf{\hl{\mbox{#1}}}\xspace}
-\DeclareRobustCommand{\result}[1]{\sethlcolor{soulCyan}\textbf{\hl{\mbox{#1}}}\xspace}
-\DeclareRobustCommand{\quip}[1]{\sethlcolor{soulLightGreen}\textit{\hl{#1}}\xspace}
-\DeclareRobustCommand{\example}[1]{\sethlcolor{soulDarkOrange}\textit{\hl{#1}}\xspace}
-\DeclareRobustCommand{\custhl}[2]{\sethlcolor{#1}\hl{\mbox{#2}}\xspace}
+
+\newlength{\cboxwidth}
+\DeclareRobustCommand{\custhl}[2][soulGrey]{%
+\pgfmathparse{min(\columnwidth,\textwidth)}%
+\setlength{\cboxwidth}{\pgfmathresult pt}%
+\sethlcolor{#1}%
+\setlength{\fboxsep}{0pt}\colorbox{#1}{%
+\pbox{\cboxwidth}{%
+%\ \strut{#2}\,%
+\strut{#2}%
+}}}
+
+
+
+
+
+\DeclareRobustCommand{\tcdieroll}[1]{\custhl[soulGreenYellow]{\textbf{#1}}}
+\DeclareRobustCommand{\listing}[1]{\custhl[soulGrey]{\textbf{#1}}}
+\DeclareRobustCommand{\tcpage}[1]{\custhl[soulCrimson]{\textbf{Page \pageref{#1}}}}
+\DeclareRobustCommand{\chref}[1]{\custhl[soulCrimson]{\textbf{Ch \ref{#1}: \nameref{#1}}}}
+\DeclareRobustCommand{\apref}[1]{\custhl[soulCrimson]{\textbf{Ap \ref{#1}: \nameref{#1}}}}
+\DeclareRobustCommand{\measure}[1]{\custhl[soulKhaki]{\textbf{#1}}}
+\DeclareRobustCommand{\result}[1]{\custhl[soulCyan]{\textbf{#1}}}
+\DeclareRobustCommand{\quip}[1]{\custhl[soulLightGreen]{\textit{#1}}}
+\DeclareRobustCommand{\tcdefine}[1]{\custhl[soulDodgerBlue]{\textbf{#1}}}
+\DeclareRobustCommand{\example}[1]{\custhl[soulDarkOrange]{\textit{#1}}}
+
 
 
 \newtcolorbox{normbox}[1][]{%
   boxrule=0pt,%
   enhanced,%
-  title=\textbf{#1},%
-  left=2pt,%
-  right=2pt,%
-  top=2pt,%
-  bottom=1pt,%
+  title=\small\textbf{#1},%
+  left=1pt,%
+  right=1pt,%
+  top=0pt,%
+  bottom=-2pt,%
   boxsep=2pt,%
   boxrule=0.6pt,%
-  before skip=0.5\baselineskip,%
-  lefttitle=2mm,%
+  %before skip=0.5\baselineskip,%
+  before skip=0.0pt,%
+  %after skip=0.5\baselineskip,%
+  after skip=0.0pt,%
+  lefttitle=2pt,%
   righttitle=2mm,
   toptitle=1mm,%
-  bottomtitle=1mm,%
+  bottomtitle=0mm,%
   minipage boxed title,%
   hbox,%
   colbacktitle=Navy,%
   colback=white,%
   }
 
-\newtcolorbox{normboxw}[1][]{%
+\newtcolorbox{normboxc}[1][]{%
   boxrule=0pt,%
   enhanced,%
-  title=\textbf{#1},%
-  left=2pt,%
-  right=2pt,%
-  top=2pt,%
-  bottom=1pt,%
+  title=\small\textbf{#1},%
+  left=1pt,%
+  right=1pt,%
+  top=0pt,%
+  bottom=-2pt,%
   boxsep=2pt,%
   boxrule=0.6pt,%
   before skip=0.5\baselineskip,%
-  lefttitle=2mm,%
+  after skip=0.5\baselineskip,%
+  lefttitle=2pt,%
   righttitle=2mm,
   toptitle=1mm,%
-  bottomtitle=1mm,%
+  bottomtitle=0mm,%
   minipage boxed title,%
-  width=\columnwidth,%
+  hbox,%
   colbacktitle=Navy,%
   colback=white,%
+  %before=\begin{nscenter},%
+  before=\hspace*{\fill},%
+  %after=\end{nscenter},%
+  after=\hspace*{\fill},%
   }
 
-\newtcolorbox{normboxper}[2][]{%
-  boxrule=0pt,%
-  enhanced,
-  title=\textbf{#2},%
-  left=2pt,%
-  right=2pt,%
-  top=2pt,%
-  bottom=1pt,%
-  boxsep=2pt,%
-  boxrule=0.6pt,%
-  lefttitle=2mm,%
-  righttitle=2mm,
-  toptitle=1mm,%
-  bottomtitle=1mm,%
-  width=#1\linewidth,%
-  %width=0.5\linewidth,%
-  minipage boxed title,%
-  %attach boxed title to top,%
-  colbacktitle=Navy,%
-  colback=white,%
-  }
+\hyphenpenalty=9999
 
-\hyphenpenalty=5000
+\setcounter{chapter}{-1}
 
 
 \begin{document}
 \enlargethispage{1.5\baselineskip}
 \titleformat{\chapter}[display] {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}   
-\titlespacing*{\chapter}{0pt}{20pt}{20pt}
+\titlespacing*{\chapter}{0pt}{10pt}{10pt}
 \titlespacing\section{0pt}{6pt}{6pt}
 \titlespacing\subsection{0pt}{6pt }{6pt}
 \titlespacing\subsubsection{0pt}{6pt}{6pt}
