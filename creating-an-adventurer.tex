@@ -9,15 +9,16 @@ To play in \textbf{Adventure Quest} (\textbf{AQ} for short), you must first crea
 \begin{multicols*}{2}
 \section{Random Numbers}
 \indx{dice!rolling}\indx{roll!dice}
-When people are born, they do not get to choose to be male or female, tall or short, or clever or daft. To simulate this in AQ, these attributes (and other uncontrollable random events) are determined by rolling dice. Later, you may freely choose the skills, languages, etc. your adventurer learns as he grows. Dice come in many different sizes, and when a die roll is required, the type and number are expressed like this:
-\begin{center}
+When people are born, they do not get to choose to be male or female, tall or short, or clever or daft. To simulate this in AQ, these attributes (and other uncontrollable random events) are determined by rolling dice. Later, you may freely choose the skills, languages, etc. your adventurer learns as he grows. Dice come in many different sizes, and when a die roll is required, the type and number are expressed like this:\\
+
+\begin{nscenter}
 \tcdefine{(\# of dice) d (sides of dice)}
-\end{center}
+\end{nscenter}
 
 Thus, \tcdieroll{3d6} means to roll three six-sided dice and add up the results of each die to get the total result. Always assume six-sided dice if the number of sides per die is not specified.
 \section{Physical Statistics}\indx{statistics!physical}\indx{adventurer!statistics}
 
-Each adventurer has several attributes. The most important of these are the nine physical statistics or stats, which are listed at the top of the first column of the adventurer card. These stats normally have a \indy{rank} or value between 0 and 24.
+Each adventurer has several attributes. The most important of these are the nine physical statistics or stats, which are listed at the top of the first column of the adventurer card. These stats normally have a \indy{rank} or value between \tcdefine{zero and twenty-four}.
 
 \noindent\begin{normbox}[Physical Statistics]
 \small
@@ -70,36 +71,36 @@ If the roll is 19 or 20 this means the adventurer's parents were of different ra
 \small
 \begin{tabularx}{0.95\columnwidth}{@{}l l}
 \makecell[l]{\indx{elf}\indx{race!elf}\textbf{Elf}\\
-1. Exceptional \PER\\
-2. Distance Judgment\\
-3. Missile Skill*\\
-4. Soulless} & 
+1. \indy[perception!PER]{Exceptional PER}\\
+2. \indy{Distance Judgment}\\
+3. \indy{Missile} Skill*\\
+4. \indy{Soulless} }& 
 \makecell[l]{\indx{orc}\indx{race!orc}\textbf{Orc}\\
-1. Exceptional \WIL\\
-2. Enhanced Smell\\
-3. Physical Viciousness*\\
-4. Mental Stubbornness}\\
+1. \indy[willpower!WIL]{Exceptional WIL}\\
+2. \indy{Enhanced Smell}\\
+3. \indy{Physical Viciousness}*\\
+4. \indy{Mental Stubbornness}}\\
 \makecell[l]{\indx{dwarf}\indx{race!dwarf}\textbf{Dwarf}\\
-1. Exceptional \HEA\\
-2. Material Sense\\
-3. Armor Construction*\\
-4. Great Durability} & 
+1. \indy[health!HEA]{Exceptional HEA}\\
+2. \indy{Material Sense}\\
+3. \indy{Armor Construction}*\\
+4. \indy{Great Durability} }& 
 \makecell[l]{\indx{lizard}\indx{race!lizard}\textbf{Lizard}\\
-1. Exceptional \AGI\\
-2. Quickness\\
-3. Water Breathing\\
-4. Homing}\\
+1. \indy[agility!AGI]{Exceptional AGI}\\
+2. \indy{Quickness}\\
+3. \indy{Water Breathing}\\
+4. \indy{Homing}}\\
 \end{tabularx}
 \tcblower
-*Partial breeds check \chref{ch:jaern-humanoids} to learn how to set these skills.
+**Partial breeds check \chref{ch:jaern-humanoids} to learn how to set these skills.
 \end{tcolorbox}
 \normalsize
 
-Non-physical differences are represented as racial skills. For each list below in which your adventurer has a grandparent, roll \tcdieroll{1d4} for each skill. If the number is equal to or less than the number of grandparents of that race, write that skill on the adventurer card. If your adventurer is purebred, (i.e., all four grandparents are the same race) he automatically gets all that race's skills. Read the \chref{ch:jaern-humanoids} to learn about these skills and racial disadvantages.
+Non-physical differences are represented as racial skills. For each list below in which your adventurer has a grandparent, roll \tcdieroll{1d4} for each skill. If the number is equal to or less than the number of grandparents of that race, write that skill on the adventurer card. If your adventurer is purebred, (i.e. \tcdefine{all four grandparents are the same race}) they automatically get all that race's skills. Read the \chref{ch:jaern-humanoids} to learn about these skills and racial disadvantages.
 
 Elves are extremely long lived compared to the other races. The do not, however, posses a soul, and thus do not have an existence after death. This makes then unable to use divine magic, and unable to ever be brought back from the dead. Elves generally do not interact with the deities and their priests. Holy places like temples and shrines make them feel uncomfortable and they tend to avoid them.
 
-\indx{human}\indx{race!human}Full Humans are often more diverse and adaptable than other races. If your adventurer is a full bred human, you may take an additional Placed Roll to further customize your stats. Roll \tcdieroll{4d6} and throw any one die out, totaling the remaining three. Use this total to again replace the value of any of your nine original stats. If the roll is unsatisfactory, ignore it and leave your stats unchanged.
+\indx{human}\indx{race!human}Full Humans are often more diverse and adaptable than other races. If your adventurer is a full bred human, you may take an additional \indy{Placed Roll} to further customize your stats. Roll \tcdieroll{4d6} and throw any one die out, totaling the remaining three. Use this total to again replace the value of any of your nine original stats. If the roll is unsatisfactory, ignore it and leave your stats unchanged.
 \section{Sex}
 \indx{sex}\indx{adventurer!sex}
 \begin{wrapfigure}[5]{o}[0pt]{2.75cm}
@@ -114,7 +115,7 @@ Elves are extremely long lived compared to the other races. The do not, however,
 Choose a sex for your adventurer, or roll \tcdieroll{1d6} and check against the following table. You may additionally choose to play an intersex character, and you may also play your character as any gender of your choice.
 \section{Age}
 \indx{aging}\indx{adventurer!aging}
-\begin{wrapfigure}[10]{o}[0pt]{3.5cm}
+\begin{wrapfigure}[8]{o}[0pt]{3.25cm}
 \begin{normbox}[Age Die]
 \small
 \indx{roll!age}
@@ -130,9 +131,9 @@ Elf &  20\\
 \normalsize
 \end{normbox}
 \end{wrapfigure}
-Determine how old your adventurer is at the start of his or her career by rolling one die of the appropriate type (from the following table) for each grandparent, and add 10 to the result.
+Determine how old your adventurer is at the start of his or her career by rolling one die of the appropriate type (from the following table) for each grandparent, and add \result{10} to the result.
 
-If your adventurer is pure human, obviously all four of his grandparents are human. Roll \tcdieroll{4d6}, total them and add 10 to find out his age. If, for example, he is half-elf, quarter-human and quarter-dwarf, roll 2d20 + 1d6 + 1d10 + 10. Aging is covered in detail in \chref{ch:jaern-humanoids} on \tcpage{ch:jaern-humanoids}.
+If your adventurer is pure human, obviously all four of their grandparents are human. Roll \tcdieroll{4d6}, total them and add 10 to find out their age. \example{If, for example, they are half-elf, quarter-human and quarter-dwarf, roll 2d20 + 1d6 + 1d10 + 10}. Aging is covered in detail in \chref{ch:jaern-humanoids} on \tcpage{ch:jaern-humanoids}.
 \section{Body build}
 \indx{body build}\indx{adventurer!build}
 If your adventurer is not purebred, roll \tcdieroll{1d4} to randomly select a grandparent' s race. Now roll \tcdieroll{1d20} to determine your adventurer's body build using the appropriate race column on the following table. If your adventurer is female, her body build is one category smaller than the chart result.
@@ -227,7 +228,7 @@ Silver & -- & 19-20 & -- & -- & --
 \indx{motivation}\indx{adventurer!motivation}\section{Motivation}
 That takes care of the random elements of adventurer creation; now you have a free hand in developing your adventurer's inner-self. Evolving his personality takes some thought, but it is a rewarding aspect of role-playing. A good way to start is to create an event that occurred early in his life that now defines his basic motivation. Once you have a starting point it is easier to describe more about their personality.
 
-Below are some possible motivations from which to choose, but you are free to make up others as best fits your needs and concepts. Now mentally describe an event or condition to explain why it is your adventurer's primary motivation. Write this motive down on the Adventurer Card after "Motive." Here are some suggestions:
+Below are some possible motivations from which to choose, but you are free to make up others as best fits your needs and concepts. Now mentally describe an event or condition to explain why it is your adventurer's primary motivation. Write this motive down on the Adventurer Card after "\indy{Motive}." Here are some suggestions:
 \begin{normbox}[Motivation]
 \small
 \begin{tabularx}{\linewidth}{@{} l L}
@@ -248,24 +249,24 @@ The motive you choose is not meant to be a "straight jacket" to force you to pla
 To learn more about creating your adventurer's personality, read \chref{ch:creating-actors} to see how the GM creates personalities for actors. These methods are applicable to your adventurer's personality as well.
 \section{Patron Gods}
 \indx{deitiy}\indx{gods}\indx{adventurer!deity}
-You may select one deity as your adventurer's patron god. Adventurers aligning themselves to a deity this way are expected to assist the causes of the god, and especially to follow that god's precepts and laws. In return, they are often assisted by the priests and followers of that deity. Worshiping more than one god is possible, but can become difficult if the deities conflict in any way. Write down the name(s) of the deity(s) on the adventurer card after "Deity." Here is a list of available deities; each is covered in detail in its own chapter.
+You may select one deity as your adventurer's patron god. Adventurers aligning themselves to a deity this way are expected to assist the causes of the god, and especially to follow that god's precepts and laws. In return, they are often assisted by the priests and followers of that deity. Worshiping more than one god is possible, but can become difficult if the deities conflict in any way. Write down the name(s) of the deity(s) on the \indy{adventurer card} after "\indy{Deity}." Here is a list of available deities; each is covered in detail in its own chapter.
 
 \begin{normbox}[Patron Gods]
 \small
-\begin{tabular}{@{}l l l}
+\begin{tabular}{@{}l l l l}
 \indx{ra}\indx{isis}\indx{t'or}\indx{at'ena}\indx{osiris}\indx{tarus}\indx{neptune}\indx{orus}\indx{anubis}\indx{rudri}\indx{scrogg}
-\textbf{GOD} & \textbf{Sphere of Influence} & \textbf{Sex}\\
-Ra & Bearer of Light & M\\
-Isis & Mistress of Life & F\\
-T'or & The Thunder of Righteousness & M\\
-At'ena & Mistress of Wisdom & F\\
-Osiris & Protector of Nature & F\\
-Tarus & Master Archivist & M\\
-Neptune & Dweller of the Waters & M\\
-Orus & The Flame of Zeal & M\\
-Anubis & Lord of the Dead & M\\
-Rudri & Dweller of the Dark & F\\
-Scrogg & Concubine and follower of Orus & M\\
+\textbf{GOD} & \textbf{Sphere of Influence} & \textbf{Sex} & \textbf{Chapter}\\
+Ra & Bearer of Light & M & \ref{ch:ra}\\
+Isis & Mistress of Life & F & \ref{ch:isis}\\
+T'or & The Thunder of Righteousness & M & \ref{ch:t'or}\\
+At'ena & Mistress of Wisdom & F & \ref{ch:at'ena}\\
+Osiris & Protector of Nature & F & \ref{ch:osiris}\\
+Tarus & Master Archivist & M & \ref{ch:tarus}\\
+Neptune & Dweller of the Waters & M & \ref{ch:neptune}\\
+Orus & The Flame of Zeal & M & \ref{ch:orus}\\
+Anubis & Lord of the Dead & M & \ref{ch:anubis}\\
+Rudri & Dweller of the Dark & F & \ref{ch:rudri}\\
+Scrogg & Earthly Pleasures & M & \ref{ch:scrogg}\\
 \end{tabular}
 \end{normbox}
 \normalsize
@@ -312,7 +313,7 @@ Backgrounds are the adventuring professions available in a specific AQ Game. Eac
 \end{tikzpicture}
 \end{center}
 
-The three backgrounds at the ends of the spokes are thus Warrior (for those exclusively trained in combat) Mages (Magic), and Augers (Skills). As for the areas between the spokes, a background that combines Magic and Combat produces the Priest, someone with a knowledge of Magic and the physical training to back it up. Combining Magic and skills yields a Nomad, with training in the mystical arts as well as skills. And finally, mixing Combat and Skills produces a Marine, a person with a need for fighting ability and quick and nimble movements.
+The three backgrounds at the ends of the spokes are thus \indy{Warrior} (for those exclusively trained in \indy{combat}), \indy{Mages} (\indy{magic}), and \indy{Augers} (\indy{skills}). As for the areas between the spokes, a background that combines magic and combat produces the \indy{Priest}, someone with a knowledge of magic and the physical training to back it up. Combining magic and skills yields a \indy{Nomad}, with training in the mystical arts as well as skills. And finally, mixing combat and skills produces a \indy{Marine}, a person with a need for fighting ability and quick and nimble movements.
 
 \begin{normbox}[Adventurer Background Stats]
 \indx{background}
@@ -330,15 +331,21 @@ The three backgrounds at the ends of the spokes are thus Warrior (for those excl
 \end{normbox}
 Each background has one or more stats that is very important to the successful practice of the profession, as given in the above table. If your adventurer's highest stat is
 \STR, they probably would fare best as a Warrior. If they have a high \PER, you probably should consider making them a Nomad, etc.\\
-You must now choose an available background for your adventurer. Consider not only the stats, but also what you envision your persona becoming, or what you want to roleplay. You are not forced to pick the background that matches the highest stat. In fact, successfully role-playing (for example) an adventurer with a high \STR and a mediocre \INT as a Auger rather than a Warrior is very rewarding, not to mention entertaining, to you, the GM, and other players.Here are descriptions of the available backgrounds to further help you make a selection:\\
-- A \indy{Warrior} relies upon their skill at arms. They are proficient at fighting and confident in their ability to succeed with force. While they might serve in an army, a warrior prefers individual combat and is more likely found employed as a bodyguard, mercenary, constable, or a guard.\\
-- A \indy{Priest} is devoted to the service of a deity, forever at that deity's disposal to spread their faith and worship throughout the world. A priest is willing for fight for their deity's cause, but can also use god-given magical powers to further their goals.\\
-- A \indy{Magician} is a practitioner of one of four types of elemental magics, using his magics to affect the world and gain wealth, recognition and influence. A magician is often consulted and employed by others to accomplish their goals.
-The spells available in each element give a definite flavor to the personality and style of play of a magician. Fire and Air magicians tend to have more offensive spells, whereas Earth and Water mages are more defense oriented. Fire and Earth magic tends to be more individual in nature, while many Air and Water spells are useful to support and maintain a group of adventurers. If your adventurer is going to become a magician, bear these generalities in mind to select the elemental style that matches your adventurer's personality.\\
-- Brought up learning to think to solve their problems, an \indy{Auger}'s basic tenet is to live up to their potential, learning to utilize their best skills and making the most of any situation.\\
-- Born to the seas, a \indy{Marine} is a member of the traveling armies that plies the seas of Jaern. Ready with a quick story of marine heroes of the past, today's marine attempts to make a name for themselves and their shipmates. They adventure for fame, and are always ready for a good fight and a large tankard of ale.\\
-- Members of a tight-knit group of families, \indy{Nomads} mistrust all other Jaernians and rarely travel among them. They are rumored to have various mystical and magical powers, so most people shun them, unsure of their intentions.
+You must now choose an available background for your adventurer. Consider not only the stats, but also what you envision your persona becoming, or what you want to roleplay. You are not forced to pick the background that matches the highest stat. In fact, successfully role-playing (for example) an adventurer with a high \STR and a mediocre \INT as a Auger rather than a Warrior is very rewarding, not to mention entertaining, to you, the GM, and other players.Here are descriptions of the available backgrounds to further help you make a selection:
 
+\begin{itemize}[leftmargin=12pt]
+\item {A \indy{Warrior} relies upon their skill at arms. They are proficient at fighting and confident in their ability to succeed with force. While they might serve in an army, a warrior prefers individual combat and is more likely found employed as a bodyguard, mercenary, constable, or a guard.}
+
+\item A \indy{Priest} is devoted to the service of a deity, forever at that deity's disposal to spread their faith and worship throughout the world. A priest is willing for fight for their deity's cause, but can also use god-given magical powers to further their goals.
+
+\item A \indy{Magician} is a practitioner of one of four types of elemental magics, using his magics to affect the world and gain wealth, recognition and influence. A magician is often consulted and employed by others to accomplish their goals.
+The spells available in each element give a definite flavor to the personality and style of play of a magician. \indy{Fire} and \indy{Air} magicians tend to have more offensive spells, whereas \indy{Earth} and \indy{Water} mages are more defense oriented. \indy{Fire} and \indy{Earth} magic tends to be more individual in nature, while many \indy{Air} and \indy{Water} spells are useful to support and maintain a group of adventurers. If your adventurer is going to become a magician, bear these generalities in mind to select the elemental style that matches your adventurer's personality.
+
+\item Brought up learning to think to solve their problems, an \indy{Auger}'s basic tenet is to live up to their potential, learning to utilize their best skills and making the most of any situation.
+\item Born to the seas, a \indy{Marine} is a member of the traveling armies that plies the seas of Jaern. Ready with a quick story of marine heroes of the past, today's marine attempts to make a name for themselves and their shipmates. They adventure for fame, and are always ready for a good fight and a large tankard of ale.
+
+\item Members of a tight-knit group of families, \indy{Nomads} mistrust all other Jaernians and rarely travel among them. They are rumored to have various mystical and magical powers, so most people shun them, unsure of their intentions.
+\end{itemize}
 After choosing one of these, place it on the adventurer card after "Background." If you're still uncertain, scan the list of Model Adventurers beginning on \tcpage{create-models} for ideas and suggestions. If it appears your adventurer suffers from hopelessly inadequate stats, they would probably not become an adventurer in a fantasy world. Ask the GM; they may allow you to discard this would-be adventurer and start over.
 \section{Languages}
 You need to know which \indy[language]{languages} (if any) your adventurer speaks to know how they can communicate with actors and other adventurers. Knowledge of languages is an intelligence-based skill, and beginning adventurers may know zero, one or two languages.
@@ -363,11 +370,11 @@ INT & \makecell{Initial\#} & \makecell{Max\#}\\
 \end{normbox}
 \end{wrapfigure}
 
-Adventurers having an \INT of less than \defnum{6} cannot speak coherently. They may know how to say isolated words or phrases, and can generally understand simple sentences. Playing adventurers with a low \INT is very challenging because the player must communicate through actions rather than words.
+Adventurers having an \INT of less than \tcdefine{six} cannot speak coherently. They may know how to say isolated words or phrases, and can generally understand simple sentences. Playing adventurers with a low \INT is very challenging because the player must communicate through actions rather than words.
 
-The first language an adventurer with an INT greater than \defnum{6} learns is their racial language. This is \indx{language!paroli}\indy{Paroli} for all \indy{human} adventurers. \indy[race!half-breed]{Half-breed} adventurers may pick one of their racial languages as their native tongue or the tongue of whomever raised them, whichever is most appropriate. The first language is always known at a skill \indy{rank} of \defnum{9} or the adventurer's \INT, whichever is lower.
+The first language an adventurer with an \INT greater than \tcdefine{six} learns is their racial language. This is \indx{language!paroli}\indy{Paroli} for all \indy{human} adventurers. \indy[race!half-breed]{Half-breed} adventurers may pick one of their racial languages as their native tongue or the tongue of whomever raised them, whichever is most appropriate. The first language is always known at a skill \indy{rank} of \tcdefine{nine} or the adventurer's \INT, whichever is lower.
 
-With an \INT above \defnum{8}, the player may choose a second language. For non-human adventurers, it would be prudent to pick the common tongue of the area to simplify communications. This second language is initially known at a skill \indy{rank} of \defnum{6}.
+With an \INT above \tcdefine{eight}, the player may choose a second language. For non-human adventurers, it would be prudent to pick the common tongue of the area to simplify communications. This second language is initially known at a skill \indy{rank} of \tcdefine{six}.
 
 \begin{normbox}[Languages]
 \indx{languages}
@@ -392,25 +399,25 @@ With an \INT above \defnum{8}, the player may choose a second language. For non-
 Your GM must be able to balance your adventuring party against some opponents it might meet. Your adventurer's \indy{Rating} is how many adventurers they have experienced. Set this at two now, and each time he finishes a gaming session, add one. A starting rating of two represents the skills that you choose in creating your adventurer. Your GM may ask for this number from all the players at the beginning of a gaming session.
 \section{Date}
 \indx{date}
-At the beginning and end of each adventure, the Game Master will tell you the current game date. The amount of time elapsed between adventures is important for curing damage, doing research, being pregnant, etc. The date is in ISO 8601 format (Year-Month-Day), such as 10080-06-15 SF (Since Founding). Record the current date minus your age on your card as your date of birth (DOB).
+At the beginning and end of each adventure, the Game Master will tell you the current game date. The amount of time elapsed between adventures is important for curing damage, doing research, being pregnant, etc. The date is in ISO 8601 format (Year-Month-Day), such as \example{10080-06-15 SF (Since Founding)}. Record the current date minus your age on your card as your date of birth (DOB).
 \section{Nomadic Prefix Names}
 \indx{name!epokonom}\indx{adventurer!epokonom}\indx{adventurer!nomad prefix}
-\begin{wrapfigure}[8]{l}[0pt]{5cm}
+\begin{wrapfigure}[9]{l}[0pt]{5cm}
 \begin{normbox}[Nomad Prefix Names]
 \small
 \begin{tabular}{l l|l l}
 Roll & Prefix & Roll & Prefix\\
 \midrule
-1 - 5 & Raz- & 16 & Ald-\\
-6 - 9 & Car- & 17 & Edo-\\
-10 - 12 & Oka- & 18 & Ijo-\\
-13 - 14 & Vem- & 19 & Bez-\\
+1-5 & Raz- & 16 & Ald-\\
+6-9 & Car- & 17 & Edo-\\
+10-12 & Oka- & 18 & Ijo-\\
+13-14 & Vem- & 19 & Bez-\\
 15 & Lar- & 20 & Sag-\\
 \end{tabular}
 \normalsize
 \end{normbox}
 \end{wrapfigure}
-If your adventurer is a \indy{Nomad}, then they must know their own prefix name, or \indy{Epokonom}. Roll \tcdieroll{1d20} and look at the following table. Put this prefix before your adventurer's name.
+If your adventurer is a \indy{Nomad}, then they must know their own prefix name, or \indy{Epokonom}. Roll \tcdieroll{1d20} and look at the following table. Put this prefix before your adventurer's name on your \indy{adventurer card}.
 
 \section{Name}
 \indx{adventurer!name}\indx{name}
@@ -423,11 +430,11 @@ Your adventurer may have a regular job to bring in a steady income. After your a
 \indx{models}\indx{adventurer!models}
 Players buy attributes for their adventurers using experience points. Physical equipment is bought with silver pieces. This buying allows you to make your adventurer's abilities fit your perception of her personality.
 
-To simplify making a new adventurer, several different Model Adventurers are reproduced here. If you wish to pick one of these, just copy the information from the chosen model that matches your adventurer's background onto an adventurer card. For each defense value listed in the model, plug in the appropriate stats from your adventurer (dividing them by 5 and rounding down as shown) and add the results to find the your adventurer's defense values. If they are an elf, add one on their MDV for Exceptional PER. If they are an orc, add one to his GDV for Exceptional WIL. Your adventurer is ready to play.
+To simplify making a new adventurer, several different Model Adventurers are reproduced here. If you wish to pick one of these, just copy the information from the chosen model that matches your adventurer's background onto an adventurer card. For each defense value listed in the model, plug in the appropriate stats from your adventurer (dividing them by \result{5} and rounding down as shown) and add the results to find the your adventurer's defense values. If they are an elf, add \result{1} on their \DV for \indy[perception!exceptional]{Exceptional PER}. If they are an orc, add \result{1} to their \indy{GDV} for \indy[willpower!exceptional]{Exceptional WIL}. Your adventurer is ready to play.
 
-Each model allows you 20\% more attributes than if you had bought all the attributes separately. This extra does not make the adventurer more powerful; it is used to buy attributes that give added flavor and a direction for further development. Once selected, models cannot be modified or changed except to buy new attributes (or upgrade current ones) with earned experience points (see \nameref{create-buying} on \tcpage{create-buying}).
+Each model allows you \result{20\%} more attributes than if you had bought all the attributes separately. This extra does not make the adventurer more powerful; it is used to buy attributes that give added flavor and a direction for further development. Once selected, models cannot be modified or changed except to buy new attributes (or upgrade current ones) with earned experience points (see \nameref{create-buying} on \tcpage{create-buying}).
 
-If none of the models fit your idea of your adventurer's personality, and your GM is allowing custom adventurer creation, skip this section and read \nameref{create-buying} to learn how to complete your adventurer's creation.
+If none of the models fit your idea of your adventurer's personality, and your GM is allowing custom adventurer creation, skip this section and read \indy{\nameref{create-buying}} to learn how to complete your adventurer's creation.
 
 Each adventurer prototype specifies the values for the following attributes:
 
@@ -438,9 +445,9 @@ Each adventurer prototype specifies the values for the following attributes:
 \indy{Combat Modifier} (\CM) & Ability using hand-to-hand weapons\\
 \indy{Missile Modifier} (\MM) & Ability using bows, slings and crossbows\\
 \indy{Grapple Modifier} (\GM) & Ability to grapple\\
-Spell type & Declared type of spells (EARTH, FIRE, AIR, WATER, and DIVINE)\\
-\indy{Spell Group}s & Ability to use various spell groups\\
-\indy{Incants} & Specific nomadic items and talisman\\
+Spell type & Declared type of spells (Earth, Fire, Aair, Water, and Divine)\\
+\indy[Spell Group]{Spell Groups} & Ability to use various spell groups\\
+\indy[Incant]{Incants} & Specific nomadic items and talisman\\
 \indy[Skill]{Skills} & Purchased skills and their ranks\\
 \indy{Combat Defense} (\CDV) & Resistance to being struck\\
 \indy{Missile Defense} (\MDV) & Resistance to being hit by missiles\\
@@ -454,41 +461,42 @@ Spell type & Declared type of spells (EARTH, FIRE, AIR, WATER, and DIVINE)\\
 \input{create-models.tex}
 \pagebreak
 \section{Experience Points}
-\indy{Experience Points} (\EP) are the currency used to buy such attributes as skills, stats, spells groups, damage points, and melee modifiers. Your adventurer is awarded EP during and after an adventure in several ways, depending on the method chosen by your GM. Using experience points in this way simulates any training or study that might be required to acquire or improve an ability without actually going through the tedium and boredom of doing so during a gaming session. By the way, when an adventure ends, don't forget to add one to the Rating entry on the adventurer's card. Your GM uses the Rating to get a rough idea of how much experience your adventurer has had so that they may balance the difficulty of an adventure against the power of the adventurers.
+\indy{Experience Points} (\EP) are the currency used to buy such attributes as skills, stats, spells groups, damage points, and melee modifiers. Your adventurer is awarded \EP during and after an adventure in several ways, depending on the method chosen by your GM. Using experience points in this way simulates any training or study that might be required to acquire or improve an ability without actually going through the tedium and boredom of doing so during a gaming session. By the way, when an adventure ends, don't forget to add \result{1} to the \indy{Rating} entry on the adventurer's card. Your GM uses the rating to get a rough idea of how much experience your adventurer has had so that they may balance the difficulty of an adventure against the power of the adventurers.
 
 You may specify that a portion of the awarded experience be set aside and used later to buy attributes. There is no limit to the amount of experience your adventurer may hold, but it makes little sense to hold it longer than needed to buy the attributes sought.
 \section{Buying}
 \label{create-buying}\indx{buying}\indx{skill!buying}\indx{attribute!buying}\indx{melee modifiers}
-If you have not chosen an Adventurer Model, your adventurer is given 5,000 EP with which to buy:
+If you have not chosen an \indy{Adventurer Model}, your adventurer is given \tcdefine{five thousand \EP} with which to buy:
 \begin{normbox}[Things You Can Purchase With Experience]
 \small
 \begin{tabular}{@{}l l}
-STATS & STR, INT, etc.\\
-DAMAGE POINTS  & Ability to survive injury\\
-MELEE MODs & Ability to resist physical damage\\
-SPELLS & Magician and Priest magic\\
-INCANTS & Nomadic rituals\\
-LANGUAGES & Spoken languages\\
-ABILITIES & Useful skills and abilities\\
+\indy[statistics]{Stats} & STR, INT, etc.\\
+\indy{Damage Points}  & Ability to survive injury\\
+\indy[melee mod]{Melee Mods} & Ability to resist physical damage\\
+\indy[spell]{Spells} & Magician and Priest magic\\
+\indy[incant]{Incants} & Nomadic rituals\\
+\indy[language]{Languages} & Spoken languages\\
+\indy[ability]{Abilities} & Useful skills and abilities\\
 \end{tabular}
 \end{normbox}
 All buying must be done either when creating an adventurer or between adventures, and must be witnessed by the GM or their representative. The majority of the time this will be done when the adventurer has returned to a civilized setting, where the resources for training are most likely to be found. If an adventure is one in a series, and no game time has passed since the previous adventure, your GM may disallow buying attributes until after the entire sequence of adventures has been completed.
 
-All attributes start at an initial \indy{rank} of \defnum{zero} and may be bought upward one point at a time. To buy new attributes, or increase the value of an old one, multiply the base cost of the attribute by the point value you wish your adventurer to gain.
+All attributes start at an initial \indy{rank} of \tcdefine{zero} and may be bought upward one point at a time. To buy new attributes, or increase the value of an old one, multiply the \indy{base cost} of the attribute by the point value you wish your adventurer to gain.
 
-\textit{If Marna (a priestess of Osiris) attempts to raise her teaching skill (base cost 100 EP) from 8 to 9, she must expend 100 x 9 or 900 EP to do so.}
+\example{If Marna (a priestess of Osiris) attempts to raise her teaching skill (base cost 100 EP) from 8 to 9, she must expend 100 x 9 or 900 EP to do so.}
 
-\textit{If George the Magnificent (a Warrior) wants to raise his disguise attribute (base cost 50 EP) from 11 to 12, it will cost him 12 x 50 x 3 or 1800 EP. The 3x multiplier is included because the skill is an Auger skill, and George is a Warrior.} 
+\example{If George the Magnificent (a Warrior) wants to raise his disguise attribute (base cost 50 EP) from 11 to 12, it will cost him 12 x 50 x 3 or 1800 EP. The 3x multiplier is included because the skill is an Auger skill, and George is a Warrior.} 
 
-See \nameref{create-skills} on \tcpage{create-skills} for more information on purchasing skills outside your class.
+See \indy[skill!learning]{\nameref{create-skills}} on \tcpage{create-skills} for more information on purchasing skills outside your class.
 \subsection{Buying up from zero}
-While attributes are usually bought one point at a time, sometimes it is necessary to buy one from zero up to a high value. To do this, we use a little bit of math . . .\\
-To buy something from zero to an arbitrary value, call that value N,
+While attributes are usually bought one point at a time, sometimes it is necessary to buy one from zero up to a high value. To do this, we use a little bit of math.
+
+To buy something up by arbitrary value, call that value \result{N},
 \begin{normbox}[Attribute Purchase Equation]
 \large
 $Total Cost = \frac{N * (N+1)}{2} * Base Cost$
 \end{normbox}
-For example, to buy damage points (base cost 25 EP) from zero up to 16 would cost as follows:
+\example{For example, to buy damage points} (\indy{base cost} \tcdefine{twenty-five EP}) \example{from zero up to 16 would cost as follows:}
 \begin{normbox}[Attribute Purchase Example]
 \large
 $\frac{16 * (16+1)}{2} * 25 = \frac{16*17}{2} * 25 = 3,400 EP$
@@ -525,9 +533,9 @@ If the formula above is too intimidating, use the following table. Cross referen
 \begin{multicols*}{2}
 \section{Stats}
 \indx{statistics!character}
-Of all the attributes, stats are arguably the most important. Stats are the basis for most resistance checks (the avoidance of effects), and determine the maximum value for most other attributes (skills, languages, spell groups, etc.). At a base cost of 500, they are also very expensive to increase. \textit{For example, to buy STR from 14 to 15 would cost 500 x 15 = 7,500 experience points.}
+Of all the attributes, stats are arguably the most important. Stats are the basis for most resistance checks (the avoidance of effects), and determine the maximum value for most other attributes (skills, languages, spell groups, etc.). At a base cost of 500, they are also very expensive to increase. \example{For example, to buy STR from 14 to 15 would cost 500 x 15 = 7,500 experience points.}
 
-A physical stat may not be increased more than \defnum{4} above the initial roll, to reflect the notion that training and practice can only increase a physical ability so much.
+A physical stat may not be increased more than \result{4} above the initial roll, to reflect the notion that training and practice can only increase a physical ability so much.
 \section{Damage Points}
 \indy{Damage points} (\DP) indicate your adventurer's ability to avoid damage during combat. As you buy this total higher, your adventurer becomes more skillful at dodging, moving and twisting to avoid being damaged while fighting. If they are injured, damage points are temporarily subtracted from their total DP; the new total indicates their relative condition.
 
@@ -548,13 +556,13 @@ DP & Cost & DP & Cost & DP & Cost\\
 \end{normbox}
 \end{wrapfigure}
 
-Lost DP may be regained by resting. A full night's rest (at least eight hours; twelve for those with no soul, like elves) restores a number of DP equal to the adventurer's HEA divided by five (by two for those with the \indy{Exceptional HEA} attribute, like most dwarves), rounded down. Damage points may not be restored beyond the original maximum DP total.
+Lost \DP may be regained by \indy{resting}. A full night's rest (at least \tcdefine{eight hours}; \tcdefine{twelve hours} for those with \indy[soulless]{no soul}, like \indy[elf]{elves}) restores a number of DP equal to the adventurer's \HEA divided by \result{5} (by \result{2} for those with the \indy[health!exceptional]{Exceptional HEA} attribute, like most \indy[dwarf]{dwarves}), rounded down. Damage points may not be restored beyond the original maximum DP total.
 
-The base cost for DPs is \defnum{25}. Your adventurer must have DP to survive. Buying damage points with experience actually simulates additional training to avoid being wounded. This could be handled as another defensive modification, but being able to take more damage yields the same effect, is easier to keep track of, balances quite nicely, and is more fun to play.
+The \indy{base cost} for DP is \tcdefine{twenty-five EP}. Your adventurer must have DP to survive. Buying damage points with experience actually simulates additional training to avoid being wounded. This could be handled as another defensive modification, but being able to take more damage yields the same effect, is easier to keep track of, balances quite nicely, and is more fun to play.
 
 When buying damage points, you are only increasing your adventurer's maximum DP, not their current DP total. New DPs are only gained after resting, according to the DP recovery rule above.
 \section{Melee Modifiers}
-Every adventurer has three modifiers, or \indy[modifier!melee]{Mods}, that help determine success in combat. The \indy{Combat Modifier} (\CM) is added to all \tcdieroll{1d20} "to strike" rolls you make when your adventurer attacks using a hand-to-hand weapon. The \indy{Missile Modifier} (\MM) is added to all "to hit" rolls from bows, crossbows and thrown objects. The \indy{Grapple Modifier} (\GM) is used when wrestling or boxing an opponent. Mods start at \indy{rank} \defnum{zero} and are bought upward like any other attribute. The base cost depends on your adventurer's background\indx{background!adventurer}\indx{background}:
+Every \indy{adventurer} has three modifiers, or \indy[modifier!melee]{Mods}, that help determine success in combat. The \indy{Combat Modifier} (\CM) is added to all \tcdieroll{1d20} "to strike" rolls you make when your adventurer attacks using a hand-to-hand weapon. The \indy{Missile Modifier} (\MM) is added to all "to hit" rolls from bows, crossbows and thrown objects. The \indy{Grapple Modifier} (\GM) is used when wrestling or boxing an opponent. Mods start at \indy{rank} \tcdefine{zero} and are bought upward like any other attribute. The base cost depends on your adventurer's \indx{background!adventurer}\indy{background}:
 
 %\begin{wrapfigure}[9]{o}[0pt]{5.25cm}
 \begin{normbox}[Melee Modifier Costs]
@@ -578,34 +586,34 @@ Subtract the calculated \EP from your adventurer's expendable EP total, then pla
 \indx{spell}
 There is more to using magic in \textbf{AQ/Jaern} than is given here, but you need to understand experience point costs and stat limitations to decide whether your adventurer is suited to magic use. Spell casting mechanics are discussed in \chref{ch:play-adventurer} on \tcpage{ch:play-adventurer}.
 
-\textbf{Spells} are of two varieties: Divine and Elemental. \indy{Divine magic}\indx{magic!divine} is the magic used by priests, granted them by their \indy[deity]{deities}deities. \indy{Elemental magic}\indx{magic!elemental} is used by magicians to harness the raw power of the elements. Both styles of magic are bought in similar ways.
+\textbf{Spells} are of two varieties: \indy[divine magic]{Divine} and \indy[magic!elemental]{Elemental}. Divine magic is the magic used by priests, granted them by their \indy[deity]{deities}. Elemental magic is used by magicians to harness the raw power of the elements. Both styles of magic are bought in similar ways.
 
 Adventurers buying elemental magic must declare which one of the four elements (\indx{magic!earth}\indy{Earth}, \indx{magic!fire}\indy{Fire}, \indx{magic!air}\indy{Air}, or \indx{magic!water}\indy{Water}) they will use as the source of their power. List this choice on the \indy{Adventurer Card} under \indy{Element}.
 
-If an adventurer wants to purchase priestly magic, he must declare \indy{allegiance} to a specific deity, who will serve as the source of his magic. This is listed on the card under "Deity" as the primary go or goddess to whom the adventurer owes allegiance.
+If an adventurer wants to purchase priestly magic, he must declare \indy{allegiance} to a specific deity, who will serve as the source of his magic. This is listed on the card under "\indy{Deity}" as the primary god or goddess to whom the adventurer owes allegiance.
 Spell effects for both elemental and divine magic are divided into groups. The spells in each group are related in some fashion, and are ranked in ascending order of power.
 Spells in a group must be acquired in ascending order, as the ability to cast the more powerful spells is built on the knowledge learned from casting the less powerful spells in the group.
 
 Elemental spells are divided into \indy[spell!elemental core]{core} spells, usable by all magicians, and \indy[spell!element-specific]{element-specific} spells that may only be used by the appropriate mages.
 
 Priestly \indy{spell groups} are also divided into two types: \indy[spell!divine core]{core} spells that are common to all devout casters, and \indy[spell!deity-specific]{deity-specific} spell groups that manifest the particular sphere of influence of each deity.
-The base cost for each spell group varies and is listed in the spell descriptions. Most spell groups have a base cost of 300 EP; one spell group in each element has a base
-cost of 600 EP.
+The base cost for each spell group varies and is listed in the spell descriptions. Most spell groups have a base cost of \tcdefine{three hundred EP}; one spell group in each element has a base
+cost of \tcdefine{six hundred EP}.
 \subsection{Acquiring Spells from Other Elements}
 \indx{spell!non-mage acquiring}
 Besides their chosen element, adventurers may purchase spells in the element they dominate at double the base cost. They may not purchase spells in any other element.
-Dominance is discussed in \chref{ch:play-adventurer}, but briefly Fire dominates Air, Air dominates Water, Water dominates Earth, and Earth dominates Fire. Thus an earth magician could also learn fire spells, but not air or water spells.
+Dominance is discussed in \chref{ch:play-adventurer}, but briefly \indy[magic!fire]{fire} dominates \indy[magic!air]{air}, \indy[magic!air]{air} dominates \indy[magic!water]{water}, \indy[magic!water]{water} dominates \indy[magic!earth]{earth}, and \indy[magic!earth]{earth} dominates \indy[magic!fire]{fire}. \example{Thus an earth magician could also learn fire spells, but not air or water spells.}
 \subsection{Stat Limitations}
 \indx{spell!stat limitations}
-Your adventurer's \INT, divided by 2 and rounded down, dictates how many elemental spell groups he may buy; \CSE is the limiter for divine magic. Thus if your adventurer has an INT of 12 and a CSE of 15, they may not buy into more than 12/2 or 6 elemental spell groups and 15/2=7.5 (round down to 7) divine spell groups.
+Your adventurer's \INT, divided by \result{2} and rounded down, dictates how many elemental spell groups they may buy; \CSE is the limiter for divine magic. \example{Thus if your adventurer has an INT of 12 and a CSE of 15, they may not buy into more than 12/2 or 6 elemental spell groups and 15/2=7.5 (round down to 7) divine spell group}s.
 
-Your adventurer's \PWR stat determines the highest \indy{rank} that may be bought within any spell group, \textit{e.g., someone with a PWR of 13 may not buy above rank 13 in any spell group.} Also, your adventurer may not buy a spell group's \indy{rank} higher than it has listed spells.
+Your adventurer's \PWR stat determines the highest \indy{rank} that may be bought within any spell group, \example{e.g., someone with a PWR of 13 may not buy above rank 13 in any spell group.} Also, your adventurer may not buy a spell group's \indy{rank} higher than it has listed spells.
 \subsection{Buying of Spells by Other Backgrounds}
-Normally only magician or priest adventurers buy spells, but those in other backgrounds may desire at some point in their careers to dabble in magic. Like any magician or priest they must choose an element and/or declare devotion to a deity. Spell groups are purchased at \defnum{triple} the base cost; buying into the subservient element costs \defnum{sextuple} the \indy{base cost}.
+Normally only magician or priest adventurers buy spells, but those in other backgrounds may desire at some point in their careers to dabble in magic. Like any magician or priest they must choose an element and/or declare devotion to a deity. Spell groups are purchased at \result{triple} the \indy{base cost}; buying into the subservient element costs \result{sextuple} the \indy{base cost}.
 
 \begin{normbox}[Spell Cost Multiplier]
 \indx{spell!cost multiplier}
-\begin{tabular}{l l l l l l}
+\begin{tabular}{l c c c c c}
 \small
 \textbf{Buyer} & \textbf{Earth}  & \textbf{Fire} & \textbf{Air} & \textbf{Water}  & \textbf{Divine}\\
 \midrule
@@ -628,19 +636,19 @@ NM*/Water & 6 & - & - & 3 & 3\\
 
 \section{Incants}
 \indy{Incants} are rituals performed by by \indy{nomads}. These
-incants take the form of Alchemical \indy[mixture]{mixtures}\indx{incant!mixture}, \indy[song]{Songs}\indx{incant!song}, \indy{Talisman}\indx{incant!talisman}, \indy[imprint]{Imprints}\indx{incant!imprint}\indx{incant!tattoo} (\indy{tattoos}), and \indy[invocation]{Spiritual Invocations}\indx{incant!invocation}. The ability to perform the ritual is purchased by the nomad by \indy{rank} and at stated \indy{base cost}. When the ritual is performed, many require a proper ingredient. An incant can not be purchased at a rank higher than \defnum{half the adventurer's \PER stat, rounded down}.
+incants take the form of Alchemical \indy[mixture]{mixtures}\indx{incant!mixture}, \indy[song]{Songs}\indx{incant!song}, \indy{Talisman}\indx{incant!talisman}, \indy[imprint]{Imprints}\indx{incant!imprint}\indx{incant!tattoo} (\indy{tattoos}), and \indy[invocation]{Spiritual Invocations}\indx{incant!invocation}. The ability to perform the ritual is purchased by the nomad by \indy{rank} and at stated \indy{base cost}. When the ritual is performed, many require a proper ingredient. An incant can not be purchased at a \indy{rank} higher than \result{1/2} the adventurer's \PER stat, rounded down.
 \subsection{Preparing Incants by Other Backgrounds}
 \indx{incant!non-nomad preparation}
-If an adventurer from another background wishes to delve into the arcane, they must seek out a nomadic \indy{rondo}, renounce their allegiance to any gods, and be accepted by the nomads. They must be inducted into their ranks before they can learn any spiritual magic. They undergo \indy{The Seraei} to find and bind with a \indy{Guardian Spirit}\indx{nomad!guardian spirit}. Even then, they must pay \textbf{triple} the normal experience cost since they have not yet learned the stories, songs an traditions of those brought up within the rondo.
+If an adventurer from another background wishes to delve into the arcane, they must seek out a nomadic \indy{rondo}, renounce their allegiance to any \indy[deity]{gods}, and be accepted by the \indy[nomad]{nomads}. They must be inducted into their ranks before they can learn any spiritual magic. They undergo \indy{The Seraei} to find and bind with a \indy{Guardian Spirit}\indx{nomad!guardian spirit}. Even then, they must pay \textbf{triple} the normal experience cost since they have not yet learned the stories, songs an traditions of those brought up within the rondo.
 \vfill\null
 
 \columnbreak
 \section{Languages}
-The key to increasing your adventurer's ability in a \indy{language} is to find someone with a \indy{rank} in that language at least \defnum{four} higher than the rank your adventurer wishes to obtain. They may buy the language skill to the desired rank at a \indy{base cost} of \defnum{100 EP}, besides the teacher's fee (monetary or service), if any. Remember that your adventurer's \INT limits the number of languages they may learn (see \tcpage{create-language}). Furthermore, the rank of a language may never exceed the INT value. Language rank definitions are as follows:
+The key to increasing your adventurer's ability in a \indy{language} is to find someone with a \indy{rank} in that language at least \result{4} higher than the rank your adventurer wishes to obtain. They may buy the language skill to the desired rank at a \indy{base cost} of \tcdefine{one hundred EP}, besides the teacher's fee (monetary or service), if any. Remember that your adventurer's \INT limits the number of languages they may learn (see \tcpage{create-language}). Furthermore, the rank of a language may never exceed the \INT value. Language rank definitions are as follows:
 
 \begin{normbox}[Language Rank Definitions]
 \indx{rank!language}\indx{language!rank}
-\begin{tabular}{p{0.085\linewidth} p{0.7\linewidth}}
+\begin{tabular}{p{0.085\linewidth} p{0.8\linewidth}}
 1-2  & Knows individual words, no sentences\\
 3-4  & Can speak common phrases\\
 5-6  & Can be understood, but speaks w/accent\\
@@ -668,14 +676,14 @@ The key to increasing your adventurer's ability in a \indy{language} is to find 
 \end{normbox}
 \end{wrapfigure}
 
-Skills allow your adventurer to be more than their basic background permits. Each skill has a \indy{rank} starting at \defnum{one} and going upward. An adventurer possessing a skill at rank 1 is complete novice at that skill, while holding a rank 18 shows an almost godlike command of the craft.
+Skills allow your adventurer to be more than their basic background permits. Each skill has a \indy{rank} starting at \tcdefine{one} and going upward. An adventurer possessing a skill at rank 1 is complete novice at that skill, while holding a rank \tcdefine{eighteen} shows an almost godlike command of the craft.
 
 \subsection{Learning Skills}
-\indy[skill]{Skills} may be taught by an actor, or by one adventurer to another. The teacher must rank at least four higher than the student's desired rank; the minimum learning time is one week times the skill rank the student is attempting to learn. The student must spend the required EP, plus a teacher's fee (monetary or service), if any.
+\indy[skill]{Skills} may be taught by an actor, or by one adventurer to another. The teacher must rank at least four higher than the student's desired rank; the minimum learning time is \tcdefine{one week} times the skill \indy{rank} the student is attempting to learn. The student must spend the required \EP, plus a teacher's fee (monetary or service), if any.
 
-Each skill's \indy[skill!associated stat]{associated stat} governs the maximum rank your adventurer may purchase, e.g., INT based skills may not be bought higher than your adventurer's \INT rank.
+Each skill's \indy[skill!associated stat]{associated stat} governs the maximum rank your adventurer may purchase, \example{e.g., INT based skills may not be bought higher than your adventurer's INT rank.}
 
-The following table is a listing of available skills. Those listed as \defnum{res} cannot be bought without consulting the GM. All the others can be bought by a beginning adventurer. The number listed in the "Extra Dice" column is the number of extra dice used to \indy{default}\indx{skill!default} that skill. Skills labeled with \defnum{non} cannot be defaulted. Full descriptions of each skill are in \chref{ch:skills} beginning on \tcpage{ch:skills}.
+The following table is a listing of available skills. Those listed as \tcdefine{reserved} cannot be bought without consulting the GM. All the others can be bought by a beginning adventurer. The number listed in the "Extra Dice" column is the number of extra dice used to \indy{default}\indx{skill!default} that skill. Skills labeled with \tcdefine{N/A} cannot be defaulted. Full descriptions of each skill are in \chref{ch:skills} beginning on \tcpage{ch:skills}.
 \vfill\null
 \label{create-skills}
 \indx{skill!listing}
@@ -684,12 +692,12 @@ The following table is a listing of available skills. Those listed as \defnum{re
 \end{tcbraster}
 \section{Money}
 \indx{money}
-Each adventurer has a small initial supply of silver pieces to spend on equipment. If you did not pick an adventurer model, roll \tcdieroll{3d6} and multiply the total by 10 to determine your adventurer's starting money.
+Each adventurer has a small initial supply of silver pieces to spend on equipment. If you did not pick an adventurer model, roll \tcdieroll{3d6} and multiply the total by \result{10} to determine your adventurer's starting money.
 \section{Equipment}
 \indx{equipment}
-Silver is used to buy adventuring equipment. Items on the following table may be bought or sold when in a town and between adventures, without consulting the GM. Equipment may be sold back to the merchants in town for one half of the listed price. Place any equipment bought under "Equipment" on the \indy{Adventurer Card} and subtract the proper amount of silver.
+Silver is used to buy adventuring equipment. Items on the following table may be bought or sold when in a town and between adventures, without consulting the GM. Equipment may be sold back to the merchants in town for one half of the listed price. Place any equipment bought under "\indy{Equipment}" on the \indy{Adventurer Card} and subtract the proper amount of silver.
 
-All prices are in \indx{metal!silver}\indx{coin!silver}\indy{silver}. The exchange rate is 100 \indx{metal!copper}\indx{coin!copper}\indy{copper} coins = 10 silver coins = 1 \indx{metal!gold}\indx{coin!gold}\indy{gold} coin. Any item that is \indx{material!iron}\indx{metal!iron}\indy{iron} or \indx{material!steel}\indx{metal!steel}\indy{steel} may be \indy[silvering]{silvered} by quadrupling the cost. Items may also be made of other materials, if feasible.
+All prices are in \indx{metal!silver}\indx{coin!silver}\indy{silver}. The exchange rate is \tcdefine{one hundred} \indx{metal!copper}\indx{coin!copper}\indy{copper} coins (cp) = \tcdefine{ten} silver coins (sp) = \tcdefine{one} \indx{metal!gold}\indx{coin!gold}\indy{gold} coin (gp). Any item that is \indx{material!iron}\indx{metal!iron}\indy{iron} or \indx{material!steel}\indx{metal!steel}\indy{steel} may be \indy[silvering]{silvered} by \result{quadrupling} the cost. Items may also be made of other materials, if feasible.
 
 \begin{normbox}[Material cost multiplier chart]
 \indx{cost!material multiplier}\indx{price!material multiplier}
@@ -718,30 +726,30 @@ Solid Platinum  & 1000x\\
 \section{Defense Values}
 \indx{defense!modifier}\indx{defense}
 \indx{missile}\indx{grapple}\indx{hand-to-hand}
-Once your adventurer is equipped, you can calculate the three defense values, which determine how difficult it is to wound your adventurer in combat. There is a separate defense value for each type of melee: using hand-to-hand weapons (to strike), missiles (to hit), and grappling (to grapple). Add up the factors for each defensive component to calculate your adventurer's three defense values. They only need to be recalculated if any of the component values change.
+Once your adventurer is equipped, you can calculate the three defense values, which determine how difficult it is to wound your adventurer in combat. There is a separate defense value for each type of melee: using hand-to-hand weapons (to \indy{strike}), missiles (to \indy{hit}), and grappling (to \indy{grapple}). Add up the factors for each defensive component to calculate your adventurer's three defense values. They only need to be recalculated if any of the component values change.
 
-If the adventurer is \indy{bound} or \indy{unconscious}, skip the sections on \indy{Mobility}, \indy{Agility}, and \indy[modifier!statistic]{Stat Modifiers}. Set your adventurer's defense values at \textbf{zero} and start at the section on \indy{Armor}.
+If the adventurer is \indy{bound} or \indy{unconscious}, skip the sections on \indy{Mobility}, \indy{Agility}, and \indy[modifier!statistic]{Stat Modifiers}. Set your adventurer's defense values at \result{0} and start at the section on \indy{Armor}.
 \subsection{Mobility}
 \indx{mobility}
-If your adventurer is standing and alert, they start each \indy[defense]{defense value} with 3.
+If your adventurer is standing and alert, they start each \indy[defense]{defense value} with \result{3}.
 \subsection{Agility}
 \indx{agility}\indx{defense!agility}
-If your adventurer is alert and able to move, add 1 point to each defense value for each 5 points of AGI (rounded down) that your adventurer has. Add an additional one point to each defense value if your adventurer has \indy[agility!exceptional]{Exceptional AGI} (That is if they are a \indx{lizard}lizard).
+If your adventurer is alert and able to move, add \result{1} point to each defense value for every \result{5} points of \AGI (rounded down) that your adventurer has. Add an additional \result{1} point to each defense value if your adventurer has \indy[agility!exceptional]{Exceptional AGI} (if they are a \indx{lizard}lizard).
 \subsection{Stat Modifiers}
 \indx{modifier!statistic}\indx{modifier!defense}\indx{defense!modifier}
-Each defense value is dependent on one additional stat. Take the related stat for each defense value, divide it by five and round down. Add this to the appropriate defense value.
+Each defense value is dependent on one additional \indy[statistic]{stat}. Take the related stat for each defense value, divide it by \result{5} and round down. Add this to the appropriate defense value.
 \begin{normbox}[Melee Defense Stats]
 \indx{defense!modifier}
-\begin{tabular}{@{}l l l}
-Combat & (\CDV) & \STR\\
-Missile & (\MDV) & \PER\\
-Grapple & (\GDV) & \WIL\\
+\begin{tabular}{@{}l l | l}
+Combat & (CDV) & \STR\\
+Missile & (MDV) & \PER\\
+Grapple & (GDV) & \WIL\\
 \end{tabular}
 \end{normbox}
-Elves gain an additional one on their MDB for \textbf{Exceptional PER} and orcs one on their GDV for \textbf{Exceptional WIL}.
+\indy[elf]{Elves} gain an additional \result{1} on their \MDV for \indy[perception!exceptional]{Exceptional PER} and \indy[orc]{orcs} \result{1} on their \GDV for \indy[willpower!exceptional]{Exceptional WIL}.
 \subsection{Armor}
 \indx{armor}\indx{defense!armor}
-Different types of armor increase your adventurer's defense. Armor also determines how fast he can move each round during combat. Look up the type of armor they are wearing on the following table and add the modifier to each defense value:
+Different types of armor increase your adventurer's defense. Armor also determines how fast they can move each round during combat. Look up the type of armor they are wearing on the following table and add the modifier to each defense value:
 \begin{normbox}[Armor Defense and Movement]
 \indx{movement}
 \begin{tabular}{@{}l p{0.125\linewidth} p{0.125\linewidth} p{0.125\linewidth} p{0.125\linewidth}}
@@ -757,6 +765,7 @@ Plate Mail & 6 & 4 & 2 & 20'\\
 Steel Plate & 8 & 5 & 2 & 20'\\
 \end{tabular}
 \end{normbox}
+Also take note of the move speed and note that on your \indy{adventurer card} under "\indy{Movement}."
 \subsection{Defensive Devices}
 \indx{defense!devices}\indx{shield}\indx{buckler}\indx{helmet}
 Different kinds of shielding devices affect defense values. Of course, they must be worn or properly used to be effective.

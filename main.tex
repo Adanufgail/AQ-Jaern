@@ -48,6 +48,19 @@
 \def\defcolwidth{0.6cm}
 \def\aq{\textbf{Adventure Quest }}
 
+\makeatletter
+ \def\SOUL@hlpreamble{%
+ \setul{}{2ex}%         !!!change this value!!! default is 2.5ex
+ \let\SOUL@stcolor\SOUL@hlcolor
+ \SOUL@stpreamble
+ }
+\makeatother
+
+\newenvironment{nscenter}
+ {\parskip=0pt\par\nopagebreak\centering}
+ {\par\noindent\ignorespacesafterend}
+
+
 \setcounter{secnumdepth}{5}
 
 \DeclareDocumentCommand \indy { o m } {%
@@ -69,8 +82,6 @@
 
 \newcommand{\bhead}[1]{\thead{\textbf{#1}}}
 \newcommand{\defnum}[1]{\uline{\textbf{#1}}}
-\newcommand{\result}[1]{\tcresult{#1}}
-\newcommand{\measure}[1]{\tcmeasure{#1}}
 \newcommand{\mets}[4]{%
   \ifthenelse{\equal{#2}{}}{%
     \measure{#1 mets} (\textit{#3 mi or #4 KM})%
@@ -79,9 +90,6 @@
     \measure{#1 mets} per #2 (\textit{#3 mi or #4 KM})%
   }
 }
-
-\newcommand{\chref}[1]{\textbf{Chapter \ref{#1}: \nameref{#1}}}
-%\textbf{Chapter \ref{ch:jaern-humanoids}: \nameref{ch:jaern-humanoids}}
 
 \newcommand{\skillentry}[6]{%
   \begin{minipage}{\columnwidth}%
@@ -140,74 +148,24 @@
 }
 
 \colorlet{soulGreenYellow}{white!40!GreenYellow}
-\colorlet{soulDodgerBlue}{white!40!DodgerBlue}
-\colorlet{soulCrimson}{white!40!Crimson}
+\colorlet{soulDodgerBlue}{white!60!DodgerBlue}
+\colorlet{soulCrimson}{white!50!Crimson}
 \colorlet{soulKhaki}{white!50!Khaki}
 \colorlet{soulCyan}{white!40!Cyan}
+\colorlet{soulLightGreen}{white!40!LightGreen}
+\colorlet{soulDarkOrange}{white!60!DarkOrange}
+\colorlet{soulGrey}{white!40!Grey}
 
 \DeclareRobustCommand{\tcdieroll}[1]{\sethlcolor{soulGreenYellow}\textbf{\hl{\mbox{#1\xspace}}}}
 \DeclareRobustCommand{\tcdefine}[1]{\sethlcolor{soulDodgerBlue}\textbf{\hl{\mbox{#1\xspace}}}}
+\DeclareRobustCommand{\listing}[1]{\sethlcolor{soulGrey}\textbf{\hl{\mbox{#1\xspace}}}}
 \DeclareRobustCommand{\tcpage}[1]{\sethlcolor{soulCrimson}\textbf{\hl{\mbox{Page \pageref{#1}\xspace}}}}
-\DeclareRobustCommand{\tcmeasure}[1]{\sethlcolor{soulKhaki}\textbf{\hl{\mbox{#1}}}\xspace}
-\DeclareRobustCommand{\tcresult}[1]{\sethlcolor{soulCyan}\textbf{\hl{\mbox{#1}}}\xspace}
-
-
-\begin{comment}
-\DeclareTotalTCBox{\tcdieroll}{ O{GreenYellow} v !O{} }{%
-  leftrule=0mm,%
-  rightrule=0mm,%
-  toprule=0mm,%
-  bottomrule=0mm,%
-  rounded corners,%
-  top=0pt,%
-  bottom=0pt,%
-  left=2pt,%
-  right=2pt,%
-  tcbox raise base,%
-  boxsep=0mm,%
-  nobeforeafter,%
-  colback=white!40!#1,%
-  colupper=black,%
-  halign=center,%
-  }{\textbf{\strut{#2}}}
-
-\DeclareTotalTCBox{\tcdefine}{ O{DodgerBlue} v !O{} }{%
-  leftrule=0mm,%
-  rightrule=0mm,%
-  toprule=0mm,%
-  bottomrule=0mm,%
-  rounded corners,%
-  top=0pt,%
-  bottom=0pt,%
-  left=2pt,%
-  right=2pt,%
-  tcbox raise base,%
-  boxsep=0mm,%
-  nobeforeafter,%
-  colback=white!30!#1,%
-  colupper=black,%
-  halign=center,%
-  }{\textbf{\strut{#2}}}
-
-\DeclareTotalTCBox{\tcpage}{ O{Crimson} m !O{} }{%
-  leftrule=0mm,%
-  rightrule=0mm,%
-  toprule=0mm,%
-  bottomrule=0mm,%
-  rounded corners,%
-  top=0pt,%
-  bottom=0pt,%
-  left=2pt,%
-  right=2pt,%
-  tcbox raise base,%
-  boxsep=0mm,%
-  nobeforeafter,%
-  colback=white!50!#1,%
-  colupper=black,%
-  halign=center,%
-  }{\strut{\textbf{Page \pageref{#2}}}}
-\end{comment}
-
+\DeclareRobustCommand{\chref}[1]{\sethlcolor{soulCrimson}\textbf{\hl{\mbox{Chapter \ref{#1}: \nameref{#1}\xspace}}}}
+\DeclareRobustCommand{\measure}[1]{\sethlcolor{soulKhaki}\textbf{\hl{\mbox{#1}}}\xspace}
+\DeclareRobustCommand{\result}[1]{\sethlcolor{soulCyan}\textbf{\hl{\mbox{#1}}}\xspace}
+\DeclareRobustCommand{\quip}[1]{\sethlcolor{soulLightGreen}\textit{\hl{#1}}\xspace}
+\DeclareRobustCommand{\example}[1]{\sethlcolor{soulDarkOrange}\textit{\hl{#1}}\xspace}
+\DeclareRobustCommand{\custhl}[2]{\sethlcolor{#1}\hl{\mbox{#2}}\xspace}
 
 
 \newtcolorbox{normbox}[1][]{%
@@ -280,7 +238,7 @@
 \begin{document}
 \enlargethispage{1.5\baselineskip}
 \titleformat{\chapter}[display] {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}   
-\titlespacing*{\chapter}{0pt}{20pt}{40pt}
+\titlespacing*{\chapter}{0pt}{20pt}{20pt}
 \titlespacing\section{0pt}{6pt}{6pt}
 \titlespacing\subsection{0pt}{6pt }{6pt}
 \titlespacing\subsubsection{0pt}{6pt}{6pt}
@@ -289,6 +247,7 @@
 \include{copyright.tex}
 \include{dedication.tex}
 \include{introduction.tex}
+\include{changes.tex}
 \include{creating-an-adventurer.tex}
 \include{playing-an-adventurer.tex}
 \include{life-on-the-high-seas.tex}
