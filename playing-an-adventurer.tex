@@ -100,7 +100,7 @@ Plate mail & 20'\\
 It is often necessary to maneuver during combat. Each adventurer has a \indy{Movement Rate} that is the distance they may move in a round when not in direct melee. This distance may be modified by your GM according to terrain, obstacles, or circumstances. If you wish to make any attacks or cast spells, you can only move \result{1/4} your movement rate that round. You can ready weapons, talk, observe the situation or ready actions while moving.
 
 \subsection{Striking}\indx{melee!striking}\indx{striking}
-When two opponents are within \tcdefine{5 feet} of each other, they are normally considered \indy[melee!in melee]{in melee}, trading attacks with intent to harm. To determine if a hand-to-hand attack is successful, the attacker rolls \tcdieroll{1d20}, adds their \indy{Combat Modifier} (\CM), plus any other appropriate bonuses, to the result, and compares the total to the \indy{Combat Defense Value} (\CDV) of the opponent. The total must equal or exceed the opponent's CDV to hit.
+When two opponents are within \measure{5 feet} of each other, they are normally considered \indy[melee!in melee]{in melee}, trading attacks with intent to harm. To determine if a hand-to-hand attack is successful, the attacker rolls \tcdieroll{1d20}, adds their \indy{Combat Modifier} (\CM), plus any other appropriate bonuses, to the result, and compares the total to the \indy{Combat Defense Value} (\CDV) of the opponent. The total must equal or exceed the opponent's CDV to hit.
 
 \example{Valken the Warrior attacks a poor, helpless villager with his once enchanted (+1) long sword. Valken's player rolls a 10 on 1d20. Valken's CM is 1, and the magical sword has a bonus of 1, for a total of 10+1+1 = 12. The poor villager is lying supine on the ground (with Valken's foot on his stomach), so it has a CDV of 5.}
 
@@ -341,10 +341,10 @@ This targeting method involves an \indy{audible} casting magic, which affects an
 This targeting method is generally used for spells which move the caster or an object to a distanct place, or let the caster scry or communicate at a distance. To memorize a location the player must state that their adventurer is specifically memorizing a location. The adventurer must spend at least \measure{10 minutes} to complete the memorization, and may not memorize more locations than their \INT attribute. The adventurer can only remember the fine details needed to target to the memorized location for a period of \measure{4 weeks}. Since there is no target object, no resistance checks are needed for these spells.
 \subsection{Direction/Distance}
 \indx{target!direction}\listing{Target: X + Y/F unit}\\
-Spells using this method contain only a \indy{distance} in the Target: field. The caster specifies the direction the spell is to travel, and the distance at which it will activate. The spell then travels in that direction and activates at the stated distance \tcdefine{X units}, or at the \tcdefine{first} intervening object in the indicated direction. Since there is no intended target object, there is no resistance check which could prevent the spell from activating. However, there may be a resistance check against the spell effect. The distance can be finessed by \tcdefine{Y units} per finess.
+Spells using this method contain only a \indy{distance} in the Target: field. The caster specifies the direction the spell is to travel, and the distance at which it will activate. The spell then travels in that direction and activates at the stated distance \measure{X units}, or at the \tcdefine{first} intervening object in the indicated direction. Since there is no intended target object, there is no resistance check which could prevent the spell from activating. However, there may be a resistance check against the spell effect. The distance can be finessed by \measure{Y units} per finess.
 \subsection{Line of Sight}
 \indx{target!line of sight}\listing{Target: LOS X + Y/F unit}\\
-\LOS stands for \indy{Line of Sight}. These spells are cast at an object. The object must be within the listed distance \tcdefine{X units}, and there must be an unobstructed, straight path from the caster to the object. The distance limitation is based on the details needed for the caster to successfully target the spell. Any intervening objects, glass, water, opaque gases, or darkness prevent these spells from succeeding. LOS spells may not be cast through scrying spells unless the spell specifically states otherwise. Distances can be increased by the amount \tcdefine{Y units} for each finess.
+\LOS stands for \indy{Line of Sight}. These spells are cast at an object. The object must be within the listed distance \measure{X units}, and there must be an unobstructed, straight path from the caster to the object. The distance limitation is based on the details needed for the caster to successfully target the spell. Any intervening objects, glass, water, opaque gases, or darkness prevent these spells from succeeding. LOS spells may not be cast through scrying spells unless the spell specifically states otherwise. Distances can be increased by the amount \measure{Y units} for each finess.
 
 These spells can be banked off of well-formed mirrors and other optics, but will malfunction in strange ways (GM's discretion) if banked off flawed surfaces. Spells which affect vision also affect the ability to cast LOS spells. \example{For example, \indy{Long Eyes} increases LOS spell ranges proportionally. \indy{Heat Vision} allows LOS spells to function in the dark.} There are no resistance checks against the activation of these spells, but any listed RC applies to the resulting spell effect.
 \section{Areas of Effect}
@@ -354,16 +354,16 @@ As well as understanding how to target a spell, you also need to know how to def
 Let's deal with areas first. An area is defined by giving a specific size to the spell effect. If the effect is meant to occur to objects within the area, then every object within it is entitled to the resistance check listed in the spell description. If the area itself is to be affected, there is no resistance check. Areas can be expressed as:
 \subsection{Radius}
 \listing{Area: X unit radius}\\
-This affects a spherically-shaped area with a radius of \tcdefine{X units} from the point at which the spell is targeted. Intervening objects within the area may partially or fully shield other objects from the spell effect (GM's discretion). Once the spell is activated, the GM may use normal laws of physics to determine how the effect acts, if it's a physical effect.
+This affects a spherically-shaped area with a radius of \measure{X units} from the point at which the spell is targeted. Intervening objects within the area may partially or fully shield other objects from the spell effect (GM's discretion). Once the spell is activated, the GM may use normal laws of physics to determine how the effect acts, if it's a physical effect.
 \subsection{Volume}
 \listing{Area: X cubic unit}\\
-This spell affects a particular volume of size \tcdefine{X units}, whose shape is specified by the caster. No single dimension of this volume may by more than \tcdefine{4 times} larger than any other dimension. All objects within the volume can be affected by the spell, and resistance checks may be listed, if appropriate.
+This spell affects a particular volume of size \measure{X units}, whose shape is specified by the caster. No single dimension of this volume may by more than \tcdefine{4 times} larger than any other dimension. All objects within the volume can be affected by the spell, and resistance checks may be listed, if appropriate.
 \subsection{Cone}
 \listing{Area: X x Y unit cone}\\
-This spell affects a conical area \tcdefine{Y units} long with a \tcdefine{X unit} diameter base. The point of the cone is at the caster's fingertip. Intervening objects within the area may partially or fully shield other objects from the spell effect (GM's discretion). Once the spell is activated, the GM may use normal laws of physics to determine how the effect acts, if it's physical in nature.
+This spell affects a conical area \measure{Y units} long with a \tcdefine{X unit} diameter base. The point of the cone is at the caster's fingertip. Intervening objects within the area may partially or fully shield other objects from the spell effect (GM's discretion). Once the spell is activated, the GM may use normal laws of physics to determine how the effect acts, if it's physical in nature.
 \subsection{Line}
 \listing{Area: X x Y unit line}\\
-This area of effect is defined by drawing a line from the caster's finger tip \tcdefine{Y units} toward the spell target. All objects within a column whose radius is one half of the width (\tcdefine{X/2 units}) can be affected by the spell. Intervening objects within the area may partially or fully shield other objects from the spell effect (GM's discretion). Once the spell is activated, the GM may use normal laws of physics to determine how the effect acts, if it's physical in nature.
+This area of effect is defined by drawing a line from the caster's finger tip \measure{Y units} toward the spell target. All objects within a column whose radius is one half of the width (\measure{X/2 units}) can be affected by the spell. Intervening objects within the area may partially or fully shield other objects from the spell effect (GM's discretion). Once the spell is activated, the GM may use normal laws of physics to determine how the effect acts, if it's physical in nature.
 \section{Objects}
 An object is a person, a creature or a thing. When a spell affects an object, further restrictions limit what kind or type of object can be affected by the spell.
 
@@ -380,10 +380,10 @@ This type of area further restricts the target to a creature which primarily liv
 Yes, plants can be affected by some spells as well.
 
 \listing{Area: X unit}\\
-This limits the spell effect to a \tcdefine{single} object of no more than \tcdefine{X units}.
+This limits the spell effect to a \tcdefine{single} object of no more than \measure{X units}.
 
 \listing{Area: X unit radius}\\
-This limits the spell to affecting that portion of an object which is within \tcdefine{X units} of the target point of the spell.
+This limits the spell to affecting that portion of an object which is within \measure{X units} of the target point of the spell.
 
 \listing{Area: ferromagnetic object}\\
 The target of this spell is only effected if it can be magnetized. Other classifications, such as \indy{transparent}, \indy{non-metallic}, \indy{frozen} or \indy{red} can be used in this way.
@@ -405,7 +405,7 @@ All adventurers have a \indy{Life Force} equal to the total of their \HEA and \P
 \subsection{Restrictions on Preparing Incants}
 Incants may not be prepared under duress. The incantor must be calm and in firm control to complete the preparation without error. The incantor must not be under the influence of any mind-controlling spell or drug. If the incantor is interrupted while mixing, speaking or singing, the ritual must be redone from the beginning.
 \subsection{Stressing Health for Incants}
-An adventurer may sacrifice \tcdefine{one point} of \HEA while preparing an incant to increase its \indy{rank} by \result{2}. This may done only once per day, and it does not count as an action. The caster can only effect the single ritual they are currently performing. The cost to replace a point of \HEA is quite high, so this is not an action to be taken lightly.
+An adventurer may sacrifice \tcdefine{1 \HEA} while preparing an incant to increase its \indy{rank} by \result{+2}. This may done only once per day, and it does not count as an action. The caster can only effect the single ritual they are currently performing. The cost to replace a point of \HEA is quite high, so this is not an action to be taken lightly.
 \subsection{Performing Songs}
 \indx{incant!song}
 Some incants are performed as songs, or songs with dancing. More than one nomad can conduct such an incant at the same time. While multiple incantors will not increase the effect of such a ceremony, it will multiple the number of resistance checks needed to resist. Musicians accompanying the incantor assist in their concentration making it harder for external distractions to interrupt the ritual.
@@ -435,7 +435,7 @@ $Profit = \cfrac{Base Cost}{10} * Rank$
 \subsection{Being Your Own Boss}
 With a sufficient amount of capital, you can buy the property and equipment to become your own boss, running a business. Pick a skill which your adventurer has at \tcdefine{rank 9} or higher and ask your GM the cost of setting up a storefront, shop or warehouse. If you can meet or exceed that amount, and they determine there is space available, and a market for your product or service, you may invest silver to establish this business.
 
-The GM will then roll \tcdieroll{1d6} to find out how many \tcdefine{months} your adventurer will have to spend out of play to acquire land, outfit or build the building, purchase stock or supplies and hire and train employees. Once you are in business, you normally earn \result{1/20} of your original investment back \tcdefine{each game month} with no further attention on your part. You may invest additional silver at any time, raising the earnings and worth of your business. If at any time after you have started, you decide to disband your business, you may recover up to one half of your total investment.
+The GM will then roll \tcdieroll{1d6} to find out how many \measure{months} your adventurer will have to spend out of play to acquire land, outfit or build the building, purchase stock or supplies and hire and train employees. Once you are in business, you normally earn \result{1/20} of your original investment back \tcdefine{each game month} with no further attention on your part. You may invest additional silver at any time, raising the earnings and worth of your business. If at any time after you have started, you decide to disband your business, you may recover up to one half of your total investment.
 
 The economy of the village, town or city you are based in may change. The GM may alter your earnings to reflect times of boom, or economic hardship. Also, the GM can base adventures around your business and its employees.
 \section{Extended Leave from Adventuring}
@@ -447,6 +447,7 @@ If you want to take an adventurer out of play for an extended period, inform you
 Very successful adventures may live to a ripe old age, but eventually Time catches up with everyone. To find out when your adventurer could pass on from natural causes, add the numbers on the table below for each of their four grandparents.
 
 \begin{normboxc}[Min Life Span]
+\small
 \begin{tabular}{@{}l| l l l l l}
 \textbf{Race} & Orc & Human & Lizard & Dwarf & Elf\\
 \textbf{Years} & 10 & 15 & 20 & 35 & 50\\
@@ -455,6 +456,7 @@ Very successful adventures may live to a ripe old age, but eventually Time catch
 
 \example{A half-human, half-elf's minimum life span would be 2 x 15 + 2 x 50 = 130 years.} A full human's \indy{Minimum Life Span} is \result{60 (4 x 15)}. A check needs to be made on each of your character's birthdays past their minimum life span. To make the check, subtract your adventurer's minimum life span from their age. Then roll the die shown on the next table for each grandparent and total the results. If it is less than the difference in ages, your character has passed on (\indy[death]{died}) due to natural causes.\\
 \begin{normboxc}[Aging Die]
+\small
 \begin{tabular}{@{}l| l l l l l}
 \textbf{Race} & Orc & Human & Lizard & Dwarf & Elf\\
 \textbf{Die} & d4 & d6 & d8 & d10 & d20\\
@@ -488,7 +490,7 @@ Caused by a fungus which normally grows on certain underground mushrooms, this d
 \indx{Siritmenso}\listing{Siritmenso}\\
 The origin and transmission method of this disease are still unknown, but its symptoms are devastating. It attacks the brain, forcing it to use more and more of its reasoning power to combat the effects of the disease. This manifests itself first as short \indy[dropout]{dropouts}, where the victim stops moving, and is unaware of the passage of time. These can be as short as a few seconds, but get longer as the disease progresses until the victim never comes out of this state again.
 
-In any new situation, scene or location (GM's discretion), the player rolls \tcdieroll{1d6} vs \WIL for each week they have been infected. If this \RC vs \WIL fails, they have a \indy{dropout} of \result{1 round times the product of the dice} of their roll \example{(ie if the player rolls 2d6 and gets a 4 and a 3, they lose 12 rounds)}. At the end of this time, they must succeed at this roll to come out of the dropout. While not in a mindless state, the victim can be aware that the dropouts are occurring by the sudden shifts occurring around them. This gets more pronounced and frantic as the dropouts increase, until near the end, time seems to be rushing to a final end. This is extremely frightening.
+In any new situation, scene or location (GM's discretion), the player rolls \tcdieroll{1d6} vs \WIL for each week they have been infected. If this \RC vs \WIL fails, they have a \indy{dropout} of \result{1 round times the product of the dice} of their roll. \example{If the player rolls 2d6 and gets a 4 and a 3, they lose 12 rounds.} At the end of this time, they must succeed at this roll to come out of the dropout. While not in a mindless state, the victim can be aware that the dropouts are occurring by the sudden shifts occurring around them. This gets more pronounced and frantic as the dropouts increase, until near the end, time seems to be rushing to a final end. This is extremely frightening.
 
 \indx{Sondikapto}\listing{Sondikapto}\\
 An inherited condition, the unfortunate victim goes into a violent seizure triggered by the combination and sequence of certain tones. This seizure can last up to five minutes, during which the victim is likely to injure themselves. When triggered, make a \tcdieroll{5d6} check vs \HEA or suffer \tcdieroll{1d10} \DP damage.
@@ -501,9 +503,9 @@ This can only effect those who cast magic, either divine or elemental. This airb
 These spores are most often found in humid dark regions rich in magical energies. These spores will feed for \measure{4 to 8 weeks} until they reach a magical saturation level and reproduce, leaving the current host behind. The only known method of treating this infection involves the use of the metal \indy{Terisium} to create an area completely devoid of magic. The spores will die within \measure{4 hours} in such an area.
 
 \indx{Steliforto}\listing{Steliforto}\\
-This disease affects all muscle tissue in its victim. It lodges within the muscles, and feeds of the energy and nutrients which would have operated the muscles. Its symptoms start with a weakening of the limbs, and progress in two days to a difficulty in walking. At four days the victim can no longer walk and can barely use their arms. At six they are unable to make any voluntary movement, and generally at eight days their heart stops beating and they die. Effectively, the unfortunate adventurer afflicted with this loses \tcdefine{2 points} of \STR each day.
+This disease affects all muscle tissue in its victim. It lodges within the muscles, and feeds of the energy and nutrients which would have operated the muscles. Its symptoms start with a weakening of the limbs, and progress in two days to a difficulty in walking. At four days the victim can no longer walk and can barely use their arms. At six they are unable to make any voluntary movement, and generally at eight days their heart stops beating and they die. Effectively, the unfortunate adventurer afflicted with this loses \tcdefine{2 \STR} each day.
 
-Treated carefully by informed and well equipped priests of \indy{Isis}, this disease can be halted and it effects slowly reserved in one half of most cases if they are caught while the victim can still walk. The earlier it is treated, the better the chances of living and eventual recovery. \STR will recover at \tcdefine{1 point} for every \measure{2 days} of rest after being cured.
+Treated carefully by informed and well equipped priests of \indy{Isis}, this disease can be halted and it effects slowly reserved in one half of most cases if they are caught while the victim can still walk. The earlier it is treated, the better the chances of living and eventual recovery. They will recover \tcdefine{1 \STR} for every \measure{2 days} of rest after being cured.
 
 \indx{Vortoperdi}\listing{Vortoperdi}\\
 This very unusual and rare disease can only affect those of human stock, and mostly just those with red hair. When afflicted, the victim loses the ability to associate words with ideas, objects and places. This process takes about a day, and after this, they can not communicate verbally or telepathically with anyone else. The only known method of treating this disease involves magically removing all knowledge of language from the victim's brain, and then reteaching it language, from the ground up. The scrambled brain pathways relearn speech, and eventually the victim can communicate once again.

@@ -26,6 +26,7 @@
 \usepackage{tabularx}
 \usepackage{nameref}
 \usepackage{tikz}
+\usetikzlibrary{tikzmark, shapes.geometric, shapes.arrows, fit, bending}
 \usepackage[sfdefault]{roboto}
 \usepackage[most]{tcolorbox}
 \tcbuselibrary{breakable}
@@ -58,7 +59,7 @@
 \setlist{nosep,topsep=0pt,leftmargin=12pt}
 \setul{1pt}{.4pt}
 
-\setlength{\aboverulesep}{0pt}
+\setlength{\aboverulesep}{-1pt}
 \setlength{\belowrulesep}{2pt}
 
 \raggedbottom
@@ -66,12 +67,22 @@
 \def\defcolwidth{0.6cm}
 \def\aq{\textbf{Adventure Quest }}
 
+\begin{comment}
 \makeatletter
  \def\SOUL@hlpreamble{%
  \setul{}{2ex}%         !!!change this value!!! default is 2.5ex
  \let\SOUL@stcolor\SOUL@hlcolor
  \SOUL@stpreamble
  }
+\makeatother
+\end{comment}
+
+\makeatletter
+\def\SOUL@hlpreamble{%
+    \setul{\dp\strutbox}{\dimexpr\ht\strutbox+\dp\strutbox\relax}%
+    \let\SOUL@stcolor\SOUL@hlcolor
+    \SOUL@stpreamble
+}
 \makeatother
 
 \newenvironment{nscenter}
@@ -86,10 +97,12 @@
     \lowercase{\def\temp{#2}}%
     \index{\temp}%
     \textbf{#2}\xspace%
+    %\textbf{#2}%
   }{%
     \lowercase{\def\temp{#1}}%
     \index{\temp}%
     \textbf{#2}\xspace%
+    %\textbf{#2}%
   }%
 }
 
@@ -112,7 +125,7 @@
 \newcommand{\skillentry}[6]{%
   \begin{minipage}{\columnwidth}%
   \noindent\rule{\columnwidth}{1pt}\\%
-  \textbf{#1}\\%
+  \listing{#1}\\%
 
   \begin{tabular}{@{} l l l l}%
   Base Cost: & #2 & Attribute: & #3\\%
@@ -164,7 +177,7 @@
 \colorlet{soulCyan}{white!40!Cyan}
 \colorlet{soulLightGreen}{white!40!LightGreen}
 \colorlet{soulDarkOrange}{white!80!DarkOrange}
-\colorlet{soulGrey}{white!40!Grey}
+\colorlet{soulGrey}{white!60!Grey}
 
 
 \newlength{\cboxwidth}
@@ -174,7 +187,6 @@
 \sethlcolor{#1}%
 \setlength{\fboxsep}{0pt}\colorbox{#1}{%
 \pbox{\cboxwidth}{%
-%\ \strut{#2}\,%
 \strut{#2}%
 }}}
 
@@ -183,7 +195,7 @@
 
 
 \DeclareRobustCommand{\tcdieroll}[1]{\custhl[soulGreenYellow]{\textbf{#1}}}
-\DeclareRobustCommand{\listing}[1]{\custhl[soulGrey]{\textbf{#1}}}
+\DeclareRobustCommand{\listing}[1]{\custhl[soulGrey]{\ \textbf{#1}\,}}
 \DeclareRobustCommand{\tcpage}[1]{\custhl[soulCrimson]{\textbf{Page \pageref{#1}}}}
 \DeclareRobustCommand{\chref}[1]{\custhl[soulCrimson]{\textbf{Ch \ref{#1}: \nameref{#1}}}}
 \DeclareRobustCommand{\apref}[1]{\custhl[soulCrimson]{\textbf{Ap \ref{#1}: \nameref{#1}}}}
@@ -226,7 +238,7 @@
   left=1pt,%
   right=1pt,%
   top=0pt,%
-  bottom=-2pt,%
+  bottom=0pt,%
   boxsep=2pt,%
   boxrule=0.6pt,%
   before skip=0.5\baselineskip,%
