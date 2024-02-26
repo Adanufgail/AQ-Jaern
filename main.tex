@@ -1,50 +1,92 @@
 \documentclass[openany,svgnames]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Import Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \usepackage[svgnames]{xcolor}
 \usepackage{blindtext}
-
 \usepackage{comment}
 \usepackage{microtype}
-
 \usepackage{cprotectinside}
 \usepackage{ulem}
 \usepackage{soul}
-%\usepackage{soulpos}
 \usepackage{pbox}
-
+\usepackage{xfp}
+\usepackage{xintexpr}
 \usepackage{parskip}
-\setlength{\parindent}{0pt}
-%\setlength{\parfillskip}{0pt}
-
 \usepackage{geometry}
-\geometry{letterpaper, portrait, margin=0.5in}
-
 \usepackage{imakeidx}
-\makeindex[columns=3]
-
 \usepackage{multicol}
 \usepackage{enumitem}
 \usepackage{tabularx}
 \usepackage{nameref}
 \usepackage{tikz}
-\usetikzlibrary{tikzmark, shapes.geometric, shapes.arrows, fit, bending}
 \usepackage[sfdefault]{roboto}
 \usepackage[most]{tcolorbox}
-\tcbuselibrary{breakable}
-\tcbuselibrary{skins}
 \usepackage{booktabs}
 \usepackage{xtab}
 \usepackage{makecell}
 \usepackage{wrapfig}
-
 \usepackage{array,ragged2e}
-
 \usepackage{titlesec}
-
 \usepackage{etoolbox}
-
 \usepackage{xparse}
-
 \usepackage{ifthen}
+\usepackage{fancyhdr} 
+
+\begin{comment}
+\usepackage{wasysym}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{pict2e}
+\usepackage{amsmath}
+\usepackage{color,pxfonts,fix-cm}
+\usepackage{latexsym}
+%\usepackage[mathletters]{ucs}
+\end{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Package-specific variables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%Page Geometry
+\geometry{letterpaper, portrait, margin=0.5in}
+
+%%%%Set Indent Width to 0
+\setlength{\parindent}{0pt}
+
+%%%%Tcolorbox
+\tcbuselibrary{breakable}
+\tcbuselibrary{skins}
+
+%%%%Tikz
+\usetikzlibrary{tikzmark, shapes.geometric, shapes.arrows, fit, bending}
+
+%%%%imakeidx Indexing
+
+%\makeindex[columns=3]
+%\indexsetup{othercode=\small}
+%\makeindex[program=makeindex,columns=3,intoc=true,options={-s index_style.ist}]
+\makeindex[columns=3,intoc=true,options={-s index_style.ist}]
+
+%\fancyhf{}
+\fancyfoot{}
+\fancyfoot[RO, LE]{\thepage}
+\pagestyle{fancy}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[RO, LE]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
+  \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+}
+%\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+
+
+\hyphenpenalty=9999
+
+\setcounter{chapter}{-1}
 
 \newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
 \newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
@@ -67,15 +109,6 @@
 \def\defcolwidth{0.6cm}
 \def\aq{\textbf{Adventure Quest }}
 
-\begin{comment}
-\makeatletter
- \def\SOUL@hlpreamble{%
- \setul{}{2ex}%         !!!change this value!!! default is 2.5ex
- \let\SOUL@stcolor\SOUL@hlcolor
- \SOUL@stpreamble
- }
-\makeatother
-\end{comment}
 
 \makeatletter
 \def\SOUL@hlpreamble{%
@@ -92,49 +125,37 @@
 
 \setcounter{secnumdepth}{5}
 
-\DeclareDocumentCommand \indy { o m } {%
-  \IfNoValueTF {#1} {%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Indexing Functions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% \indy
+
+\makeatletter
+\DeclareDocumentCommand \indy { s o m } {%
+  \IfNoValueTF{#2}{%
+    \lowercase{\def\temp{#3}}%
+    \index{\temp}%
+    \ifthenelse{\equal{\f@series}{b}}{\ul{#3}\xspace}{\textbf{#3}}%
+  }{%
     \lowercase{\def\temp{#2}}%
     \index{\temp}%
-    \textbf{#2}\xspace%
-    %\textbf{#2}%
-  }{%
-    \lowercase{\def\temp{#1}}%
-    \index{\temp}%
-    \textbf{#2}\xspace%
-    %\textbf{#2}%
+    \ifthenelse{\equal{\f@series}{b}}{\ul{#3}\xspace}{\textbf{#3}}%
   }%
+  \IfBooleanTF{#1}{}{\xspace}%
 }
 
+%%%% \indx
+
+\makeatother
 \DeclareDocumentCommand \indx { m } {%
     \lowercase{\def\temp{#1}}%
     \index{\temp}%
 }
 
-\newcommand{\bhead}[1]{\thead{\textbf{#1}}}
-\newcommand{\defnum}[1]{\uline{\textbf{#1}}}
-\newcommand{\mets}[4]{%
-  \ifthenelse{\equal{#2}{}}{%
-    \measure{#1 mets} (\textit{#3 mi or #4 KM})%
-  }%
-  {%
-    \measure{#1 mets} per #2 (\textit{#3 mi or #4 KM})%
-  }
-}
 
-\newcommand{\skillentry}[6]{%
-  \begin{minipage}{\columnwidth}%
-  \noindent\rule{\columnwidth}{1pt}\\%
-  \listing{#1}\\%
 
-  \begin{tabular}{@{} l l l l}%
-  Base Cost: & #2 & Attribute: & #3\\%
-  Skill Type: & #4 & Extra Dice: & #5\\%
-  \end{tabular}\\%
-
-  #6\\%
-  \end{minipage}%
-}
+%%%% Indexing Shortcuts
 
 \DeclareRobustCommand{\STR}{\indy[strength!STR]{STR}}
 \DeclareRobustCommand{\INT}{\indy[intelligence!INT]{INT}}
@@ -163,24 +184,27 @@
 \DeclareRobustCommand{\ADV}{\indy[Artillery Defense Value!ADV]{ADV}}
 \DeclareRobustCommand{\AM}{\indy[Artillery Modifier!AM]{AM}}
 
-\newcommand{\newacronymidx}[4][]{
-    \newacronym{#2}{#3}{#4}
-    \ifstrempty{#1}
-        { \index{#3|see{\MakeLowercase{#4}}} }
-        { \index{#3|see{#1}} }
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Colored Highlighting Functions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% Color Definitions
 
 \colorlet{soulGreenYellow}{white!40!GreenYellow}
 \colorlet{soulDodgerBlue}{white!60!DodgerBlue}
 \colorlet{soulCrimson}{white!50!Crimson}
 \colorlet{soulKhaki}{white!50!Khaki}
-\colorlet{soulCyan}{white!40!Cyan}
+\colorlet{soulCyan}{white!60!Cyan}
 \colorlet{soulLightGreen}{white!40!LightGreen}
 \colorlet{soulDarkOrange}{white!80!DarkOrange}
 \colorlet{soulGrey}{white!60!Grey}
 
+%%%% Color Box Width
 
 \newlength{\cboxwidth}
+
+%%%% \custhl
+
 \DeclareRobustCommand{\custhl}[2][soulGrey]{%
 \pgfmathparse{min(\columnwidth,\textwidth)}%
 \setlength{\cboxwidth}{\pgfmathresult pt}%
@@ -190,46 +214,69 @@
 \strut{#2}%
 }}}
 
-
-
-
+%%%% Highlighting Commands
 
 \DeclareRobustCommand{\tcdieroll}[1]{\custhl[soulGreenYellow]{\textbf{#1}}}
 \DeclareRobustCommand{\listing}[1]{\custhl[soulGrey]{\ \textbf{#1}\,}}
 \DeclareRobustCommand{\tcpage}[1]{\custhl[soulCrimson]{\textbf{Page \pageref{#1}}}}
 \DeclareRobustCommand{\chref}[1]{\custhl[soulCrimson]{\textbf{Ch \ref{#1}: \nameref{#1}}}}
 \DeclareRobustCommand{\apref}[1]{\custhl[soulCrimson]{\textbf{Ap \ref{#1}: \nameref{#1}}}}
+\DeclareRobustCommand{\chpage}[1]{\chref{#1} on \tcpage{#1}}
+\DeclareRobustCommand{\appage}[1]{\apref{#1} on \tcpage{#1}}
 \DeclareRobustCommand{\measure}[1]{\custhl[soulKhaki]{\textbf{#1}}}
 \DeclareRobustCommand{\result}[1]{\custhl[soulCyan]{\textbf{#1}}}
 \DeclareRobustCommand{\quip}[1]{\custhl[soulLightGreen]{\textit{#1}}}
 \DeclareRobustCommand{\tcdefine}[1]{\custhl[soulDodgerBlue]{\textbf{#1}}}
 \DeclareRobustCommand{\example}[1]{\custhl[soulDarkOrange]{\textit{#1}}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Complex Section Building
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%% \skillentry
 
-\newtcolorbox{normbox}[1][]{%
-  boxrule=0pt,%
-  enhanced,%
-  title=\small\textbf{#1},%
-  left=1pt,%
-  right=1pt,%
-  top=0pt,%
-  bottom=-2pt,%
-  boxsep=2pt,%
-  boxrule=0.6pt,%
-  %before skip=0.5\baselineskip,%
-  before skip=0.0pt,%
-  %after skip=0.5\baselineskip,%
-  after skip=0.0pt,%
-  lefttitle=2pt,%
-  righttitle=2mm,
-  toptitle=1mm,%
-  bottomtitle=0mm,%
-  minipage boxed title,%
-  hbox,%
-  colbacktitle=Navy,%
-  colback=white,%
-  }
+\DeclareRobustCommand{\skillentry}[6]{%
+  \def\skilldie{#5}%
+  \def\skillindent{10pt}
+  \ifthenelse{\equal{\skilldie}{N/A}}{\def\skilldie{#5}}{\ifthenelse{\equal{\skilldie}{RESERVED}}{\def\skilldie{#5}}{\ifthenelse{\equal{\skilldie}{+0}}{\def\skilldie{#5}}{\def\skilldie{+#5}}}}
+  \begin{minipage}{\columnwidth}%
+  \noindent\rule{\columnwidth}{1pt}%
+
+  \vspace{5pt}
+  \begin{tabularx}{\linewidth}{@{} X r}
+  \makecell[lt]{\large\textbf{#1}} & 
+  \def\tabcolsep{2pt}
+  \footnotesize%
+  \begin{tabular}{@{}lrlr}%
+  Base Cost & \small\textbf{#4 EP} & Attribute & \small\textbf{#2}\\%
+  Skill Type & \small\textbf{#3} & Extra Dice & \small\textbf{\skilldie}\\%
+  \midrule%
+  \end{tabular}\\%
+  \end{tabularx}\\%
+  \vspace{2pt}
+
+  #6\\%
+  \end{minipage}%
+  \vspace{5pt}
+  \def\tabcolsep{6pt}
+}
+
+%%%% \glossary entry
+
+\newcommand{\glossaryentry}[2]{%
+  \parbox{3cm}{\listing{\indy*{#1}}}%
+  \parbox{\linewidth-3cm}{#2}\par
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Colored Boxes for Tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% normbox
+
+\newtcolorbox{normbox}[1][]{ boxrule=0pt, enhanced, title=\small\textbf{#1}, left=1pt, right=1pt, top=0pt, bottom=-2pt, boxsep=2pt, boxrule=0.6pt, before skip=0.0pt, after skip=0.0pt, lefttitle=2pt, righttitle=2mm, toptitle=1mm, bottomtitle=0mm, minipage boxed title, hbox, colbacktitle=Navy, colback=white}
+
+%%%% normboxc
 
 \newtcolorbox{normboxc}[1][]{%
   boxrule=0pt,%
@@ -251,15 +298,35 @@
   hbox,%
   colbacktitle=Navy,%
   colback=white,%
-  %before=\begin{nscenter},%
   before=\hspace*{\fill},%
-  %after=\end{nscenter},%
   after=\hspace*{\fill},%
   }
 
-\hyphenpenalty=9999
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Misc Functions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setcounter{chapter}{-1}
+%%%% \bhead
+
+\newcommand{\bhead}[1]{\thead{\textbf{#1}}}
+
+%%%% \mets
+
+\DeclareDocumentCommand \mets {m O{}}{%
+  \def\metfeet{\fpeval{#1*2000}}%
+  \def\metmi{\fpeval{round(\metfeet/5280,1)}}%
+  \def\mikm{\fpeval{round(\metmi*1.609344,1)}}%
+  \xintifboolexpr{\metmi>10}{\def\metmir{\fpeval{round(\metmi,0)}}}{\def\metmir{\metmi}}%
+  \xintifboolexpr{\mikm>10}{\def\mikmr{\fpeval{round(\mikm,0)}}}{\def\mikmr{\mikm}}%
+  \ifthenelse{\equal{#2}{}}{%
+    \measure{#1 mets} (\textit{\metmir mi or \mikmr KM})%
+  }%
+  {%
+    \measure{#1 mets} per \ul{#2} (\textit{\metmir mi or \mikmr KM})%
+  }%
+}
+
+
 
 
 \begin{document}
@@ -270,10 +337,12 @@
 \titlespacing\subsection{0pt}{6pt }{6pt}
 \titlespacing\subsubsection{0pt}{6pt}{6pt}
 %\include{test.tex}
+%\begin{comment}
 \include{titlepage.tex}
 \include{copyright.tex}
 \include{dedication.tex}
 \include{introduction.tex}
+\index{gibberish}
 \include{changes.tex}
 \include{creating-an-adventurer.tex}
 \include{playing-an-adventurer.tex}
@@ -282,7 +351,10 @@
 \include{onivero.tex}
 \include{jaernian-humanoids.tex}
 \include{creating-and-playing-actors.tex}
+\include{glossary.tex}
 \include{important-tables.tex}
 \include{earth-references.tex}
-\include{index.tex}
+%\include{index.tex}
+%\end{comment}
+\printindex
 \end{document}

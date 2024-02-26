@@ -171,6 +171,16 @@ slippery, so the GM asks Alene's player to roll 8 or less on 2d6. The player rol
 \indy{Resistance Checks} (or \RC) are a measure of your adventurer's resistance to physical and spell effects. When you are subject to such an effect, your GM will state what the effect is, which stat to check against, and how strong the effect is by announcing how many dice you need to roll to resist that effect. Roll that many dice, and if you roll \tcdefine{equal to or lower than your \indy{rank}} in the appropriate stat, you succeed the resistance check and the effect is weakened or negated.
 \subsection{Armor Effects of Resistance Checks}\indx{armor}\indx{resistance check!armor}
 Different types of armor can diminish your ability to resist certain magical and physical effects. Leather armor restricts mobility, automatically adding \tcdieroll{1d6} to any \textbf{RC (Resistance Check)} against \AGI. Chain mail has, in addition, a large mass of metal that attracts magical energies. An adventurer in chain must add \tcdieroll{1d6} to any RC against \AGI and \PWR. A set of plate mail is extremely heavy and takes considerable strength to wear. An adventurer in plate mail must add \tcdieroll{1d6} to any RC against \AGI, \PWR, or \STR.
+\begin{normboxc}[Armor Stat Effects]
+\small
+\begin{tabular}{@{} l l l}
+\textbf{Armor} & \textbf{Stat} & \textbf{Change}\\
+\midrule
+Leather & \AGI & \tcdieroll{1d6}\\
+Chain Mail & \AGI, \PWR & \tcdieroll{1d6}\\
+Plate Mail & \AGI, \PWR, \STR & \tcdieroll{1d6}\\
+\end{tabular}
+\end{normboxc}
 \section{Dying and Falling Unconscious}\indx{dying}
 If you fight you just might get hurt! When an adventurer is damaged they must temporarily subtract that number of damage points from their damage point total. If the total goes \tcdefine{below 0 DP}, the adventurer \indy[death]{dies} \tcdefine{immediately}. (Since all actions are simultaneous in an action phase, a cure in the same round may prevent the total from going below zero).
 
@@ -250,12 +260,12 @@ When a spell is cast, the required units are temporarily deducted from the caste
 
 \example{For example, a caster with a PWR of 13 recovers units at the rate of 13 units/full rest}. 
 
-Divine and elemental unit totals are kept separate, and an adventurer recovers their PWR in units for both types if they have purchased both styles of magic. \indy[priest]{Priests} of \indy{Ra} (see \chref{ch:ra} on \pageref{ch:rudri}) and \indy{Rudri} (see \chref{ch:ra} on \pageref{ch:rudri}) recover spells in unusual ways.
+Divine and elemental unit totals are kept separate, and an adventurer recovers their PWR in units for both types if they have purchased both styles of magic. \indy[priest]{Priests} of \indy{Ra} (see \chpage{ch:ra}) and \indy{Rudri} (see \chpage{ch:rudri}) recover spells in unusual ways.
 \subsection{Restrictions on Spell Casting}
 \indx{spell!restrictions}
 If your adventurer's hands are damaged or restricted, they may be prevented from casting spells. One impaired hand prevents casting any spell with a casting time greater than \tcdefine{1 \indy{round}}; two impaired hands prevents any casting. A damaged or non-functional voice also prevents casting, but a magical \indy{silence} does not, as the vocal component of a \indx{spell!vocal component}spell is more a concentration device than a method of summoning magical power. 
 
-If a spell caster has the \indx{spell!one-hand casting}\indy{One-Hand Casting} skill, they can cast spells longer than one round by making a check. \indx{spelL!non-verbal casting}\indy{Non-verbal casting} allows a caster to cast spells without using their voice. See \chref{ch:skills} on \tcpage{ch:skills} for more information.
+If a spell caster has the \indx{spell!one-hand casting}\indy{One-Hand Casting} skill, they can cast spells longer than one round by making a check. \indx{spelL!non-verbal casting}\indy{Non-verbal casting} allows a caster to cast spells without using their voice. See \chpage{ch:skills} for more information.
 
 The properties of the metal \indy{Terisium}, consume spell energy. If a caster is encircled by this metal, their current \EU and \DU totals eventually drops to \tcdefine{0 units}; the adventurer may recover the units, by resting, once the metal is removed. 
 
