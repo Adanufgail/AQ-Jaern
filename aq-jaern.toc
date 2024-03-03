@@ -1,0 +1,290 @@
+\setlength {\cftchapnumwidth }{60pt}
+\renewcommand {\cftchappresnum }{Chapter }
+\contentsline {chapter}{\numberline {0}Changes Made in this Version}{7}{}%
+\contentsline {section}{\numberline {0.1}Conventions Used}{8}{}%
+\contentsline {subsection}{\numberline {0.1.1}Colored Highlighting}{8}{}%
+\contentsline {section}{\numberline {0.2}To Do}{8}{}%
+\contentsline {section}{\numberline {0.3}Changelog}{8}{}%
+\contentsline {subsection}{\numberline {0.3.1}Bolded, Italicized, and Underlined Text}{8}{}%
+\contentsline {chapter}{\numberline {1}Creating an Adventurer}{9}{}%
+\contentsline {section}{\numberline {1.1}Random Numbers}{9}{}%
+\contentsline {section}{\numberline {1.2}Physical Statistics}{9}{}%
+\contentsline {section}{\numberline {1.3}Placed Roll}{10}{}%
+\contentsline {section}{\numberline {1.4}Race}{10}{}%
+\contentsline {section}{\numberline {1.5}Sex}{10}{}%
+\contentsline {section}{\numberline {1.6}Age}{10}{}%
+\contentsline {section}{\numberline {1.7}Body build}{10}{}%
+\contentsline {section}{\numberline {1.8}Height and Weight}{10}{}%
+\contentsline {section}{\numberline {1.9}Eye color}{11}{}%
+\contentsline {section}{\numberline {1.10}Hair color}{11}{}%
+\contentsline {section}{\numberline {1.11}Motivation}{11}{}%
+\contentsline {section}{\numberline {1.12}Patron Gods}{12}{}%
+\contentsline {section}{\numberline {1.13}Adventurer Background}{12}{}%
+\contentsline {section}{\numberline {1.14}Languages}{13}{}%
+\contentsline {section}{\numberline {1.15}Rating}{13}{}%
+\contentsline {section}{\numberline {1.16}Date}{13}{}%
+\contentsline {section}{\numberline {1.17}Nomadic Prefix Names}{13}{}%
+\contentsline {section}{\numberline {1.18}Name}{13}{}%
+\contentsline {section}{\numberline {1.19}Profession}{13}{}%
+\contentsline {section}{\numberline {1.20}Adventurer Models}{14}{}%
+\contentsline {subsection}{\numberline {1.20.1}Models}{14}{}%
+\contentsline {section}{\numberline {1.21}Experience Points}{15}{}%
+\contentsline {section}{\numberline {1.22}Buying}{15}{}%
+\contentsline {subsection}{\numberline {1.22.1}Buying up from zero}{15}{}%
+\contentsline {section}{\numberline {1.23}Stats}{16}{}%
+\contentsline {section}{\numberline {1.24}Damage Points}{16}{}%
+\contentsline {section}{\numberline {1.25}Melee Modifiers}{16}{}%
+\contentsline {section}{\numberline {1.26}Spells}{16}{}%
+\contentsline {subsection}{\numberline {1.26.1}Acquiring Spells from Other Elements}{17}{}%
+\contentsline {subsection}{\numberline {1.26.2}Stat Limitations}{17}{}%
+\contentsline {subsection}{\numberline {1.26.3}Buying of Spells by Other Backgrounds}{17}{}%
+\contentsline {section}{\numberline {1.27}Incants}{17}{}%
+\contentsline {subsection}{\numberline {1.27.1}Preparing Incants by Other Backgrounds}{17}{}%
+\contentsline {section}{\numberline {1.28}Languages}{17}{}%
+\contentsline {section}{\numberline {1.29}Skills}{18}{}%
+\contentsline {subsection}{\numberline {1.29.1}Learning Skills}{19}{}%
+\contentsline {section}{\numberline {1.30}Money}{21}{}%
+\contentsline {section}{\numberline {1.31}Equipment}{21}{}%
+\contentsline {section}{\numberline {1.32}Defense Values}{23}{}%
+\contentsline {subsection}{\numberline {1.32.1}Mobility}{23}{}%
+\contentsline {subsection}{\numberline {1.32.2}Agility}{23}{}%
+\contentsline {subsection}{\numberline {1.32.3}Stat Modifiers}{23}{}%
+\contentsline {subsection}{\numberline {1.32.4}Armor}{23}{}%
+\contentsline {subsection}{\numberline {1.32.5}Defensive Devices}{23}{}%
+\contentsline {subsection}{\numberline {1.32.6}Weapons}{23}{}%
+\contentsline {chapter}{\numberline {2}Playing an Adventurer}{24}{}%
+\contentsline {section}{\numberline {2.1}Your job as a player}{24}{}%
+\contentsline {section}{\numberline {2.2}Use of Dice}{24}{}%
+\contentsline {section}{\numberline {2.3}Playing Modes}{24}{}%
+\contentsline {subsection}{\numberline {2.3.1}Summarized Actions Mode}{24}{}%
+\contentsline {subsection}{\numberline {2.3.2}Free Actions Mode}{24}{}%
+\contentsline {subsection}{\numberline {2.3.3}Melee Actions Mode}{24}{}%
+\contentsline {section}{\numberline {2.4}Encounters and Combat}{24}{}%
+\contentsline {subsection}{\numberline {2.4.1}Distance}{25}{}%
+\contentsline {subsection}{\numberline {2.4.2}Order of Melee}{25}{}%
+\contentsline {subsubsection}{\numberline {2.4.2.1}Initiative}{25}{}%
+\contentsline {subsubsection}{\numberline {2.4.2.2}Informational Questions}{25}{}%
+\contentsline {subsubsection}{\numberline {2.4.2.3}Action Preparation}{25}{}%
+\contentsline {subsubsection}{\numberline {2.4.2.4}Statement of Actions}{25}{}%
+\contentsline {subsubsection}{\numberline {2.4.2.5}Results of Actions}{25}{}%
+\contentsline {subsubsection}{\numberline {2.4.2.6}Outcome Phase}{25}{}%
+\contentsline {subsection}{\numberline {2.4.3}Surprise}{25}{}%
+\contentsline {section}{\numberline {2.5}Actions}{25}{}%
+\contentsline {subsection}{\numberline {2.5.1}Movement}{25}{}%
+\contentsline {subsection}{\numberline {2.5.2}Striking}{26}{}%
+\contentsline {subsubsection}{\numberline {2.5.2.1}Impaling}{26}{}%
+\contentsline {subsection}{\numberline {2.5.3}Hitting}{26}{}%
+\contentsline {subsection}{\numberline {2.5.4}Critical Hits and Misses}{26}{}%
+\contentsline {subsection}{\numberline {2.5.5}Grappling}{26}{}%
+\contentsline {subsubsection}{\numberline {2.5.5.1}Hold}{26}{}%
+\contentsline {subsubsection}{\numberline {2.5.5.2}Throw}{26}{}%
+\contentsline {subsection}{\numberline {2.5.6}Withdrawal from Melee and Grappling}{26}{}%
+\contentsline {subsection}{\numberline {2.5.7}Multiple Combatants}{26}{}%
+\contentsline {subsection}{\numberline {2.5.8}Shooting into Melee}{26}{}%
+\contentsline {subsection}{\numberline {2.5.9}Other Common Actions}{27}{}%
+\contentsline {section}{\numberline {2.6}Using Skills}{27}{}%
+\contentsline {section}{\numberline {2.7}Defaulting a skill}{27}{}%
+\contentsline {section}{\numberline {2.8}Resistance Checks}{27}{}%
+\contentsline {subsection}{\numberline {2.8.1}Armor Effects of Resistance Checks}{27}{}%
+\contentsline {section}{\numberline {2.9}Dying and Falling Unconscious}{27}{}%
+\contentsline {section}{\numberline {2.10}Stressing Stats}{28}{}%
+\contentsline {subsection}{\numberline {2.10.1}Strength}{28}{}%
+\contentsline {subsection}{\numberline {2.10.2}Common Sense}{28}{}%
+\contentsline {subsection}{\numberline {2.10.3}Power}{28}{}%
+\contentsline {subsection}{\numberline {2.10.4}Health}{28}{}%
+\contentsline {subsection}{\numberline {2.10.5}Comeliness}{28}{}%
+\contentsline {section}{\numberline {2.11}Weapons and Their Effects}{28}{}%
+\contentsline {section}{\numberline {2.12}Weapon Specialization Skills}{29}{}%
+\contentsline {section}{\numberline {2.13}Using Magic}{29}{}%
+\contentsline {subsection}{\numberline {2.13.1}Casting and Terminating Skills}{29}{}%
+\contentsline {subsection}{\numberline {2.13.2}Recovering Elemental and Divine Units}{29}{}%
+\contentsline {subsection}{\numberline {2.13.3}Restrictions on Spell Casting}{30}{}%
+\contentsline {subsection}{\numberline {2.13.4}Spell Interruption}{30}{}%
+\contentsline {subsection}{\numberline {2.13.5}Spell Duration}{30}{}%
+\contentsline {subsection}{\numberline {2.13.6}Stressing PWR for Units}{30}{}%
+\contentsline {subsection}{\numberline {2.13.7}Overloading the Spell Group}{30}{}%
+\contentsline {subsection}{\numberline {2.13.8}Finessing Spells}{31}{}%
+\contentsline {subsection}{\numberline {2.13.9}Limitations on Finessing}{31}{}%
+\contentsline {subsection}{\numberline {2.13.10}Finessing and Overloading}{31}{}%
+\contentsline {subsection}{\numberline {2.13.11}Powerful Spells}{31}{}%
+\contentsline {section}{\numberline {2.14}Targeting}{31}{}%
+\contentsline {subsection}{\numberline {2.14.1}Caster}{31}{}%
+\contentsline {subsection}{\numberline {2.14.2}Touch}{32}{}%
+\contentsline {subsection}{\numberline {2.14.3}Multitouch}{32}{}%
+\contentsline {subsection}{\numberline {2.14.4}Hearing}{32}{}%
+\contentsline {subsection}{\numberline {2.14.5}Memorized Location}{32}{}%
+\contentsline {subsection}{\numberline {2.14.6}Direction/Distance}{32}{}%
+\contentsline {subsection}{\numberline {2.14.7}Line of Sight}{32}{}%
+\contentsline {section}{\numberline {2.15}Areas of Effect}{32}{}%
+\contentsline {subsection}{\numberline {2.15.1}Radius}{32}{}%
+\contentsline {subsection}{\numberline {2.15.2}Volume}{32}{}%
+\contentsline {subsection}{\numberline {2.15.3}Cone}{33}{}%
+\contentsline {subsection}{\numberline {2.15.4}Line}{33}{}%
+\contentsline {section}{\numberline {2.16}Objects}{33}{}%
+\contentsline {section}{\numberline {2.17}Groups of Objects}{33}{}%
+\contentsline {section}{\numberline {2.18}Incants}{33}{}%
+\contentsline {subsection}{\numberline {2.18.1}Preparing Incants}{33}{}%
+\contentsline {subsection}{\numberline {2.18.2}Life Force and Death}{33}{}%
+\contentsline {subsection}{\numberline {2.18.3}Restrictions on Preparing Incants}{33}{}%
+\contentsline {subsection}{\numberline {2.18.4}Stressing Health for Incants}{34}{}%
+\contentsline {subsection}{\numberline {2.18.5}Performing Songs}{34}{}%
+\contentsline {section}{\numberline {2.19}Intervention of the Deities}{34}{}%
+\contentsline {section}{\numberline {2.20}Between Adventures}{34}{}%
+\contentsline {subsection}{\numberline {2.20.1}Employment: Getting a Job}{34}{}%
+\contentsline {subsection}{\numberline {2.20.2}Being Your Own Boss}{34}{}%
+\contentsline {section}{\numberline {2.21}Extended Leave from Adventuring}{34}{}%
+\contentsline {section}{\numberline {2.22}Aging}{35}{}%
+\contentsline {section}{\numberline {2.23}Diseases}{35}{}%
+\contentsline {chapter}{\numberline {3}Life on the High Seas}{37}{}%
+\contentsline {section}{\numberline {3.1}Ocean Creatures}{37}{}%
+\contentsline {subsection}{\numberline {3.1.1}Fish}{37}{}%
+\contentsline {subsection}{\numberline {3.1.2}Coelenterates}{37}{}%
+\contentsline {subsection}{\numberline {3.1.3}Dolphins}{37}{}%
+\contentsline {subsection}{\numberline {3.1.4}Lizards}{37}{}%
+\contentsline {subsection}{\numberline {3.1.5}Balenoigajos}{38}{}%
+\contentsline {subsection}{\numberline {3.1.6}Oorn}{38}{}%
+\contentsline {section}{\numberline {3.2}Oceangoing Vessels}{38}{}%
+\contentsline {subsection}{\numberline {3.2.1}Sail Boards}{38}{}%
+\contentsline {subsection}{\numberline {3.2.2}Dolphins}{38}{}%
+\contentsline {subsection}{\numberline {3.2.3}Skiffs}{38}{}%
+\contentsline {subsection}{\numberline {3.2.4}Attack Boats}{38}{}%
+\contentsline {subsection}{\numberline {3.2.5}Kurujo}{38}{}%
+\contentsline {subsection}{\numberline {3.2.6}Metioujo}{39}{}%
+\contentsline {subsection}{\numberline {3.2.7}Maraujo}{39}{}%
+\contentsline {subsection}{\numberline {3.2.8}Onivero Skim Boats}{39}{}%
+\contentsline {subsection}{\numberline {3.2.9}Platforms}{39}{}%
+\contentsline {section}{\numberline {3.3}Building and Buying Ships}{39}{}%
+\contentsline {subsection}{\numberline {3.3.1}Design}{39}{}%
+\contentsline {subsection}{\numberline {3.3.2}Dry Dock Fees}{40}{}%
+\contentsline {subsection}{\numberline {3.3.3}Workers}{40}{}%
+\contentsline {subsection}{\numberline {3.3.4}The Hull}{40}{}%
+\contentsline {subsection}{\numberline {3.3.5}Masts}{40}{}%
+\contentsline {subsection}{\numberline {3.3.6}Rowing Deck}{40}{}%
+\contentsline {subsection}{\numberline {3.3.7}Weapons}{40}{}%
+\contentsline {subsection}{\numberline {3.3.8}Auxiliary Craft}{41}{}%
+\contentsline {subsection}{\numberline {3.3.9}Defense Value}{41}{}%
+\contentsline {subsubsection}{\numberline {3.3.9.1}Mobility}{41}{}%
+\contentsline {subsubsection}{\numberline {3.3.9.2}Maneuverability}{41}{}%
+\contentsline {subsubsection}{\numberline {3.3.9.3}Hull Condition}{41}{}%
+\contentsline {subsubsection}{\numberline {3.3.9.4}Hull Reinforcements}{42}{}%
+\contentsline {subsubsection}{\numberline {3.3.9.5}Armor}{42}{}%
+\contentsline {subsubsection}{\numberline {3.3.9.6}ADV Equation}{42}{}%
+\contentsline {subsection}{\numberline {3.3.10}Initial Supplies}{42}{}%
+\contentsline {subsection}{\numberline {3.3.11}Construction Costs}{42}{}%
+\contentsline {subsection}{\numberline {3.3.12}Used Ships}{42}{}%
+\contentsline {subsection}{\numberline {3.3.13}Running Costs}{42}{}%
+\contentsline {subsection}{\numberline {3.3.14}Cargo Profits}{42}{}%
+\contentsline {section}{\numberline {3.4}Maintaining and Operating a Ship}{43}{}%
+\contentsline {subsection}{\numberline {3.4.1}Navigation}{43}{}%
+\contentsline {subsection}{\numberline {3.4.2}Porting}{43}{}%
+\contentsline {subsection}{\numberline {3.4.3}Repairs}{43}{}%
+\contentsline {subsection}{\numberline {3.4.4}Crew Management}{43}{}%
+\contentsline {subsection}{\numberline {3.4.5}Crew Abilities}{43}{}%
+\contentsline {section}{\numberline {3.5}Combat at Sea}{43}{}%
+\contentsline {subsection}{\numberline {3.5.1}Ship to Ship Combat}{43}{}%
+\contentsline {subsubsection}{\numberline {3.5.1.1}Moving the Ship}{44}{}%
+\contentsline {subsubsection}{\numberline {3.5.1.2}Firing Weapons}{44}{}%
+\contentsline {subsubsection}{\numberline {3.5.1.3}Critical Hits and Misses}{44}{}%
+\contentsline {subsubsection}{\numberline {3.5.1.4}Individual Missiles}{44}{}%
+\contentsline {subsubsection}{\numberline {3.5.1.5}Individual Spells}{44}{}%
+\contentsline {subsubsection}{\numberline {3.5.1.6}Boarding Actions}{44}{}%
+\contentsline {subsection}{\numberline {3.5.2}Sink and Burn}{44}{}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}Damage Points}{44}{}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}Impact Damage}{45}{}%
+\contentsline {subsubsection}{\numberline {3.5.2.3}Fire Damage}{45}{}%
+\contentsline {subsubsection}{\numberline {3.5.2.4}Combat Repairs}{45}{}%
+\contentsline {subsubsection}{\numberline {3.5.2.5}Fire Fighting}{45}{}%
+\contentsline {subsubsection}{\numberline {3.5.2.6}Sinking}{45}{}%
+\contentsline {chapter}{\numberline {4}Skills}{46}{}%
+\contentsline {chapter}{\numberline {5}Jaern -- The Planet}{66}{}%
+\contentsline {chapter}{\numberline {6}The Onivero}{67}{}%
+\contentsline {chapter}{\numberline {7}Jaernian Humanoids}{68}{}%
+\contentsline {section}{\numberline {7.1}Humans}{68}{}%
+\contentsline {section}{\numberline {7.2}Elves}{68}{}%
+\contentsline {subsection}{\numberline {7.2.1}History}{68}{}%
+\contentsline {subsection}{\numberline {7.2.2}Appearance}{68}{}%
+\contentsline {subsection}{\numberline {7.2.3}Technology}{68}{}%
+\contentsline {subsection}{\numberline {7.2.4}Transportation}{68}{}%
+\contentsline {subsection}{\numberline {7.2.5}Cities and Architecture}{68}{}%
+\contentsline {subsection}{\numberline {7.2.6}Agriculture}{68}{}%
+\contentsline {subsection}{\numberline {7.2.7}Medicine}{68}{}%
+\contentsline {subsection}{\numberline {7.2.8}Language}{69}{}%
+\contentsline {subsection}{\numberline {7.2.9}Art}{69}{}%
+\contentsline {subsection}{\numberline {7.2.10}Sports}{69}{}%
+\contentsline {subsection}{\numberline {7.2.11}Religion}{69}{}%
+\contentsline {subsection}{\numberline {7.2.12}Economy}{69}{}%
+\contentsline {subsection}{\numberline {7.2.13}Government}{69}{}%
+\contentsline {subsection}{\numberline {7.2.14}Traditions}{69}{}%
+\contentsline {subsection}{\numberline {7.2.15}Elven Abilities}{69}{}%
+\contentsline {subsubsection}{\numberline {7.2.15.1}Exceptional PER}{69}{}%
+\contentsline {subsubsection}{\numberline {7.2.15.2}Distance Judgment}{69}{}%
+\contentsline {subsubsection}{\numberline {7.2.15.3}Missile Skill}{69}{}%
+\contentsline {subsubsection}{\numberline {7.2.15.4}Soulless}{69}{}%
+\contentsline {section}{\numberline {7.3}Dwarves}{69}{}%
+\contentsline {subsection}{\numberline {7.3.1}History}{69}{}%
+\contentsline {subsection}{\numberline {7.3.2}Technology}{70}{}%
+\contentsline {subsection}{\numberline {7.3.3}Transportation}{70}{}%
+\contentsline {subsection}{\numberline {7.3.4}Cities and Architecture}{70}{}%
+\contentsline {subsection}{\numberline {7.3.5}Agriculture}{70}{}%
+\contentsline {subsection}{\numberline {7.3.6}Medicine}{70}{}%
+\contentsline {subsection}{\numberline {7.3.7}Language}{70}{}%
+\contentsline {subsection}{\numberline {7.3.8}Art}{70}{}%
+\contentsline {subsection}{\numberline {7.3.9}Sports}{70}{}%
+\contentsline {subsection}{\numberline {7.3.10}Religion}{70}{}%
+\contentsline {subsection}{\numberline {7.3.11}Economy}{70}{}%
+\contentsline {subsection}{\numberline {7.3.12}Government}{70}{}%
+\contentsline {subsection}{\numberline {7.3.13}Dwarven Abilities}{70}{}%
+\contentsline {subsubsection}{\numberline {7.3.13.1}Exceptional HEA}{70}{}%
+\contentsline {subsubsection}{\numberline {7.3.13.2}Knowledge of Material Composition}{70}{}%
+\contentsline {subsubsection}{\numberline {7.3.13.3}Armor Construction}{70}{}%
+\contentsline {subsubsection}{\numberline {7.3.13.4}Great Durability}{70}{}%
+\contentsline {section}{\numberline {7.4}Orcs}{70}{}%
+\contentsline {subsection}{\numberline {7.4.1}Technology}{71}{}%
+\contentsline {subsection}{\numberline {7.4.2}Transportation}{71}{}%
+\contentsline {subsection}{\numberline {7.4.3}Cities and Architecture}{71}{}%
+\contentsline {subsection}{\numberline {7.4.4}Agriculture}{71}{}%
+\contentsline {subsection}{\numberline {7.4.5}Medicine}{71}{}%
+\contentsline {subsection}{\numberline {7.4.6}Language}{71}{}%
+\contentsline {subsection}{\numberline {7.4.7}Art}{71}{}%
+\contentsline {subsection}{\numberline {7.4.8}Sports}{71}{}%
+\contentsline {subsection}{\numberline {7.4.9}Religion}{71}{}%
+\contentsline {subsection}{\numberline {7.4.10}Economy}{71}{}%
+\contentsline {subsection}{\numberline {7.4.11}Government}{71}{}%
+\contentsline {subsection}{\numberline {7.4.12}Orcish Abilities}{71}{}%
+\contentsline {subsubsection}{\numberline {7.4.12.1}Exceptional WIL}{71}{}%
+\contentsline {subsubsection}{\numberline {7.4.12.2}Sense of Smell}{71}{}%
+\contentsline {subsubsection}{\numberline {7.4.12.3}Physical Viciousness}{71}{}%
+\contentsline {subsubsection}{\numberline {7.4.12.4}Mental Stubbornness}{71}{}%
+\contentsline {section}{\numberline {7.5}Lizards}{71}{}%
+\contentsline {subsection}{\numberline {7.5.1}History}{71}{}%
+\contentsline {subsection}{\numberline {7.5.2}Physical Description}{72}{}%
+\contentsline {subsection}{\numberline {7.5.3}Reproduction}{72}{}%
+\contentsline {subsection}{\numberline {7.5.4}Technology}{72}{}%
+\contentsline {subsection}{\numberline {7.5.5}Transportation}{72}{}%
+\contentsline {subsection}{\numberline {7.5.6}Cities and Architecture}{72}{}%
+\contentsline {subsection}{\numberline {7.5.7}Agriculture}{72}{}%
+\contentsline {subsection}{\numberline {7.5.8}Medicine}{72}{}%
+\contentsline {subsection}{\numberline {7.5.9}Language}{72}{}%
+\contentsline {subsection}{\numberline {7.5.10}Art}{72}{}%
+\contentsline {subsection}{\numberline {7.5.11}Sports}{72}{}%
+\contentsline {subsection}{\numberline {7.5.12}Religion}{72}{}%
+\contentsline {subsection}{\numberline {7.5.13}Economy}{72}{}%
+\contentsline {subsection}{\numberline {7.5.14}Government}{72}{}%
+\contentsline {subsection}{\numberline {7.5.15}Lizard Abilities}{72}{}%
+\contentsline {subsubsection}{\numberline {7.5.15.1}Exceptional AGI}{72}{}%
+\contentsline {subsubsection}{\numberline {7.5.15.2}Quickness}{73}{}%
+\contentsline {subsubsection}{\numberline {7.5.15.3}Water Breathing}{73}{}%
+\contentsline {chapter}{\numberline {8}Creating and Playing Actors}{74}{}%
+\contentsline {chapter}{\numberline {A}Glossary}{75}{}%
+\renewcommand {\cftchappresnum }{Appendix }
+\contentsline {chapter}{\numberline {B}Important Tables}{76}{}%
+\contentsline {section}{\numberline {B.1}Weapon Effects}{76}{}%
+\contentsline {section}{\numberline {B.2}Critical Hits}{77}{}%
+\contentsline {subsection}{\numberline {B.2.1}Artillery Critical Hits}{77}{}%
+\contentsline {subsection}{\numberline {B.2.2}Blunt Weapon Critical Wounds}{77}{}%
+\contentsline {subsection}{\numberline {B.2.3}Bludgeon Weapon Critical Wounds}{78}{}%
+\contentsline {section}{\numberline {B.3}Spell Overloading}{78}{}%
+\contentsline {section}{\numberline {B.4}Ship Combat}{78}{}%
+\contentsline {chapter}{\numberline {C}Earth References}{79}{}%
+\contentsline {section}{\numberline {C.1}Distance Conversion}{80}{}%
+\contentsline {chapter}{Index}{82}{}%

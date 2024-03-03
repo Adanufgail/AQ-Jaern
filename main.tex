@@ -4,7 +4,7 @@
 % Import Packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[svgnames]{xcolor}
+\usepackage[svgnames]{xcolor} % Color Names
 \usepackage{blindtext}
 \usepackage{comment}
 \usepackage{microtype}
@@ -15,63 +15,54 @@
 \usepackage{xfp}
 \usepackage{xintexpr}
 \usepackage{parskip}
-\usepackage{geometry}
+\usepackage{geometry} % Page Geometry
 \usepackage{imakeidx}
 \usepackage{multicol}
 \usepackage{enumitem}
 \usepackage{tabularx}
 \usepackage{nameref}
-\usepackage{tikz}
-\usepackage[sfdefault]{roboto}
+\usepackage{tikz} % Diagramming
+\usepackage[sfdefault]{roboto} % Roboto Font
 \usepackage[most]{tcolorbox}
 \usepackage{booktabs}
 \usepackage{xtab}
-\usepackage{makecell}
-\usepackage{wrapfig}
+\usepackage{makecell} % Multiline Table Cells
+\usepackage{wrapfig} % Wrap text around images
 \usepackage{array,ragged2e}
 \usepackage{titlesec}
 \usepackage{etoolbox}
 \usepackage{xparse}
-\usepackage{ifthen}
+\usepackage{ifthen} % Better If/Then Handling
 \usepackage{fancyhdr} 
-
-\begin{comment}
-\usepackage{wasysym}
-\usepackage[english]{babel}
-\usepackage[T1]{fontenc}
-\usepackage[utf8x]{inputenc}
-\usepackage{pict2e}
-\usepackage{amsmath}
-\usepackage{color,pxfonts,fix-cm}
-\usepackage{latexsym}
-%\usepackage[mathletters]{ucs}
-\end{comment}
+\usepackage{tocloft} % Customize ToC
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Package-specific variables
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%Page Geometry
+%%%% Page Geometry
+
 \geometry{letterpaper, portrait, margin=0.5in}
 
-%%%%Set Indent Width to 0
+%%%% Set Indent Width to 0
+
 \setlength{\parindent}{0pt}
 
-%%%%Tcolorbox
+%%%% Tcolorbox
+
 \tcbuselibrary{breakable}
 \tcbuselibrary{skins}
 
-%%%%Tikz
+%%%% Tikz
+
 \usetikzlibrary{tikzmark, shapes.geometric, shapes.arrows, fit, bending}
 
-%%%%imakeidx Indexing
+%%%% imakeidx Indexing
 
-%\makeindex[columns=3]
-%\indexsetup{othercode=\small}
-%\makeindex[program=makeindex,columns=3,intoc=true,options={-s index_style.ist}]
 \makeindex[columns=3,intoc=true,options={-s index_style.ist}]
 
-%\fancyhf{}
+%%%% Footer
+
 \fancyfoot{}
 \fancyfoot[RO, LE]{\thepage}
 \pagestyle{fancy}
@@ -81,34 +72,54 @@
   \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
   \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
 }
-%\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
 
+
+%%%% Try not to hypenate
 
 \hyphenpenalty=9999
 
+%%%% Start at Chapter 0
+
 \setcounter{chapter}{-1}
 
+%%%% Create L and Y, for tables
+
 \newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
-\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+
+%%%% 
 
 \setlength\intextsep{0pt}
+
+%%%% Multi Column Width Definitions
 
 \newlength{\doublemulticol}
 \setlength{\doublemulticol}{0.25cm}
 
-\setlength{\multicolsep}{0pt}%
+%%%% Item and Number List Settings
 
 \setlist{nosep,topsep=0pt,leftmargin=12pt}
+
+%%%% Set Underline closer to text
 \setul{1pt}{.4pt}
 
+%%%%  Set horizontal rule spacing
 \setlength{\aboverulesep}{-1pt}
 \setlength{\belowrulesep}{2pt}
 
+%%%% Push text to top of page
+
 \raggedbottom
 
+%%%% Set default column width
+
 \def\defcolwidth{0.6cm}
+
+%%%% Define \aq macro
+
 \def\aq{\textbf{Adventure Quest }}
 
+
+%%%% 
 
 \makeatletter
 \def\SOUL@hlpreamble{%
@@ -118,12 +129,22 @@
 }
 \makeatother
 
+%%%% New center with no spacing above/below
+
 \newenvironment{nscenter}
  {\parskip=0pt\par\nopagebreak\centering}
  {\par\noindent\ignorespacesafterend}
 
+%%%% 
 
 \setcounter{secnumdepth}{5}
+
+%%%% Set Table of Contents to only show chapters
+
+\setcounter{tocdepth}{0}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
+\addtocontents{toc}{\protect\setlength{\protect\cftchapnumwidth}{60pt}}
+\addtocontents{toc}{\protect\renewcommand{\protect\cftchappresnum}{Chapter }}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Indexing Functions
@@ -338,22 +359,45 @@
 \titlespacing\subsubsection{0pt}{6pt}{6pt}
 %\include{test.tex}
 %\begin{comment}
-\include{titlepage.tex}
-\include{copyright.tex}
-\include{dedication.tex}
-\include{introduction.tex}
-\index{gibberish}
-\include{changes.tex}
-\include{creating-an-adventurer.tex}
-\include{playing-an-adventurer.tex}
-\include{life-on-the-high-seas.tex}
-\include{skills.tex}
-\include{onivero.tex}
-\include{jaernian-humanoids.tex}
-\include{creating-and-playing-actors.tex}
-\include{glossary.tex}
-\include{important-tables.tex}
-\include{earth-references.tex}
+\include{beg-titlepage.tex}
+\include{beg-copyright.tex}
+\include{beg-dedication.tex}
+\include{beg-introduction.tex}
+\tableofcontents
+\include{beg-changes.tex}
+\include{ch-creating-an-adventurer.tex}
+\include{ch-playing-an-adventurer.tex}
+\include{ch-life-on-the-high-seas.tex}
+\include{ch-skills.tex}
+\include{ch-jaern-planet.tex}
+\include{ch-onivero.tex}
+\include{ch-jaernian-humanoids.tex}
+\include{ch-lojem-isle.tex}
+\include{ch-rougtero.tex}
+\include{ch-marines.tex}
+\include{ch-auger.tex}
+\include{ch-nomad.tex}
+\include{ch-elem-core.tex}
+\include{ch-elem-earth.tex}
+\include{ch-elem-fire.tex}
+\include{ch-elem-air.tex}
+\include{ch-elem-water.tex}
+\include{ch-divine.tex}
+\include{ch-divine-.tex}
+\include{ch-advanced-magic.tex}
+\include{ch-magical-items.tex}
+\include{ch-creating-and-playing-actors.tex}
+\include{ch-actors-rougtero.tex}
+\include{ch-creating-creatures.tex}
+\include{ch-creatures.tex}
+\include{ch-creating-adventures.tex}
+\include{ch-judging-adventures.tex}
+\addtocontents{toc}{\protect\renewcommand{\protect\cftchappresnum}{Appendix }}
+\include{ch-running-campaign.tex}
+\appendix
+\include{ap-glossary.tex}
+\include{ap-important-tables.tex}
+\include{ap-earth-references.tex}
 %\include{index.tex}
 %\end{comment}
 \printindex
