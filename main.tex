@@ -114,10 +114,6 @@
 
 \def\defcolwidth{0.6cm}
 
-%%%% Define \aq macro
-
-\def\aq{\textbf{Adventure Quest }}
-
 
 %%%% 
 
@@ -173,8 +169,6 @@
     \lowercase{\def\temp{#1}}%
     \index{\temp}%
 }
-
-
 
 %%%% Indexing Shortcuts
 
@@ -347,7 +341,17 @@
   }%
 }
 
+%%%% Make Horizontal Line
 
+\def\makeline{\noindent\rule{\columnwidth}{1pt}}
+
+%%%% Define \aq macro
+
+\def\aq{\textbf{Adventure Quest }}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
@@ -383,7 +387,17 @@
 \include{ch-elem-air.tex}
 \include{ch-elem-water.tex}
 \include{ch-divine.tex}
-\include{ch-divine-.tex}
+\include{ch-divine-anubis.tex}
+\include{ch-divine-atena.tex}
+\include{ch-divine-isis.tex}
+\include{ch-divine-neptune.tex}
+\include{ch-divine-osus.tex}
+\include{ch-divine-osiris.tex}
+\include{ch-divine-ra.tex}
+\include{ch-divine-rudri.tex}
+\include{ch-divine-scrogg.tex}
+\include{ch-divine-tarus.tex}
+\include{ch-divine-tor.tex}
 \include{ch-advanced-magic.tex}
 \include{ch-magical-items.tex}
 \include{ch-creating-and-playing-actors.tex}
