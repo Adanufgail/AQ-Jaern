@@ -276,12 +276,43 @@
   \def\tabcolsep{6pt}
 }
 
-%%%% \glossary entry
+%%%% \glossaryentry
 
 \newcommand{\glossaryentry}[2]{%
   \parbox{3cm}{\listing{\indy*{#1}}}%
   \parbox{\linewidth-3cm}{#2}\par
 }
+
+%%%% \spellentry
+
+%%%% Name
+%%%% Rank
+%%%% Time To Cast
+%%%% Resist Check
+%%%% Target
+%%%% Duration
+%%%% Area
+%%%% Effect
+%%%% Description
+
+\DeclareRobustCommand{\spellentry}[9]{%
+  \begin{tabularx}{\linewidth}{@{} p{5pt} p{150pt} p{70pt} X}
+    \multicolumn{4}{l}{\large\textbf{#2 - \indy{#1}}}\\
+    &
+    \begin{tabular}[t]{@{}rl}
+      Time to Cast: & #3\\
+      Resist Check: & #4\\
+      Target: & #5\\
+      Duration: & #6\\
+      Area: & #7\\
+      Effect: & #8
+    \end{tabular} & &
+    #9\\
+  \end{tabularx}\\
+  %\noindent\rule{\columnwidth}{0.5pt}%
+  \vspace{10pt}
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Colored Boxes for Tables
