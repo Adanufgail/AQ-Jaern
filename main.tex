@@ -348,6 +348,9 @@
   after=\hspace*{\fill},%
   }
 
+\newtcolorbox{quotebox}{colback=red!5!white,
+colframe=red!75!black}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Misc Functions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -394,25 +397,26 @@
 \titlespacing\subsubsection{0pt}{6pt}{6pt}
 %\include{test.tex}
 %\begin{comment}
-\include{beg-titlepage.tex}
-\include{beg-copyright.tex}
-\include{beg-dedication.tex}
-\include{beg-introduction.tex}
+\include{beg-titlepage.tex} %done
+\include{beg-copyright.tex} %done
+\include{beg-dedication.tex} %done
+\include{beg-introduction.tex} %done
 \tableofcontents
-\include{beg-changes.tex}
-\include{ch-creating-an-adventurer.tex}
-\include{ch-playing-an-adventurer.tex}
-\include{ch-life-on-the-high-seas.tex}
-\include{ch-skills.tex}
+\include{beg-changes.tex} 
+\include{ch-creating-an-adventurer.tex} %done
+\include{ch-playing-an-adventurer.tex} %done
+\include{ch-life-on-the-high-seas.tex} %done
+\include{ch-skills.tex} %done
+\include{ch-weapons-armor.tex}
 \include{ch-jaern-planet.tex}
 \include{ch-onivero.tex}
 \include{ch-jaernian-humanoids.tex}
 \include{ch-lojem-isle.tex}
 \include{ch-rougtero.tex}
-\include{ch-marines.tex}
-\include{ch-auger.tex}
+\include{ch-marines.tex} %done
+\include{ch-auger.tex} %done
 \include{ch-nomad.tex}
-\include{ch-elem-core.tex}
+\include{ch-elem-core.tex} %done
 \include{ch-elem-earth.tex}
 \include{ch-elem-fire.tex}
 \include{ch-elem-air.tex}
@@ -440,6 +444,7 @@
 \addtocontents{toc}{\protect\renewcommand{\protect\cftchappresnum}{Appendix }}
 \include{ch-running-campaign.tex}
 \appendix
+\include{ap-charsheet.tex} %done
 \include{ap-glossary.tex}
 \include{ap-important-tables.tex}
 \include{ap-earth-references.tex}
