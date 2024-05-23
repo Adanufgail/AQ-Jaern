@@ -6,7 +6,7 @@ There are seven spell groups common to all magicians, and four unique spell grou
 
 \section{Magical Core Spells}
 All magicians have access to certain "core" spells. These spells are created by the power of the caster's element, but manifest themselves similarly regardless of the element. Thus, some form of the caster's element must be present so that they may draw elemental power from it.
-%\setlength{\columnsep}{\defcolwidth}\begin{Multicols*}{2}
+
 
 \indy{Defer} spells are the means by which a magician manufactures magical items and creates permanent or delayed spell effects.
 
@@ -21,12 +21,11 @@ this elemental cypher.
 
 \indy{Shadow Magic} enables the magician to manipulate shadow for useful and wondrous effects. They involve the use of both light and darkness. Light is used to delineate darkness, and thus these spells cease to function in the presence of extreme
 light (greater than daylight) or absolute darkness. The shadows created have no physical substance, and cannot be harmed by any physical or magical attacks. They cannot, on the other hand, have any effect upon things in the physical world except as explicitly stated within each spell.
-%\end{Multicols*}
 
 \renewcommand{\labelenumii}{\arabic{enumii}.}
-\begin{tabular}{@{} p{0.33\linewidth} p{0.33\linewidth} p{0.33\linewidth}}
+\begin{tabular}{@{} p{0.25\linewidth} p{0.25\linewidth} p{0.25\linewidth} p{0.25\linewidth}}
 \begin{enumerate}
-	\item Defer
+	\item \textbf{Defer}
 	\begin{enumerate}
 		\item Defer 1
 		\item Defer 2
@@ -44,10 +43,14 @@ light (greater than daylight) or absolute darkness. The shadows created have no 
 		\item Defer 14
 		\item Defer 15
 		\item Defer 16
+		\item Defer 17
+		\item Defer 18
+		\item Defer 19
+		\item Defer 20
 	\end{enumerate}
 \end{enumerate} &
 \begin{enumerate}
-	\item Revocation
+	\item \textbf{Revocation}
 	\begin{enumerate}
 		\item Revocation 1
 		\item Revocation 2
@@ -65,10 +68,14 @@ light (greater than daylight) or absolute darkness. The shadows created have no 
 		\item Revocation 14
 		\item Revocation 15
 		\item Revocation 16
+		\item Revocation 17
+		\item Revocation 18
+		\item Revocation 19
+		\item Revocation 20
 	\end{enumerate}
 \end{enumerate} &
 \begin{enumerate}
-	\item Common Magic
+	\item \textbf{Common Magic}
 	\begin{enumerate}
 		\item Lamp
 		\item Change Temperature
@@ -87,9 +94,9 @@ light (greater than daylight) or absolute darkness. The shadows created have no 
 		\item Know Magic
 		\item Sunder
 	\end{enumerate}
-\end{enumerate} \\
+\end{enumerate} &
 \begin{enumerate}
-	\item Movement
+	\item \textbf{Movement}
 	\begin{enumerate}
 		\item Tireless Walking
 		\item Cushion
@@ -108,9 +115,9 @@ light (greater than daylight) or absolute darkness. The shadows created have no 
 		\item Snatch
 		\item Emulate
 	\end{enumerate}
-\end{enumerate} &
+\end{enumerate} \\
 \begin{enumerate}
-	\item Tongues \& Scripts
+	\item \textbf{Tongues \& Scripts}
 	\begin{enumerate}
 		\item Lexesoterica
 		\item Message
@@ -131,7 +138,7 @@ light (greater than daylight) or absolute darkness. The shadows created have no 
 	\end{enumerate}
 \end{enumerate} &
 \begin{enumerate}
-	\item Shadow Magic
+	\item \textbf{Shadow Magic}
 	\begin{enumerate}
 		\item Shadow Spawn
 		\item Shadow Carry
@@ -152,10 +159,54 @@ light (greater than daylight) or absolute darkness. The shadows created have no 
 	\end{enumerate}
 \end{enumerate}
 \end{tabular}
+\pagebreak
 
 \subsection{Defer}
+
+\spellentry{Defer}{1-20}{1 Minute}{None}{Touch}{2 Hours}{1 Spell}{Delay spell effects}{}
+
+Casters use the \ul{Defer} spell to delay the effects of another spell. The caster picks some non-living, non-magical object that they can hold in one hand and lift and cast the Defer spell on the object. This places a magical field about the object that can hold one other spell of a rank equal to or less then the rank of the Defer spell used. Immediately after this, the caster casts the other spell into the same item. The magical field created by the \ul{Defer} ensnares this second spell, hold within the field. 
+
+As long as the \ul{Defer} spell lasts, the caster can touch the item and direct the ensnared spell to discharge, having the same effect as if cast normally. The spell’s release from the \ul{Defer} takes a single round, despite the casting time of the spell. If the \ul{Defer} spell expires, without triggering its contained spell, all magic energies involved dissipate harmlessly.
+
+If the caster wants someone other than themselves to be able to release and direct the spell, they may finesse the original \ul{Defer} to include a trigger that others can use. The number of finesses determines what kind of trigger is used, as follows:
+
+\begin{tabular}{@{} l l}
+0 & Thought Activated for the original caster\\
+1 & Mechanical\\
+2 & Spoken Word or Phrase\\
+3 & Thought Activated by anyone\\
+4 & Activated by a condition
+\end{tabular}
+
+Spells cast with an unfinessed \ul{Defer} can only be thought activated by their original caster, when they are touching the item. One finesse allows the spell to be triggered by any moving part of the item. Two finesses allow the spell to be triggered by a keyword or phrase. Three finesses allow the spell to be thought activated by anyone holding the item. The fourth finesse allows the caster to state the single condition that will activate the item. This condition can only describe a state of being, and can only be based on the position, condition or existence of physical objects or energies within \measure{10 Feet} of the item.
+
+The caster may choose to target the spell either at the time of casting the \ul{Defer} spell, or when it is triggered. If it is targeted when triggered, the person triggering the spell can direct it mentally, just as if they were the caster. If it is targeted when the \ul{Defer} is originally cast, the caster gives targeting information relative to the position and orientation of the object used for the \ul{Defer} spell.
+
+\ul{Defer} spells used on items with already existing defer spells cast by a different caster don’t work. Recasting a new \ul{Defer} spell on your deferred spell extends the duration of the original \ul{Defer} spell by an additional 2 hours.
+
+The Elemental \ul{Defer} spell can only be used to contain elemental spells.
+
 \subsection{Revocation}
+
+\spellentry{Revocation}{1-20}{3 Rounds}{None}{LOS 80 + 20 / Finesse Feet}{Instantaneous}{1 Magical Effect}{Nullify elemential power}{}
+
+\subsubsection{Revoking Spells}
+
+The Revocation group is different from others in that the spell remains the same throughout, except that each successive spell is more powerful than the previous. It can affect both spells and items; potions and other single use items are considered as spells for Revocation purposes.
+
+The mechanics for determining if a \ul{Revocation} is successful are simple. The player rolls a number of \tcdieroll{d6} equal to the rank of the Revocation their character is casting and totals them. The GM rolls a number of \tcdieroll{d6} equal to the rank of the effect the caster is attempting to \ul{Revoke} and totals them. The higher total wins, i.e., if the player's total is higher the targeted effect is negated; if the GM's total is higher the Revocation fails.
+
+\subsubsection{Affecting Items}
+
+Each magical item has at least two components: a spell efffect and a \ul{Defer}. These are specified in the item's description. To temporarily suspend the effect of an item (or draw charges from a charged item), the caster attempts to \ul{Revoke} the spell effect. Dice are rolled as described under \textbf{Revoking Spells}. If the player’s total is higher the \ul{Revocation} works and the difference between their and the GM's totals is the number of rounds the effect is negated, or the number of charges drawn.
+
+To permanently cancel an item the caster must revoke the \ul{Defer} spell. Dice are rolled, and if the player’s total is higher than the GM's the item is made permanently non-magical.
+
+The Elemental \ul{Revocation} spell can only be used to revoke elemental spells.
+
 \subsection{Common Magic}
+
 \spellentry{Lamp}{1}{1 Round}{None}{Touch}{\tcdieroll{1d6} + 1/Finesse Hours}{1 non-living object}{Illuminate}{Causes any non-living object to shed light equivalent to a normal torch.}
 
 \spellentry{Change Temperature}{2}{1 Round}{None}{10 + 5/Finesse Feet}{\tcdieroll{1d8} + 2/Finesse Hours}{15 Foot Radius}{Set air temperature}{Sets and maintains any desired air temperature between \measure{0 and 100 degrees} Fahrenheit (-18 to 38 degrees Celsius) within an enclosed and moderately well insulated space without need for normal heating or cooling devices.}
