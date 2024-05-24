@@ -35,6 +35,8 @@
 \usepackage{ifthen} % Better If/Then Handling
 \usepackage{fancyhdr} 
 \usepackage{tocloft} % Customize ToC
+\usepackage[hidelinks]{hyperref} % Hide Ugly Boxes around page references
+\usepackage{bookmark} % Add Page Bookmarks
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Package-specific variables
@@ -61,14 +63,16 @@
 
 \makeindex[columns=3,intoc=true,options={-s index_style.ist}]
 
-%%%% Footer
+%%%% Header / Footer
 
-\fancyfoot{}
-\fancyfoot[RO, LE]{\thepage}
+\fancyfoot{} % Clear Footer
+\fancyfoot[RO, RE]{\thepage}
+\fancyhead[R]{\rightmark}
+\fancyhead[L]{\leftmark}
 \pagestyle{fancy}
 \fancypagestyle{plain}{%
   \fancyhf{}%
-  \fancyfoot[RO, LE]{\thepage}%
+  \fancyfoot[RO, RE]{\thepage}%
   \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
   \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
 }
@@ -114,7 +118,6 @@
 
 \def\defcolwidth{0.6cm}
 
-
 %%%% 
 
 \makeatletter
@@ -137,7 +140,7 @@
 
 %%%% Set Table of Contents to only show chapters
 
-\setcounter{tocdepth}{0}
+\setcounter{tocdepth}{1}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
 \addtocontents{toc}{\protect\setlength{\protect\cftchapnumwidth}{60pt}}
 \addtocontents{toc}{\protect\renewcommand{\protect\cftchappresnum}{Chapter }}
@@ -213,6 +216,10 @@
 \colorlet{soulLightGreen}{white!40!LightGreen}
 \colorlet{soulDarkOrange}{white!80!DarkOrange}
 \colorlet{soulGrey}{white!60!Grey}
+\colorlet{soulRed}{white!45!Red}
+\colorlet{soulYellow}{white!60!Yellow}
+\colorlet{soulTurquoise}{white!40!Turquoise}
+\colorlet{soulLavender}{white!20!Lavender}
 
 %%%% Color Box Width
 
@@ -236,6 +243,7 @@
 \DeclareRobustCommand{\tcpage}[1]{\custhl[soulCrimson]{\textbf{Page \pageref{#1}}}}
 \DeclareRobustCommand{\chref}[1]{\custhl[soulCrimson]{\textbf{Ch \ref{#1}: \nameref{#1}}}}
 \DeclareRobustCommand{\apref}[1]{\custhl[soulCrimson]{\textbf{Ap \ref{#1}: \nameref{#1}}}}
+\DeclareRobustCommand{\secref}[1]{\custhl[soulCrimson]{\textbf{\nameref{#1}}}}
 \DeclareRobustCommand{\chpage}[1]{\chref{#1} on \tcpage{#1}}
 \DeclareRobustCommand{\appage}[1]{\apref{#1} on \tcpage{#1}}
 \DeclareRobustCommand{\measure}[1]{\custhl[soulKhaki]{\textbf{#1}}}
@@ -243,6 +251,11 @@
 \DeclareRobustCommand{\quip}[1]{\custhl[soulLightGreen]{\textit{#1}}}
 \DeclareRobustCommand{\tcdefine}[1]{\custhl[soulDodgerBlue]{\textbf{#1}}}
 \DeclareRobustCommand{\example}[1]{\custhl[soulDarkOrange]{\textit{#1}}}
+\DeclareRobustCommand{\espell}[1]{\custhl[soulRed]{\textbf{\ul{#1}}}}
+\DeclareRobustCommand{\dspell}[1]{\custhl[soulYellow]{\textbf{\ul{#1}}}}
+\DeclareRobustCommand{\nspell}[1]{\custhl[soulTurquoise]{\textbf{\ul{#1}}}}
+\DeclareRobustCommand{\skill}[1]{\custhl[soulLavender]{\textbf{\ul{#1}}}}
+\DeclareRobustCommand{\fixlater}[1]{\textbf{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Complex Section Building
@@ -296,9 +309,10 @@
 %%%% Description
 
 \DeclareRobustCommand{\spellentry}[9]{%
-  \begin{tabularx}{\linewidth}{@{} p{5pt} p{150pt} p{70pt} X}
-    \multicolumn{4}{l}{\large\textbf{#2 - \indy{#1}}}\\
+  \begin{tabularx}{\linewidth}{@{} p{5pt} p{100pt} p{60pt} X}
+    \multicolumn{4}{l}{\textbf{#2 - \indy{#1}}}\\
     &
+    \small
     \begin{tabular}[t]{@{}rl}
       Time to Cast: & #3\\
       Resist Check: & #4\\
@@ -307,10 +321,36 @@
       Area: & #7\\
       Effect: & #8
     \end{tabular} & &
-    #9\\
+    \small#9\\
   \end{tabularx}\\
-  %\noindent\rule{\columnwidth}{0.5pt}%
-  \vspace{10pt}
+  \vspace{1pt}
+}
+
+%%%% \incantentry
+
+%%%% Name
+%%%% Type
+%%%% Base Cost
+%%%% Silver
+%%%% Time to Make
+%%%% Ingredients/Ranks
+%%%% Description
+
+\DeclareRobustCommand{\incantentry}[7]{%
+  \begin{tabularx}{\linewidth}{@{} p{5pt} p{100pt} p{60pt} X}%
+    \multicolumn{4}{l}{\textbf{\indy{#1}}}\\
+    &
+    \small
+    \begin{tabular}[t]{@{}rl}
+      Type: & #2\\
+      Base Cost: & #3\\
+      Silver: & #4\\
+      Time to Make: & #5\\
+      \makecell[tl]{Ingredients:} & \makecell[lt]{\small #6}\\
+    \end{tabular} & &
+    \small #7\\
+  \end{tabularx}\\
+  \vspace{1pt}
 }
 
 
@@ -321,6 +361,8 @@
 %%%% normbox
 
 \newtcolorbox{normbox}[1][]{ boxrule=0pt, enhanced, title=\small\textbf{#1}, left=1pt, right=1pt, top=0pt, bottom=-2pt, boxsep=2pt, boxrule=0.6pt, before skip=0.0pt, after skip=0.0pt, lefttitle=2pt, righttitle=2mm, toptitle=1mm, bottomtitle=0mm, minipage boxed title, hbox, colbacktitle=Navy, colback=white}
+
+\newtcolorbox{normboxlist}[1][]{ boxrule=0pt, enhanced, title=\small\textbf{#1}, left=1pt, right=1pt, top=0pt, bottom=-2pt, boxsep=2pt, boxrule=0.6pt, before skip=0.0pt, after skip=0.0pt, lefttitle=2pt, righttitle=2mm, toptitle=1mm, bottomtitle=0mm, minipage boxed title, colbacktitle=Navy, colback=white}
 
 %%%% normboxc
 
@@ -417,9 +459,9 @@ colframe=red!75!black}
 \include{ch-auger.tex} %done
 \include{ch-nomad.tex}
 \include{ch-elem-core.tex} %done
-\include{ch-elem-earth.tex}
-\include{ch-elem-fire.tex}
-\include{ch-elem-air.tex}
+\include{ch-elem-earth.tex} %done
+\include{ch-elem-fire.tex} %done
+\include{ch-elem-air.tex} %done
 \include{ch-elem-water.tex}
 \include{ch-divine.tex}
 \include{ch-divine-anubis.tex}
@@ -448,7 +490,6 @@ colframe=red!75!black}
 \include{ap-glossary.tex}
 \include{ap-important-tables.tex}
 \include{ap-earth-references.tex}
-%\include{index.tex}
 %\end{comment}
-\printindex
+%\printindex
 \end{document}
