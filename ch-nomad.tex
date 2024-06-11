@@ -186,11 +186,16 @@ The most agile and strong of the young men often learn nomad dances to accompany
 Once every five years, all the rondos in a given region will gather in one place to learn what others have done, swap goods, songs, stories and often young people
 (through marriage). As the appointed time approaches, the nomads sail toward the appointed place, decided by various omens and signs that all rondos can see and decipher. Once there, the Rondos are lashed together, and for the next four weeks a vast celebration is held. This renewal of their brotherhood keeps them a united people.
 
+\section{Incants}
+Unlike spells, \fixlater[incant]{incants} involve the release of spiritual energy or \fixlater{Life Force}. The power behind incantations is that of the spirits of the \fixlater{Kurago}, but the incantor uses his own life energy to perform the ritual to create the conduit to the Kurago. This conduit is then used to channel the spiritual energy, concentrating it in a \fixlater[incant!mixture]{mixture}, \fixlater[incant!talisman]{talisman}, \fixlater[incant!song]{song}, \fixlater[incant!imprint]{imprint} or \fixlater[incant!invocation]{invocation}. 
+
+The nature of incants is such that they many may not show their power or effect immediately. The magic is concentrated in some physical form and remains quiescent until activated by drinking, breaking, or brandishing it appropriately.
+
 \section{Life Force}
 
-Nomads use their \fixlater{Life Force} to open a conduit to the Kurago when creating their incants. A nomad's life force starts as the sum of their \HEA and \PER stats, but can be increased separately. Creating an incant depletes this life energy. One night (8 hours) of rest restores one fifth of this starting life force.
+Nomads use their \fixlater{Life Force} to open a conduit to the Kurago when creating their incants. A nomad's life force starts as the sum of their \HEA and \PER stats, but can be increased separately. Creating an incant depletes this life energy. Life force is regained by the nomad after a night's rest (\measure{8 Hours}) at the rate of \result{(\HEA + \PER) divided by 5, rounded down}.
 
-If preparing an incant completely depletes a nomad's life force, their body dies, and their spirit retreats to the Kurago, where it mergess with their Guardian Spirit. The resulting spirit rests for time there, and then seeks to merge with another new nomad.
+If a nomad’s life force drops below 1, their body expires, and the nomad’s spirit travels to the Kurago, merging with their Guardian Spirit. The attempted ritual does complete, but the results may or may not be useful depending on the type of incantation. The resulting spirit rests for time there, and then seeks to merge with another new nomad.
 
 \section{Preparing Incants}
 
@@ -199,6 +204,21 @@ Nomads perform Rituals that channel energy from the Kurago to create incants. Th
 Incants come in different strengths and are arranged in ranks, from first, the weakest, to sixth, the strongest. To have the ability create an incant, the nomad must buy the incant up to the desired rank. The base cost for each incant is specific to the incant, and is modified by the mission of the nomad. Incants within the nomad's \fixlater{Mission} are purchased at \tcdefine{base cost}, while incants outside their mission are purchased at \result{2x} the base cost.
 Adventurers whom are inducted as nomads from outside the rondo pay \result{3x} the base cost for incants in their declared mission, and \result{4x} for incants
 of other missions. Priests, or anyone having any divine magic whatsoever may not buy incants as they are barred from opening a conduit to the Kurago.
+
+\subsection{Restrictions on Preparing Incants}
+
+Incants may not be prepared under duress. The incantor must be calm and in firm control to complete the preparation without error. The incantor must not be under the influence of any mind-controlling spell or drug. If the incantor is interrupted while mixing, speaking or singing, the ritual must be redone from the beginning.
+
+\subsection{Stressing Health for Incants}
+
+An adventurer may sacrifice \tcdefine{1 \HEA} while preparing an incant to increase its \fixlater{rank} by \result{+2}. This may done only once per day, and it does not count as an action. The caster can only effect the single ritual they are currently performing. The cost to replace a point of \HEA is quite high, so this is not an action to be taken lightly.
+
+\subsection{Performing Songs}
+
+\indx{incant!song}
+Some incants are performed as songs, or songs with dancing. More than one nomad can conduct such an incant at the same time. While multiple incantors will not increase the effect of such a ceremony, it \ul{will} multiply the number of resistance checks needed to resist. Musicians accompanying the incantor assist in their concentration making it harder for external distractions to interrupt the ritual.
+
+\example{If the target of such an incant must make a 4d6 RC vs WIL to resist, with three nomads singing, the target must make three RCs to resist the effects.} 
 
 Imprints and talismans marked "permanent", having permanent effects, have to be repurchased from zero after they are created. Other incants are limited only by the current life force of the nomad.\\
 
@@ -215,6 +235,8 @@ Imprints and talismans marked "permanent", having permanent effects, have to be 
 \end{itemize}
 \end{enumerate}
 \end{normboxlist}
+
+\section{Types of incants}
 
 \subsection{Mixtures}
 
@@ -480,34 +502,36 @@ When spread through an area no greater than \measure{10 Feet by 10 Feet}, it cau
 
 \incantentry{Sleep Mist}{Mixture/Triggered}{600}{50 / Rank}{2 Hours / Rank}{}{This mixture is held in an easily broken glass container. When broken the mixture reacts with the air to form a cloud a blue, pleasant smelling smoke. The smoke is subject to wind effects and has a radius of \measure{10 Feet}. Humanoids caught in this smoke must make an \RC against \WIL of \result{\tcdieroll{1d6} per Rank} or fall into a magic sleep for \tcdieroll{1d6} Hours. }
 
-\incantentry{Smoke Bombard}{Mixture/Triggered}{400}{20 / Rank}{1 Hour / Rank}{Torgon mist organ}{This mixture is held in an easily breakable vial. When activated the powder ignites with the air, forming a dense cloud of black, impenetrable smoke that blocks all vision. The cloud is subject to wind effects normally and covers a circular area of 10 fee}
-%Core
-\incantentry{Spirit Barricade}{Talisman/Permanent}{1200}{150 / Rank}{4 Hours / Rank}{}{The nomad infuses an article of jewelry to create this talisman that hampers spirits to which he does not have a bond. Any disenbodied spirit attempting to interact with the incanter must make a check against WIL of one die per rank of the talisman. If fa}
-%Core
-\incantentry{Spirit Bombard}{Mixture/Triggered}{400}{40 / Rank}{2 Hours / Rank}{}{This mixture consists of a powder in a easily broken glass container. On contact with the air the powder produces a cloud of red scintillating smoke. This smoke is affect normally by wind effects and has a radius of 10 feet per rank of the mixture. Any sp}
-%Core
-\incantentry{Spirit Call}{Invocation}{500}{25 / Rank}{5 Minutes / Rank}{}{The nomad uses this ritual to call forth a spirit from the Kurago to manifest itself in the material plane. Those present must concentrate on him and not disturb the area with negative thoughts. The nomad spends the time building up the ritual, and then w}
-%Core
-\incantentry{Spirit Cage}{Talisman}{1200}{150 / Rank}{2 Hours / Rank}{}{The nomad constructs an enclosed cage or container with no holes or gaps greater than two inches. The rank of the ritual times 3' is the maximum of any dimension of this container. Once complete the cage isolates its interior from the Kurago and any spiri}
-%Core
-\incantentry{Spirit Guard}{Imprinting}{2000}{500 / Rank}{4 Hours / Rank}{Creature blood
-Rank  Creature
-1  Osser
-2  Torgon
-3  Vatrole
-4  Jacer
-5  Gargoyle
-6  Fajrodrako}{The nomad calls a spirit to defend him in the case of misfortune. He must have a small amount of blood from a creature of the same species. While being tattooed the nomad seeks out an animal spirit to aid him. The tattoo must resemble that animal. Wheneve}
-%Core
-\incantentry{Spirit Sentinel}{Imprinting}{1000}{300 / Rank}{2 Hours / Rank}{
-Rank Creature
-1  Marokrifo  stinger
-2  Batisunui  fangs
-3  Hejtifea   feather
-4  Venevermo  digesting organ
-5  Flugofiso  tenticle
-6  Quezl      poison sac}{The tattooist begins by forming the image of a venomous creature upon the body of the target. The incanter calls for a spirit of the tattooed animal to reside in the tattoo. Once the animal spirit enters the tattoo, if the target fulfills the condition of}
-%Core
+\incantentry{Smoke Bombard}{Mixture/Triggered}{400}{20 / Rank}{1 Hour / Rank}{Torgon mist organ}{This mixture is held in an easily breakable vial. When activated the powder ignites with the air, forming a dense cloud of black, impenetrable smoke that blocks all vision. The cloud is subject to wind effects normally and covers a circular area of \measure{10 feet} per rank.}
+
+\incantentry{Spirit Barricade}{Talisman/Permanent}{1200}{150 / Rank}{4 Hours / Rank}{}{The nomad infuses an article of jewelry to create this talisman that hampers spirits to which they do not have a bond. Any disenbodied spirit attempting to interact with the incanter must make a check against \WIL of \result{\tcdieroll{1d6} per Rank} of the talisman. If failed, the spirit may not try again for a number of \tcdefine{hours equal to the rank} of the talisman. }
+
+\incantentry{Spirit Bombard}{Mixture/Triggered}{400}{40 / Rank}{2 Hours / Rank}{}{This mixture consists of a powder in a easily broken glass container. On contact with the air the powder produces a cloud of red scintillating smoke. This smoke is affect normally by wind effects and has a radius of \tcdefine{10 feet per Rank} of the mixture. Any spirits, elementals, or ethereal creatures in the cloud are clearly outlined by the smoke.}
+
+\incantentry{Spirit Call}{Invocation}{500}{25 / Rank}{5 Minutes / Rank}{}{The nomad uses this ritual to call forth a spirit from the Kurago to manifest itself in the material plane. Those present must concentrate on them and not disturb the area with negative thoughts. The nomad spends the time building up the ritual, and then with an enormous effort of will attempts to draw the spirit in question from the Kurago to themselves. If the spirit fails a check against \WIL of \tcdefine{tcdieroll{1d6} per Rank} of the ritual, or is willing, it is pulled to the nomad and then must manifest itself, either visibly as a ghost, or through sound, or through possession of the incanter.}
+
+\incantentry{Spirit Cage}{Talisman}{1200}{150 / Rank}{2 Hours / Rank}{}{The nomad constructs an enclosed cage or container with no holes or gaps greater than \measure{two inches}. The maximum of any dimension of this container is \tcdefine{3 Feet times the Rank of the ritual}. Once complete, the cage isolates its interior from the Kurago and any spirit that resides there. A nomad in such a container is isolated from their guardian spirit and is unable to prepare or activate rituals and mixtures inside it. A spirit possessing a body in the container cannot flee or escape. A nomad possessed by a second lifer spirit is free from its influence within the cage, but is instantly repossessed when it is opened. If the cage is broken, its magic is dispersed.}
+
+\incantentry{Spirit Guard}{Imprinting}{2000}{500 / Rank}{4 Hours / Rank}{Creature blood\\
+\begin{tabular}{@{} l l}
+\ul{Rank} & \ul{Creature}\\
+1 & Osser\\
+2 & Torgon\\
+3 & Vatrole\\
+4 & Jacer\\
+5 & Gargoyle\\
+6 & Fajrodrako \end{tabular}}{The nomad calls a spirit to defend them in times of misfortune. They must have a small amount of blood from a creature of the same species. While being tattooed the nomad seeks out an animal spirit to aid them. The tattoo must resemble that animal. Whenever the incanter loses consciousness and the tattoo is uncovered the spirit bound to the tattoo strikes out at the opponent who caused the injury doing \tcdefine{\tcdieroll{2d6} \DP per Rank} of the ritual. The spirit remains dormant in the tattoo until the nomad again is fully healed at which point it again may defend the nomad. When the nomad dies the spirit is released and goes free.}
+
+\incantentry{Spirit Sentinel}{Imprinting}{1000}{300 / Rank}{2 Hours / Rank}{\newline\\
+\begin{tabular}{@{} l l l}
+\ul{Rank} & \ul{Creature} & \ul{Ingredient}\\
+1 & Marokrifo & Stinger\\
+2 & Batisunui & Fangs\\
+3 & Hejtifea  & Feather\\
+4 & Venevermo & Digesting organ\\
+5 & Flugofiso & Tenticle\\
+6 & Quezl     & Poison sac \end{tabular}}{The tattooist begins by forming the image of a venomous creature upon the body of the target. The incanter calls for a spirit of the tattooed animal to reside in the tattoo. Once the animal spirit enters the tattoo, if the target fulfills the condition of the ritual the spirit becomes material. The spirit strikes at the target, inflicting \tcdefine{\tcdieroll{1d6} \DP per Rank} of the ritual until the condition is undone. Typical conditions include "Don't enter a specific place", "Don't take what is not yours," "Never hit a woman," "Don't touch yourself," etc. Undoing the condition can involve doing a particular action (leaving a place forbidden from, returning what was stolen, etc). The condition must be simple enough for the animal spirit to understand, ie actions only, no moral judgments.}
+
 \incantentry{Spirit Sound}{Talisman/Permanent}{100}{400 / Rank}{1 Hour / Rank}{Small conch shell}{Through this ritual a nomad infuses an earring to allow him to hear spirits. When worn the nomad makes a check of 6 minus the rank of the ritual in dice against PER. If the check is successful the nomad can faintly hear the nearby spirits.}
 %Core
 \incantentry{Stone Guides}{Talisman/Permanent}{500}{20 / Rank}{0.5H / Rank}{Identical pearls}{The nomad gathers a number of nearly identical small pearls. He may use as many pearls as the ritual rank plus one. After the ritual is complete, each pearl will glow if it is within 1 met times the rank of the ritual from any of the other pearls. The bri}
