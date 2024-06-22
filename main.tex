@@ -38,9 +38,12 @@
 \usepackage[hidelinks]{hyperref} % Hide Ugly Boxes around page references
 \usepackage{bookmark} % Add Page Bookmarks
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Package-specific variables
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepgfmodule{oo}
 
 %%%% Page Geometry
 
@@ -263,7 +266,7 @@
 
 %%%% \skillentry
 
-\DeclareRobustCommand{\skillentry}[6]{%
+\newcommand{\skillentry}[6]{%
   \def\skilldie{#5}%
   \def\skillindent{10pt}
   \ifthenelse{\equal{\skilldie}{N/A}}{\def\skilldie{#5}}{\ifthenelse{\equal{\skilldie}{RESERVED}}{\def\skilldie{#5}}{\ifthenelse{\equal{\skilldie}{+0}}{\def\skilldie{#5}}{\def\skilldie{+#5}}}}
@@ -308,7 +311,7 @@
 %%%% Effect
 %%%% Description
 
-\DeclareRobustCommand{\spellentry}[9]{%
+\newcommand{\spellentry}[9]{%
   \begin{tabularx}{\linewidth}{@{} p{5pt} p{100pt} p{60pt} X}
     \multicolumn{4}{l}{\textbf{#2 - \indy{#1}}}\\
     &
@@ -336,7 +339,7 @@
 %%%% Ingredients/Ranks
 %%%% Description
 
-\DeclareRobustCommand{\incantentry}[7]{%
+\newcommand{\incantentry}[8]{%
   \begin{tabularx}{\linewidth}{@{} p{5pt} p{100pt} p{60pt} X}%
     \multicolumn{4}{l}{\textbf{\indy{#1}}}\\
     &
@@ -346,13 +349,34 @@
       Base Cost: & #3\\
       Silver: & #4\\
       Time to Make: & #5\\
-      \makecell[tl]{Ingredients:} & \makecell[lt]{\small #6}\\
+      Ingredients: & \makecell[lt]{\small #6}\\
+      \multicolumn{2}{l}{\makecell[lt]{\small #7}}\\
     \end{tabular} & &
-    \small #7\\
+    \small #8\\
   \end{tabularx}\\
   \vspace{1pt}
 }
 
+%%%% \incantentry
+
+%%%% {Name}
+%%%% {Type}
+%%%% {Base Cost}
+%%%% {Silver}
+%%%% [Ingredients]
+%%%% {Description}
+%%%% [Duration]
+%%%% [Resistance Check]
+%%%% {Time to Make}
+%%%% [Effect]
+
+\newcommand{\newincantentry}[3]{%
+  \begin{tabularx}{\linewidth}{@{} p{5pt} p{100pt} p{60pt} X}%
+    \multicolumn{4}{l}{\textbf{\indy{#1}}}\\
+    & \makecell*[tl]{\small #2} & & \small #3\\
+  \end{tabularx}\\
+  \vspace{1pt}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Colored Boxes for Tables
@@ -396,6 +420,8 @@ colframe=red!75!black}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Misc Functions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
 %%%% \bhead
 
