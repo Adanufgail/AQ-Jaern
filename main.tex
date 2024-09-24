@@ -241,12 +241,12 @@
 
 %%%% Highlighting Commands
 
-\DeclareRobustCommand{\tcdieroll}[1]{\custhl[soulGreenYellow]{\textbf{#1}}}
+\DeclareRobustCommand{\tcdieroll}[1]{\textbf{#1}}
 \DeclareRobustCommand{\listing}[1]{\custhl[soulGrey]{\ \textbf{#1}\,}}
-\DeclareRobustCommand{\tcpage}[1]{\custhl[soulCrimson]{\textbf{Page \pageref{#1}}}}
-\DeclareRobustCommand{\chref}[1]{\custhl[soulCrimson]{\textbf{Ch \ref{#1}: \nameref{#1}}}}
-\DeclareRobustCommand{\apref}[1]{\custhl[soulCrimson]{\textbf{Ap \ref{#1}: \nameref{#1}}}}
-\DeclareRobustCommand{\secref}[1]{\custhl[soulCrimson]{\textbf{\nameref{#1}}}}
+\DeclareRobustCommand{\tcpage}[1]{\textbf{Page \pageref{#1}}}
+\DeclareRobustCommand{\chref}[1]{\textbf{Ch \ref{#1}: \nameref{#1}}}
+\DeclareRobustCommand{\apref}[1]{\textbf{Ap \ref{#1}: \nameref{#1}}}
+\DeclareRobustCommand{\secref}[1]{\textbf{\nameref{#1}}}
 \DeclareRobustCommand{\chpage}[1]{\chref{#1} on \tcpage{#1}}
 \DeclareRobustCommand{\appage}[1]{\apref{#1} on \tcpage{#1}}
 \DeclareRobustCommand{\measure}[1]{\custhl[soulKhaki]{\textbf{#1}}}
@@ -436,10 +436,10 @@ colframe=red!75!black}
   \xintifboolexpr{\metmi>10}{\def\metmir{\fpeval{round(\metmi,0)}}}{\def\metmir{\metmi}}%
   \xintifboolexpr{\mikm>10}{\def\mikmr{\fpeval{round(\mikm,0)}}}{\def\mikmr{\mikm}}%
   \ifthenelse{\equal{#2}{}}{%
-    \measure{#1 mets} (\textit{\metmir mi or \mikmr KM})%
+    #1 mets (\metmir mi or \mikmr KM)%
   }%
   {%
-    \measure{#1 mets} per \ul{#2} (\textit{\metmir mi or \mikmr KM})%
+    #1 mets per #2 (\metmir mi or \mikmr KM)%
   }%
 }
 
@@ -464,7 +464,7 @@ colframe=red!75!black}
 \titlespacing\subsection{0pt}{6pt }{6pt}
 \titlespacing\subsubsection{0pt}{6pt}{6pt}
 %\include{test.tex}
-%\begin{comment}
+\begin{comment}
 \include{beg-titlepage.tex} %done
 \include{beg-copyright.tex} %done
 \include{beg-dedication.tex} %done
@@ -485,7 +485,9 @@ colframe=red!75!black}
 \include{ch-elem-fire.tex} %done
 \include{ch-elem-air.tex} %done
 \include{ch-elem-water.tex} %done
+\end{comment}
 \include{ch-divine.tex}
+\begin{comment}
 \include{ch-divine-anubis.tex}
 \include{ch-divine-atena.tex}
 \include{ch-divine-isis.tex}
@@ -517,6 +519,6 @@ colframe=red!75!black}
 \include{ap-glossary.tex}
 \include{ap-important-tables.tex}
 \include{ap-earth-references.tex}
-%\end{comment}
+\end{comment}
 %\printindex
 \end{document}
