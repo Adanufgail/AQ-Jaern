@@ -1,0 +1,10 @@
+\\(dspell|espell|nspell|fixlater|uline|textbf|ul|listing|quip|tcdieroll|measure|indy|tcdefine|example|result) *{([^}]*)}
+\2
+
+\\indx{[^}]*}
+
+\\indy\[[^]]*\]{([^}]*)}
+\1
+
+\\([A-Z]{2,3})
+\1
