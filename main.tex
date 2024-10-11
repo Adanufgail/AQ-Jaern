@@ -8,7 +8,7 @@
 \usepackage{blindtext}
 \usepackage{comment}
 \usepackage{microtype}
-\usepackage{cprotectinside}
+%\usepackage{cprotectinside}
 \usepackage{ulem}
 \usepackage{soul}
 \usepackage{pbox}
@@ -464,58 +464,56 @@ colframe=red!75!black}
 \titlespacing\subsection{0pt}{6pt }{6pt}
 \titlespacing\subsubsection{0pt}{6pt}{6pt}
 %\include{test.tex}
-\begin{comment}
 \include{beg-titlepage.tex} %done
 \include{beg-copyright.tex} %done
 \include{beg-dedication.tex} %done
-\include{beg-introduction.tex} %done
+\include{beg-introduction.tex} 
 \tableofcontents
-\include{beg-changes.tex} 
-\include{ch-creating-an-adventurer.tex} %done
-\include{ch-playing-an-adventurer.tex} %done
-\include{ch-physical-combat.tex}
-\include{ch-casting-magic.tex}
-\include{ch-life-on-the-high-seas.tex} %done
-\include{ch-skills.tex} %done
-\include{ch-marines.tex} %done
-\include{ch-auger.tex} %done
-\include{ch-nomad.tex} 
-\include{ch-elem-core.tex} %done
-\include{ch-elem-earth.tex} %done
-\include{ch-elem-fire.tex} %done
-\include{ch-elem-air.tex} %done
-\include{ch-elem-water.tex} %done
-\end{comment}
-\include{ch-divine.tex}
+\label{ch:changes} \include{beg-changes.tex} 
+\include{ch-create-creating-an-adventurer.tex} 
 \begin{comment}
-\include{ch-divine-anubis.tex}
-\include{ch-divine-atena.tex}
-\include{ch-divine-isis.tex}
-\include{ch-divine-neptune.tex}
-\include{ch-divine-osus.tex}
-\include{ch-divine-osiris.tex}
-\include{ch-divine-ra.tex}
-\include{ch-divine-rudri.tex}
-\include{ch-divine-scrogg.tex}
-\include{ch-divine-tarus.tex}
-\include{ch-divine-tor.tex}
-\include{ch-advanced-magic.tex}
-\include{ch-magical-items.tex}
-\include{ch-jaern-planet.tex}
-\include{ch-onivero.tex}
-\include{ch-jaernian-humanoids.tex}
-\include{ch-lojem-isle.tex}
-\include{ch-rougtero.tex}
-\include{ch-actors-rougtero.tex}
-\include{ch-creatures.tex}
-\include{ch-creating-and-playing-actors.tex}
-\include{ch-creating-creatures.tex}
-\include{ch-creating-adventures.tex}
-\include{ch-judging-adventures.tex}
+\include{ch-create-jaernian-humanoids.tex}
+\include{ch-play-life-on-the-high-seas.tex} 
+\include{ch-play-playing-an-adventurer.tex}
+\include{ch-play-physical-combat.tex}
+\include{ch-play-casting-magic.tex}
+\include{ch-play-skills.tex} 
+\include{ch-class-marines.tex} 
+\include{ch-class-auger.tex} 
+\include{ch-class-nomad.tex} 
+\include{ch-magic-elem-core.tex} 
+\include{ch-magic-elem-earth.tex} 
+\include{ch-magic-elem-fire.tex} 
+\include{ch-magic-elem-air.tex} 
+\include{ch-magic-elem-water.tex} 
+\include{ch-magic-divine-core.tex}
+\include{ch-magic-divine-anubis.tex}
+\include{ch-magic-divine-atena.tex}
+\include{ch-magic-divine-isis.tex}
+\include{ch-magic-divine-neptune.tex}
+\include{ch-magic-divine-osus.tex}
+\include{ch-magic-divine-osiris.tex}
+\include{ch-magic-divine-ra.tex}
+\include{ch-magic-divine-rudri.tex}
+\include{ch-magic-divine-scrogg.tex}
+\include{ch-magic-divine-tarus.tex}
+\include{ch-magic-divine-tor.tex}
+\include{ch-magic-creating-magical-items.tex}
+\include{ch-world-magical-items.tex}
+\include{ch-world-onivero.tex}
+\include{ch-world-jaern-planet.tex}
+\include{ch-world-lojem-isle.tex}
+\include{ch-world-rougtero.tex}
+\include{ch-world-actors-rougtero.tex}
+\include{ch-world-creatures.tex}
+\include{ch-gm-creating-and-playing-actors.tex}
+\include{ch-gm-creating-creatures.tex}
+\include{ch-gm-creating-adventures.tex}
+\include{ch-gm-judging-adventures.tex}
 \addtocontents{toc}{\protect\renewcommand{\protect\cftchappresnum}{Appendix }}
-\include{ch-running-campaign.tex}
+\include{ch-gm-running-campaign.tex}
 \appendix
-\include{ap-charsheet.tex} %done
+\include{ap-charsheet.tex} 
 \include{ap-glossary.tex}
 \include{ap-important-tables.tex}
 \include{ap-earth-references.tex}
