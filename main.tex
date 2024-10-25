@@ -382,15 +382,56 @@
 % Colored Boxes for Tables
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
 %%%% normbox
 
-\newtcolorbox{normbox}[1][]{ boxrule=0pt, enhanced, title=\small\textbf{#1}, left=1pt, right=1pt, top=0pt, bottom=-2pt, boxsep=2pt, boxrule=0.6pt, before skip=0.0pt, after skip=0.0pt, lefttitle=2pt, righttitle=2mm, toptitle=1mm, bottomtitle=0mm, minipage boxed title, hbox, colbacktitle=Navy, colback=white}
+\newtcolorbox{normbox}[1][]{
+	boxrule=0pt,%
+	enhanced,%
+	title=\small\textbf{#1},%
+	left=1pt,%
+	right=1pt,%
+	top=0pt,%
+	bottom=-2pt,%
+	boxsep=2pt,%
+	boxrule=0.6pt,%
+	before skip=0.0pt,%
+	after skip=0.0pt,%
+	lefttitle=2pt,%
+	righttitle=2mm,%
+	toptitle=1mm,%
+	bottomtitle=0mm,%
+	minipage boxed title,%
+	hbox%,%
+	%colbacktitle=Navy,%
+	%colback=white%
+}
 
-\newtcolorbox{normboxlist}[1][]{ boxrule=0pt, enhanced, title=\small\textbf{#1}, left=1pt, right=1pt, top=0pt, bottom=-2pt, boxsep=2pt, boxrule=0.6pt, before skip=0.0pt, after skip=0.0pt, lefttitle=2pt, righttitle=2mm, toptitle=1mm, bottomtitle=0mm, minipage boxed title, colbacktitle=Navy, colback=white}
+\newtcolorbox{normboxlist}[1][]{
+	boxrule=0pt,%
+	enhanced,%
+	title=\small\textbf{#1},%
+	left=1pt,%
+	right=1pt,%
+	top=0pt,%
+	bottom=-2pt,%
+	boxsep=2pt,%
+	boxrule=0.6pt,%
+	before skip=0.0pt,%
+	after skip=0.0pt,%
+	lefttitle=2pt,%
+	righttitle=2mm,%
+	toptitle=1mm,%
+	bottomtitle=0mm,%
+	minipage boxed title%,%
+	%colbacktitle=Navy,%
+	%colback=white%
+}
 
 %%%% normboxc
 
-\begin{comment}
+
 \newtcolorbox{normboxc}[1][]{%
   boxrule=0pt,%
   enhanced,%
@@ -409,16 +450,13 @@
   bottomtitle=0mm,%
   minipage boxed title,%
   hbox,%
-  colbacktitle=Navy,%
-  colback=white,%
+  %colbacktitle=Navy,%
+  %colback=,%
   before=\hspace*{\fill},%
   after=\hspace*{\fill},%
   }
-\end{comment}
-\newcommand{\normboxc}[1]{}
 
-\newtcolorbox{quotebox}{colback=red!5!white,
-colframe=red!75!black}
+%\newtcolorbox{quotebox}{colback=red!5!white,colframe=red!75!black}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Misc Functions
@@ -471,9 +509,10 @@ colframe=red!75!black}
 \include{beg-copyright.tex} %done
 \include{beg-dedication.tex} %done
 \include{beg-introduction.tex} 
+\label{ch:beg-changes} \include{beg-changes.tex} 
 \tableofcontents
-\label{ch:changes} \include{beg-changes.tex} 
-\include{ch-create-creating-an-adventurer.tex} 
+\label{ch:beg-how-to-read}\include{beg-how-to-read.tex} 
+\label{ch:create-creating-an-adventurer}\include{ch-create-creating-an-adventurer.tex} 
 \begin{comment}
 \include{ch-create-jaernian-humanoids.tex}
 \include{ch-play-life-on-the-high-seas.tex} 
