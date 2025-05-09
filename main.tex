@@ -270,11 +270,11 @@
   \def\skilldie{#5}%
   \def\skillindent{10pt}
   \ifthenelse{\equal{\skilldie}{N/A}}{\def\skilldie{#5}}{\ifthenelse{\equal{\skilldie}{RESERVED}}{\def\skilldie{#5}}{\ifthenelse{\equal{\skilldie}{+0}}{\def\skilldie{#5}}{\def\skilldie{+#5}}}}
-  \begin{minipage}{\columnwidth}%
-  \noindent\rule{\columnwidth}{1pt}%
+  \begin{minipage}{\columnwidth/2}%
+  \noindent\rule{\columnwidth}{1pt}% Line between skills
 
   \vspace{5pt}
-  \begin{tabularx}{\linewidth}{@{} X r}
+  \begin{tabularx}{\linewidth-5pt}{@{} X r}
   \makecell[lt]{\large\textbf{#1}} & 
   \def\tabcolsep{2pt}
   \footnotesize%
@@ -505,60 +505,62 @@
 \titlespacing\subsection{0pt}{6pt }{6pt}
 \titlespacing\subsubsection{0pt}{6pt}{6pt}
 %\include{test.tex}
-\begin{comment}\end{comment}
-\include{beg-titlepage.tex} %done
-\include{beg-copyright.tex} %done
-\include{beg-dedication.tex} %done
-\include{beg-introduction.tex} 
-\label{ch:beg-changes} \include{beg-changes.tex} 
+%\begin{comment}\end{comment}
+\include{beginning/beg-titlepage.tex} %done
+\include{beginning/beg-copyright.tex} %done
+\include{beginning/beg-dedication.tex} %done
+\include{beginning/beg-introduction.tex} 
+\label{ch:beg-changes} \include{beginning/beg-changes.tex} 
 \tableofcontents
-\label{ch:beg-how-to-read}\include{beg-how-to-read.tex} 
-\label{ch:create-creating-an-adventurer}\include{ch-create-creating-an-adventurer.tex} 
-\include{ch-create-jaernian-humanoids.tex} %transcribed
-\include{ch-play-life-on-the-high-seas.tex} 
-\include{ch-play-playing-an-adventurer.tex}
-\include{ch-play-physical-combat.tex}
-\include{ch-play-casting-magic.tex}
-\include{ch-play-skills.tex} %transcribed
-\include{ch-class-marines.tex} %transcribed 
-\include{ch-class-auger.tex} %transcribed
-\include{ch-class-nomad.tex} %transcribed
-\include{ch-magic-elem-core.tex} %transcribed
-\include{ch-magic-elem-earth.tex} %transcribed
-\include{ch-magic-elem-fire.tex} %transcribed
-\include{ch-magic-elem-air.tex} %transcribed
-\include{ch-magic-elem-water.tex} %transcribed
-\include{ch-magic-divine-core.tex} %transcribed
-\include{ch-magic-divine-anubis.tex}
-\include{ch-magic-divine-atena.tex}
-\include{ch-magic-divine-isis.tex}
-\include{ch-magic-divine-neptune.tex}
-\include{ch-magic-divine-orus.tex}
-\include{ch-magic-divine-osiris.tex}
-\include{ch-magic-divine-ra.tex}
-\include{ch-magic-divine-rudri.tex}
-\include{ch-magic-divine-scrogg.tex}
-\include{ch-magic-divine-tarus.tex}
-\include{ch-magic-divine-tor.tex}
-\include{ch-magic-creating-magical-items.tex}
-\include{ch-world-magical-items.tex}
-\include{ch-world-onivero.tex}
-\include{ch-world-jaern-planet.tex}
-\include{ch-world-lojem-isle.tex}
-\include{ch-world-rougtero.tex}
-\include{ch-world-actors-rougtero.tex}
-\include{ch-world-creatures.tex}
-\include{ch-gm-creating-and-playing-actors.tex}
-\include{ch-gm-creating-creatures.tex}
-\include{ch-gm-creating-adventures.tex}
-\include{ch-gm-judging-adventures.tex}
+\label{ch:beg-how-to-read}\include{beginning/beg-how-to-read.tex} 
+\label{ch:create-creating-an-adventurer}\include{create/ch-create-creating-an-adventurer.tex} 
+\include{create/ch-create-jaernian-humanoids.tex} %transcribed
+\include{play/ch-play-life-on-the-high-seas.tex} 
+\include{play/ch-play-playing-an-adventurer.tex}
+\include{play/ch-play-physical-combat.tex}
+\include{play/ch-play-casting-magic.tex}
+%\end{comment}
+\include{play/ch-play-skills.tex} %transcribed
+%\begin{comment}
+\include{class/ch-class-marines.tex} %transcribed 
+\include{class/ch-class-auger.tex} %transcribed
+\include{class/ch-class-nomad.tex} %transcribed
+\include{magic/ch-magic-elem-core.tex} %transcribed
+\include{magic/ch-magic-elem-earth.tex} %transcribed
+\include{magic/ch-magic-elem-fire.tex} %transcribed
+\include{magic/ch-magic-elem-air.tex} %transcribed
+\include{magic/ch-magic-elem-water.tex} %transcribed
+\include{magic/ch-magic-divine-core.tex} %transcribed
+\include{magic/ch-magic-divine-anubis.tex}
+\include{magic/ch-magic-divine-atena.tex}
+\include{magic/ch-magic-divine-isis.tex}
+\include{magic/ch-magic-divine-neptune.tex}
+\include{magic/ch-magic-divine-orus.tex}
+\include{magic/ch-magic-divine-osiris.tex}
+\include{magic/ch-magic-divine-ra.tex}
+\include{magic/ch-magic-divine-rudri.tex}
+\include{magic/ch-magic-divine-scrogg.tex}
+\include{magic/ch-magic-divine-tarus.tex}
+\include{magic/ch-magic-divine-tor.tex}
+\include{magic/ch-magic-creating-magical-items.tex}
+\include{world/ch-world-magical-items.tex}
+\include{world/ch-world-onivero.tex}
+\include{world/ch-world-jaern-planet.tex}
+\include{world/ch-world-lojem-isle.tex}
+\include{world/ch-world-rougtero.tex}
+\include{world/ch-world-actors-rougtero.tex}
+\include{world/ch-world-creatures.tex}
+\include{gm/ch-gm-creating-and-playing-actors.tex}
+\include{gm/ch-gm-creating-creatures.tex}
+\include{gm/ch-gm-creating-adventures.tex}
+\include{gm/ch-gm-judging-adventures.tex}
 \addtocontents{toc}{\protect\renewcommand{\protect\cftchappresnum}{Appendix }}
-\include{ch-gm-running-campaign.tex}
+\include{gm/ch-gm-running-campaign.tex}
 \appendix
-\include{ap-charsheet.tex} 
-\include{ap-glossary.tex}
-\include{ap-important-tables.tex}
-\include{ap-earth-references.tex}
-\begin{comment}\end{comment}
+\include{appendix/ap-charsheet.tex}
+\include{appendix/ap-glossary.tex}
+\include{appendix/ap-important-tables.tex}
+\include{appendix/ap-earth-references.tex}
+%\begin{comment}\end{comment}
 %\printindex
 \end{document}

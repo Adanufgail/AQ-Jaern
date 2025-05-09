@@ -1,0 +1,61 @@
+\begin{normbox}[]
+\small
+\begin{tabular}{@{}}
+\midrule
+\end{tabular}
+\end{normbox}
+
+\vspace{-15pt}
+
+[”“]
+’
+
+\setlength{\columnsep}{\defcolwidth}\begin{multicols*}{2}
+
+
+\begin{wrapfigure}[9]{l}[0pt]{60pt}
+\end{wrapfigure}
+
+\documentclass{article}
+\usepackage[sfdefault]{roboto}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{paperwidth=3.75in,paperheight=10in, portrait, margin=0in, nofoot}
+\pagestyle{empty}
+\begin{document}
+\begin{longtable}{@{}p{0.375\linewidth} p{0.178\linewidth} p{0.1\linewidth} p{0.178\linewidth}}
+\small
+\textbf{Skills} & \textbf{Base Cost} & \textbf{Stat} & \textbf{Extra Dice}\\
+\midrule
+\endhead
+\end{longtable}
+\end{document}
+
+\indy{}
+\indy[]{}
+\indx{}
+\defnum{}
+
+\tcdefine{25 EP}
+\measure{8 to 10 feet}
+\tcdieroll{4d6}
+
+
+([A-Z][a-zA-Z ]*)\t([0-9]*)\t1\t([^\t]*)\t"Time to Cast: (.*)\nResist Check: (.*)\nTarget: (.*)\nDuration: (.*)\nArea: (.*)\nEffect: ([^"]*)"\t(.*)
+%\1\n\\spellentry{\3}{\2}{\4}{\5}{\6}{\7}{\8}{\9}{${10}}
+
+\newincantentry{}{\begin{tabular}[t]{rl}
+Type: &  \\
+Base Cost: &  EP\\
+Silver: &  / Rank\\
+Time to Make: &  / Rank \\
+Duration: & / Rank\\
+Resist Check: & \\
+Effect: & \\
+Ingredients: & \makecell[l]{
+		\tabitem \\
+		\tabitem }\\
+\end{tabular}}{}
